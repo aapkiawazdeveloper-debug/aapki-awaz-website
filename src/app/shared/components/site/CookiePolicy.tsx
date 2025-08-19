@@ -1,7 +1,7 @@
 const CookiePolicy = () => {
   return (
     <>
-      <div className="flex flex-col gap-y-4">
+      <section className="flex flex-col gap-y-4">
         <p className="text-black text-base font-normal font-poppins text-justify">
           Aap Ki Awaz Publication (“we”, “us”, “Aap Ki Awaz”) understands that
           your privacy is important to data subject (“you”, “your”, “user”,
@@ -282,7 +282,7 @@ const CookiePolicy = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
