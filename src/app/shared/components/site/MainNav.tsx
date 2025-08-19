@@ -6,28 +6,28 @@ const MainNav = () => {
             <nav className="container mx-auto px-4">
                 <ul className="flex items-center gap-6">
                     <li>
-                        <Link href="/" className="text-white text-sm font-normal font-helvetica">Home</Link>
+                        <Link href="/" className="text-white text-sm font-normal font-poppins">Home</Link>
                     </li>
                     <li>
-                        <Link href="/" className="text-white text-sm font-normal font-helvetica">Reporter</Link>
+                        <Link href="/" className="text-white text-sm font-normal font-poppins">Reporter</Link>
                     </li>
                     <li>
-                        <Link href="/" className="text-white text-sm font-normal font-helvetica">Business Associates</Link>
+                        <Link href="/" className="text-white text-sm font-normal font-poppins">Business Associates</Link>
                     </li>
                     <li>
-                        <Link href="/" className="text-white text-sm font-normal font-helvetica">Member of Parliament - MP</Link>
+                        <Link href="/" className="text-white text-sm font-normal font-poppins">Member of Parliament - MP</Link>
                     </li>
                     <li>
-                        <Link href="/" className="text-white text-sm font-normal font-helvetica">MLA of Rajasthan</Link>
+                        <Link href="/" className="text-white text-sm font-normal font-poppins">MLA of Rajasthan</Link>
                     </li>
                     <li>
-                        <Link href="/" className="text-white text-sm font-normal font-helvetica">Panchayat Samiti - Pradhan</Link>
+                        <Link href="/" className="text-white text-sm font-normal font-poppins">Panchayat Samiti - Pradhan</Link>
                     </li>
                     <li>
-                        <Link href="/" className="text-white text-sm font-normal font-helvetica">Video Interview</Link>
+                        <Link href="/" className="text-white text-sm font-normal font-poppins">Video Interview</Link>
                     </li>
                     <li>
-                        <Link href="/" className="text-white text-sm font-normal font-helvetica">Business News</Link>
+                        <Link href="/" className="text-white text-sm font-normal font-poppins">Business News</Link>
                     </li>
                 </ul>
             </nav>
