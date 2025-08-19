@@ -27,16 +27,19 @@ const SiteLayout = ({ children }: { children: React.ReactNode }) => {
         <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
             <body className="font-inter">
                 <Header />
-                <div className="flex flex-1 container mx-auto px-4">
-                    <main className="flex-1 gap-4 py-4">
-                        {children}
-                    </main>
-                    <Sidebar />
+
+                <div className="container mx-auto px-4 py-4 grid grid-cols-12 gap-6">
+                    <main className="col-span-12 lg:col-span-9">{children}</main>
+
+                    <div className="col-span-12 lg:col-span-3">
+                        <Sidebar />
+                    </div>
                 </div>
+
                 <Footer />
             </body>
         </html>
-    )
-}
+    );
+};
 
 export default SiteLayout;
