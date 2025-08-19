@@ -1,6 +1,6 @@
 import LinkButton from "./button/LinkButton";
 
-const PageHeader: React.FC<{ pageTitle: string; buttons: any[] }> = ({ pageTitle, buttons }) => {
+const PageHeader: React.FC<{ pageTitle: string; buttons?: any[] }> = ({ pageTitle, buttons = [] }) => {
     return (
         <section className="bg-[#C13B3C] px-4 py-2 rounded-lg mb-4">
             <div className="flex items-center justify-between gap-4">
