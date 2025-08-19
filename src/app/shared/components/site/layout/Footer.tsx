@@ -22,7 +22,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Member of Parliament - MP
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Member of
+                    Parliament - MP
                   </Link>
                 </li>
                 <li>
@@ -30,7 +31,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> MLA of Rajasthan
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> MLA of
+                    Rajasthan
                   </Link>
                 </li>
                 <li>
@@ -38,7 +40,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Mayor - Chairman - President
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Mayor -
+                    Chairman - President
                   </Link>
                 </li>
                 <li>
@@ -46,7 +49,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Rajasthan - Zila Pramukh
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Rajasthan -
+                    Zila Pramukh
                   </Link>
                 </li>
                 <li>
@@ -54,7 +58,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Panchayat Samiti - Pradhan
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Panchayat
+                    Samiti - Pradhan
                   </Link>
                 </li>
                 <li>
@@ -70,7 +75,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Business Associates
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Business
+                    Associates
                   </Link>
                 </li>
                 <li>
@@ -78,7 +84,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Member of Parliament - MP
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Member of
+                    Parliament - MP
                   </Link>
                 </li>
                 <li>
@@ -86,7 +93,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Video Interview
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Video
+                    Interview
                   </Link>
                 </li>
                 <li>
@@ -94,7 +102,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Vaish Samaj News
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Vaish Samaj
+                    News
                   </Link>
                 </li>
                 <li>
@@ -102,7 +111,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> AAP Party News
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> AAP Party
+                    News
                   </Link>
                 </li>
                 <li>
@@ -110,7 +120,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> CAB - CAA - NRC Video News
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> CAB - CAA -
+                    NRC Video News
                   </Link>
                 </li>
               </ul>
@@ -122,7 +133,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> MLA of Rajasthan
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> MLA of
+                    Rajasthan
                   </Link>
                 </li>
                 <li>
@@ -130,7 +142,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Panchayat Samiti - Pradhan
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Panchayat
+                    Samiti - Pradhan
                   </Link>
                 </li>
                 <li>
@@ -138,7 +151,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Sarpanch - Rajasthan
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Sarpanch -
+                    Rajasthan
                   </Link>
                 </li>
                 <li>
@@ -146,7 +160,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Business News
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Business
+                    News
                   </Link>
                 </li>
                 <li>
@@ -154,7 +169,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Leader of Rajasthan
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Leader of
+                    Rajasthan
                   </Link>
                 </li>
                 <li>
@@ -162,7 +178,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> MLA of Rajasthan
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> MLA of
+                    Rajasthan
                   </Link>
                 </li>
                 <li>
@@ -170,7 +187,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Mayor - Chairman - President
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Mayor -
+                    Chairman - President
                   </Link>
                 </li>
                 <li>
@@ -194,7 +212,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Congress Leader - INC
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Congress
+                    Leader - INC
                   </Link>
                 </li>
                 <li>
@@ -210,7 +229,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Video Interview
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Video
+                    Interview
                   </Link>
                 </li>
                 <li>
@@ -218,7 +238,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Press Release
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Press
+                    Release
                   </Link>
                 </li>
               </ul>
@@ -230,7 +251,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> BUSINESS - TRADE & INDUSTRIES Directory
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> BUSINESS -
+                    TRADE & INDUSTRIES Directory
                   </Link>
                 </li>
                 <li>
@@ -238,7 +260,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> TRADE & INDUSTRIES ASSOCIATION
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> TRADE &
+                    INDUSTRIES ASSOCIATION
                   </Link>
                 </li>
                 <li>
@@ -246,7 +269,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> LIFE MEMBERS
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> LIFE
+                    MEMBERS
                   </Link>
                 </li>
                 <li>
@@ -254,7 +278,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> PATRON MEMBERS
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> PATRON
+                    MEMBERS
                   </Link>
                 </li>
                 <li>
@@ -262,7 +287,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Bollywood Directory
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Bollywood
+                    Directory
                   </Link>
                 </li>
                 <li>
@@ -270,7 +296,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Naturopathy - Acupuncture & Acupressure
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Naturopathy
+                    - Acupuncture & Acupressure
                   </Link>
                 </li>
                 <li>
@@ -278,7 +305,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> All India Hospitals / Healthcare
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> All India
+                    Hospitals / Healthcare
                   </Link>
                 </li>
                 <li>
@@ -286,7 +314,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Diagnostic Centre
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Diagnostic
+                    Centre
                   </Link>
                 </li>
                 <li>
@@ -330,7 +359,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Pharma Companies & Dealer
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Pharma
+                    Companies & Dealer
                   </Link>
                 </li>
                 <li>
@@ -338,7 +368,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Education Directory
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Education
+                    Directory
                   </Link>
                 </li>
                 <li>
@@ -346,7 +377,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Indian Hotel Directory
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Indian
+                    Hotel Directory
                   </Link>
                 </li>
                 <li>
@@ -354,7 +386,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Automobile Dealers
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Automobile
+                    Dealers
                   </Link>
                 </li>
                 <li>
@@ -362,7 +395,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Safety Industry Directory
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Safety
+                    Industry Directory
                   </Link>
                 </li>
                 <li>
@@ -370,7 +404,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Fire Industry Directory
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Fire
+                    Industry Directory
                   </Link>
                 </li>
                 <li>
@@ -378,7 +413,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Safety Security & Fire Directory
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Safety
+                    Security & Fire Directory
                   </Link>
                 </li>
                 <li>
@@ -386,7 +422,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Caterers Dealers Directory
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Caterers
+                    Dealers Directory
                   </Link>
                 </li>
                 <li>
@@ -394,7 +431,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Tent House and Decorators
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Tent House
+                    and Decorators
                   </Link>
                 </li>
                 <li>
@@ -402,8 +440,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Naturopathy - Yoga - Acupuncture - Diet
-                    therapy
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Naturopathy
+                    - Yoga - Acupuncture - Diet therapy
                   </Link>
                 </li>
                 <li>
@@ -411,8 +449,9 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Astrology, Jyotish Vaastu, Palmistry, Yoga -
-                    Acupuncture - Diet therapy Expert
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Astrology,
+                    Jyotish Vaastu, Palmistry, Yoga - Acupuncture - Diet therapy
+                    Expert
                   </Link>
                 </li>
                 <li>
@@ -420,7 +459,8 @@ const Footer = () => {
                     href="/"
                     className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Automobile Guide
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Automobile
+                    Guide
                   </Link>
                 </li>
               </ul>
@@ -527,8 +567,14 @@ const Footer = () => {
       <section className="bg-[#23221e] py-2">
         <div className="container mx-auto px-4">
           <p className="text-center text-xs text-white">
-            © 2025 AAP KI AWAZ PUBLICATION. All rights reserved. | Privacy
-            Policy | Terms Of Use.
+            © 2025 AAP KI AWAZ PUBLICATION. All rights reserved. |{" "}
+            <Link href="/privacy-policy" className="text-[#337ab7]">
+              Privacy Policy
+            </Link>{" "}
+            |{" "}
+            <Link href="/cookie-policy" className="text-[#337ab7]">
+              Terms Of Use
+            </Link>
           </p>
         </div>
       </section>
