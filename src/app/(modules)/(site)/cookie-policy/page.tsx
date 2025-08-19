@@ -1,10 +1,12 @@
+import CookiePolicy from "@/app/shared/components/site/CookiePolicy";
+import PageHeader from "@/app/shared/components/site/ui/PageHeader";
+
 const CookiePolicyPage = () => {
   return (
     <>
-      <div>
-        <h1>test</h1>
-      </div>
-      <div></div>
+      <PageHeader pageTitle="Cookie Policy" />
+
+      <CookiePolicy />
     </>
   );
 };
