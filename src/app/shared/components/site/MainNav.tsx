@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const MainNav = () => {
     return (
-        <div className="bg-[#77a22f] py-2">
+        <div className="bg-[#ccc] py-2">
             <nav className="container mx-auto px-4">
                 <ul className="flex items-center gap-6">
                     <li>
