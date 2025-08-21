@@ -7,7 +7,7 @@ import CustomTextarea from "./ui/form/CustomTextarea";
 import ReCAPTCHA from "react-google-recaptcha";
 import CustomCheckbox from "./ui/form/CustomCheckbox";
 import Link from "next/link";
-import Button from "./ui/button/Button";
+import Button from "./ui/buttons/Button";
 
 const InquiryForm = () => {
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
