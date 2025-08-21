@@ -32,10 +32,6 @@ const InquiryForm = () => {
         </div>
 
         <div className="col-span-12">
-          <CustomInput label="Office / Business Name" />
-        </div>
-
-        <div className="col-span-12">
           <CustomTextarea
             label="Product / Service Detail"
             id="message"
@@ -43,39 +39,43 @@ const InquiryForm = () => {
           />
         </div>
 
-        <div className="col-span-12">
+        <div className="col-span-12 sm:col-span-6">
           <CustomInput label="Office / Business Name" />
         </div>
 
-        <div className="col-span-12">
+        <div className="col-span-12 sm:col-span-6">
+          <CustomInput label="Office / Business Name" />
+        </div>
+
+        <div className="col-span-12 sm:col-span-6">
           <CustomInput label="Profession" />
         </div>
 
-        <div className="col-span-12">
+        <div className="col-span-12 sm:col-span-6">
           <CustomInput label="E-mail" />
         </div>
 
-        <div className="col-span-12">
+        <div className="col-span-12 sm:col-span-6">
           <CustomInput label="Website" />
         </div>
 
-        <div className="col-span-12">
+        <div className="col-span-12 sm:col-span-6">
           <CustomInput label="Office Number" />
         </div>
 
-        <div className="col-span-12">
+        <div className="col-span-12 sm:col-span-6">
           <CustomInput label="Mobile Number" />
         </div>
 
-        <div className="col-span-12">
+        <div className="col-span-12 sm:col-span-6">
           <CustomInput label="Mobile Number" />
         </div>
 
-        <div className="col-span-12">
+        <div className="col-span-12 sm:col-span-6">
           <CustomTextarea label="Office Address" id="office_address" rows={3} />
         </div>
 
-        <div className="col-span-12">
+        <div className="col-span-12 sm:col-span-6">
           <CustomTextarea
             label="Business Profile Description"
             id="profile_description"
@@ -124,7 +124,7 @@ const InquiryForm = () => {
         </div>
 
         <div className="col-span-12">
-          <ReCAPTCHA
+          <ReCAPTCHA className="mt-4"
             sitekey={"6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"}
             onChange={(value) => setCaptchaValue(value)}
           />
