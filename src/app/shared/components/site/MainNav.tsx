@@ -12,7 +12,7 @@ const MainNav = () => {
                 {/* Mobile Header */}
                 <div className="flex justify-end items-center md:hidden">
                     <button onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
-                        <AiOutlineMenu className="text-[#0000ff]" size={24} />
+                        <AiOutlineMenu className="text-white" size={24} />
                     </button>
                 </div>
 

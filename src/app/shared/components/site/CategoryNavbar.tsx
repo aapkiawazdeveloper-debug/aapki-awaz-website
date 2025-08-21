@@ -11,7 +11,7 @@ const CategoryNavbar = () => {
             <nav className="container mx-auto px-4 py-2">
                 <div className="flex justify-end items-center md:hidden">
                     <button onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
-                        <AiOutlineMenu className="text-[#0000ff]" size={24} />
+                        <AiOutlineMenu className="text-white" size={24} />
                     </button>
                 </div>
 
