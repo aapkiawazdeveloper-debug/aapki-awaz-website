@@ -1,14 +1,29 @@
-@keyframes marquee {
-    0% {
-        transform: translateX(0%);
-    }
+.list-alpha-dot {
+  counter-reset: item;
+  list-style: none;
+}
+.list-alpha-dot li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.list-alpha-dot li::before {
+  counter-increment: item;
+  content: counter(item, lower-alpha) ").";
+  position: absolute;
+  left: 0;
+}
 
-    100% {
-        transform: translateX(-50%);
-    }
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
-    display: inline-flex;
-    animation: marquee 50s linear infinite;
+  display: inline-flex;
+  animation: marquee 50s linear infinite;
 }
