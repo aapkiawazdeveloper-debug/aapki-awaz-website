@@ -19,7 +19,7 @@ const images = [
 
 const AdBanner = () => {
     return (
-        <div className="flex items-center gap-2 px-6 py-2">
+        <div className="flex items-center flex-wrap sm:flex-nowrap gap-2 px-6 py-2">
             {images.map((image) => (
                 <CustomImage key={image.id} src={image.src} width={image.width} height={image.height} alt={image.alt} />
             ))}

@@ -19,7 +19,7 @@ const images = [
 
 const Sidebar = () => {
     return (
-        <aside className="p-4 flex flex-col gap-4">
+        <aside className="flex flex-col gap-4">
             {images.map((image) => (
                 <CustomImage key={image.id} src={image.src} width={image.width} height={image.height} alt={image.alt} />
             ))}

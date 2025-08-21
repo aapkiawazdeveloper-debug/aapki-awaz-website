@@ -1,220 +1,585 @@
-"use client";
 import Link from "next/link";
 import { FaBullhorn } from "react-icons/fa";
 
 const Footer = () => {
-    return (
-        <footer>
-            <section className="bg-[#98AFC7] py-8">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div>
-                            <ul className="space-y-3">
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> home
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> Member of Parliament - MP
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul className="space-y-3">
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> home
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> Member of Parliament - MP
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul className="space-y-3">
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> home
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> Member of Parliament - MP
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul className="space-y-3">
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> home
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> Member of Parliament - MP
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="flex items-center gap-2 text-white uppercase font-medium text-[15px]">
-                                        <FaBullhorn /> MLA of Rajasthan
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  return (
+    <footer>
+      <section className="bg-[#98AFC7] py-8">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div>
+              <ul className="space-y-4">
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Member of
+                    Parliament - MP
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> MLA of
+                    Rajasthan
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Mayor -
+                    Chairman - President
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Rajasthan -
+                    Zila Pramukh
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Panchayat
+                    Samiti - Pradhan
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Reporter
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Business
+                    Associates
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Member of
+                    Parliament - MP
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Video
+                    Interview
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Vaish Samaj
+                    News
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> AAP Party
+                    News
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> CAB - CAA -
+                    NRC Video News
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul className="space-y-4">
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> MLA of
+                    Rajasthan
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Panchayat
+                    Samiti - Pradhan
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Sarpanch -
+                    Rajasthan
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Business
+                    News
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Leader of
+                    Rajasthan
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> MLA of
+                    Rajasthan
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Mayor -
+                    Chairman - President
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> City News
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> BJP Leader
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Congress
+                    Leader - INC
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Contact Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Video
+                    Interview
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Press
+                    Release
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul className="space-y-4">
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> BUSINESS -
+                    TRADE & INDUSTRIES Directory
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> TRADE &
+                    INDUSTRIES ASSOCIATION
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> LIFE
+                    MEMBERS
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> PATRON
+                    MEMBERS
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Bollywood
+                    Directory
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Naturopathy
+                    - Acupuncture & Acupressure
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> All India
+                    Hospitals / Healthcare
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Diagnostic
+                    Centre
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Doctors
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Hospitals
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> ज्योतिष
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> वास्तु
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul className="space-y-4">
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Pharma
+                    Companies & Dealer
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Education
+                    Directory
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Indian
+                    Hotel Directory
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Automobile
+                    Dealers
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Safety
+                    Industry Directory
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Fire
+                    Industry Directory
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Safety
+                    Security & Fire Directory
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Caterers
+                    Dealers Directory
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Tent House
+                    and Decorators
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Naturopathy
+                    - Yoga - Acupuncture - Diet therapy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Astrology,
+                    Jyotish Vaastu, Palmistry, Yoga - Acupuncture - Diet therapy
+                    Expert
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                  >
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Automobile
+                    Guide
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <section className="bg-[#8B6C42] py-4">
-                <div className="container mx-auto px-4">
-                    <ul className="flex flex-wrap justify-center gap-x-6 gap-y-3">
-                        <li>
-                            <Link href="/" className="text-white text-[15px] font-helvetica font-medium">Home</Link>
-                        </li>
-                        <li>
-                            <Link href="/" className="text-white text-[15px] font-helvetica font-medium">Member of Parliament - MP</Link>
-                        </li>
-                        <li>
-                            <Link href="/" className="text-white text-[15px] font-helvetica font-medium">MLA of Rajasthan</Link>
-                        </li>
-                        <li>
-                            <Link href="/" className="text-white text-[15px] font-helvetica font-medium">Mayor - Chairman - President</Link>
-                        </li>
-                        <li>
-                            <Link href="/" className="text-white text-[15px] font-helvetica font-medium">Rajasthan - Zila Pramukh</Link>
-                        </li>
-                        <li>
-                            <Link href="/" className="text-white text-[15px] font-helvetica font-medium">Panchayat Samiti - Pradhan</Link>
-                        </li>
-                        <li>
-                            <Link href="/" className="text-white text-[15px] font-helvetica font-medium">Video Interview</Link>
-                        </li>
-                        <li>
-                            <Link href="/" className="text-white text-[15px] font-helvetica font-medium">Terms & Conditions</Link>
-                        </li>
-                        <li>
-                            <Link href="/" className="text-white text-[15px] font-helvetica font-medium">Privacy Policy</Link>
-                        </li>
-                        <li>
-                            <Link href="/" className="text-white text-[15px] font-helvetica font-medium">Cookie Policy</Link>
-                        </li>
-                        <li>
-                            <Link href="/" className="text-white text-[15px] font-helvetica font-medium">Contact Us</Link>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+      <section className="bg-[#8B6C42] py-4">
+        <div className="container mx-auto px-4">
+          <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <li>
+              <Link
+                href="/"
+                className="text-white text-sm font-poppins font-normal"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/leader-of-rajasthan-minister-mla-mp-district"
+                className="text-white text-sm font-poppins font-normal"
+              >
+                Member of Parliament - MP
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/leader-of-rajasthan-minister-mla"
+                className="text-white text-sm font-poppins font-normal"
+              >
+                MLA of Rajasthan
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/mayor-chairman-president-news-photos"
+                className="text-white text-sm font-poppins font-normal"
+              >
+                Mayor - Chairman - President
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/rajasthan-zila-pramukh"
+                className="text-white text-sm font-poppins font-normal"
+              >
+                Rajasthan - Zila Pramukh
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/panchayat-samiti-pradhan-rajasthan"
+                className="text-white text-sm font-poppins font-normal"
+              >
+                Panchayat Samiti - Pradhan
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/video-interview"
+                className="text-white text-sm font-poppins font-normal"
+              >
+                Video Interview
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/terms-and-conditions"
+                className="text-white text-sm font-poppins font-normal"
+              >
+                Terms & Conditions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/privacy-policy"
+                className="text-white text-sm font-poppins font-normal"
+              >
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/cookie-policy"
+                className="text-white text-sm font-poppins font-normal"
+              >
+                Cookie Policy
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact-us"
+                className="text-white text-sm font-poppins font-normal"
+              >
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-            <section className="bg-[#23221e] py-2">
-                <div className="container mx-auto px-4">
-                    <p className="text-center text-xs text-white">© 2025 AAP KI AWAZ PUBLICATION. All rights reserved. | Privacy Policy | Terms Of Use.</p>
-                </div>
-            </section>
-        </footer>
-    );
+      <section className="bg-[#23221e] py-2">
+        <div className="container mx-auto px-4">
+          <p className="text-center text-xs text-white">
+            © 2025 AAP KI AWAZ PUBLICATION. All rights reserved. |{" "}
+            <Link href="/privacy-policy" className="text-[#337ab7]">
+              Privacy Policy
+            </Link>{" "}
+            |{" "}
+            <Link href="/cookie-policy" className="text-[#337ab7]">
+              Terms Of Use
+            </Link>
+          </p>
+        </div>
+      </section>
+    </footer>
+  );
 };
 
 export default Footer;
