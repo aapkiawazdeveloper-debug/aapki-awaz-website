@@ -36,7 +36,7 @@ const CategoryNavbar = () => {
                             <Link href="/" className="text-[#0000ff] text-sm font-poppins">Business / Profession Directory</Link>
                         </li>
                         <li>
-                            <Link href="/" className="text-[#0000ff] text-sm font-poppins">धर्म</Link>
+                            <Link href="/" className="text-[#0000ff] text-sm font-poppins">Religion</Link>
                         </li>
                         <li>
                             <Link href="/" className="text-[#0000ff] text-sm font-poppins">Political Party</Link>

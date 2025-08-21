@@ -4,15 +4,13 @@ import AdBanner from "../AdBanner";
 import BreakingNews from "../BreakingNews";
 
 const newsData = [
-    "अफीम एवं गेहूँ तोल केंद्र का सांसद जोशी ने किया निरीक्षण",
-    "शहर में भारी बारिश की संभावना",
-    "450 ने किया रक्तदान – नया रिकॉर्ड बना",
-    "अफीम एवं गेहूँ तोल केंद्र का सांसद जोशी ने किया निरीक्षण",
-    "शहर में भारी बारिश की संभावना",
-    "450 ने किया रक्तदान – नया रिकॉर्ड बना",
-    "अफीम एवं गेहूँ तोल केंद्र का सांसद जोशी ने किया निरीक्षण",
-    "शहर में भारी बारिश की संभावना",
-    "450 ने किया रक्तदान – नया रिकॉर्ड बना",
+    "Mewar Express train timings changed as per previous schedule",
+    "Committee formed to take action against black marketers and hoarders",
+    "Curfew imposed in corona-affected areas of the city",
+    "Prohibitory orders imposed in New Vinayak Nagar of Girwa",
+    "450 people consumed Ayush Amrit Kwath",
+    "Divisional Commissioner inspected the border check post",
+    "Formation of district level team under COVID-19"
 ];
 
 const Header = () => {
