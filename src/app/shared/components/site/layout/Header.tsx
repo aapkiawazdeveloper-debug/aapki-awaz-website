@@ -15,7 +15,7 @@ const newsData = [
 
 const Header = () => {
     return (
-        <header className="overflow-hidden">
+        <header>
             <CategoryNavbar />
             <BreakingNews news={newsData} />
             <AdBanner />
