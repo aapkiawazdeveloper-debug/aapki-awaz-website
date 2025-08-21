@@ -12,7 +12,7 @@ import {
 
 const PoliticianCard = () => {
   return (
-    <div className="relative group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md flex hover:shadow-xl transition">
+    <div className="relative group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md flex flex-col sm:flex-row items-center sm:items-stretch hover:shadow-xl transition">
       {/* Image */}
       <Image
         src="/assets/images/MoolChand_Meena.jpg"
