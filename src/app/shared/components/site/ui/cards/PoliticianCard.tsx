@@ -45,23 +45,23 @@ const PoliticianCard = () => {
         <div className="mt-3 space-y-1">
           <Link
             href="tel:+919414970299"
-            className="flex items-center gap-2 text-sm text-black font-medium hover:underline"
+            className="flex items-center gap-2 text-xs text-gray-400 font-medium hover:underline"
           >
             <FiPhone /> +91 9414970299
           </Link>
           <Link
             href="tel:+917597034566"
-            className="flex items-center gap-2 text-sm text-black font-medium hover:underline"
+            className="flex items-center gap-2 text-xs text-gray-400 font-medium hover:underline"
           >
             <FiPhone /> +91 7597034566
           </Link>
         </div>
 
         {/* Action Button */}
-        <div className="mt-4">
+        <div className="mt-7">
           <Link
             href="/profile/moolchand-meena"
-            className="block px-4 py-1 text-center w-full text-sm rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition cursor-pointer"
+            className="block px-4 py-1 text-center w-full text-sm font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition cursor-pointer"
           >
             View Profile
           </Link>
