@@ -1,7 +1,7 @@
 import ArticleCard from "@/app/shared/components/site/ui/cards/ArticleCard";
 import Pagination from "@/app/shared/components/site/Pagination";
-import PageFilter from "@/app/shared/components/site/ui/PageFilter";
 import PageHeader from "@/app/shared/components/site/ui/PageHeader";
+import PageFilter from "@/app/shared/components/site/ui/filters/PageFilter";
 
 const buttons = [
   {
