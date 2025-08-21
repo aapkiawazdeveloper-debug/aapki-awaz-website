@@ -19,8 +19,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js site",
-  description: "Next.js site",
+  title: "Aap ki Awaz",
+  description: "Aap ki Awaz - Hindi & English News Website",
 };
 
 const SiteLayout = ({ children }: { children: React.ReactNode }) => {
