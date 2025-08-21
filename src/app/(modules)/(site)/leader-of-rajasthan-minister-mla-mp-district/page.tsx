@@ -14,7 +14,7 @@ const buttons = [
 const LeaderOfRajasthanMinisterMlaMpDistrictPage = () => {
   return (
     <>
-      <PageHeader pageTitle="Mayor - Chairman - President" buttons={buttons} />
+      <PageHeader pageTitle="Member of Parliament - MP" buttons={buttons} />
 
       <PoliticianFilter />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
