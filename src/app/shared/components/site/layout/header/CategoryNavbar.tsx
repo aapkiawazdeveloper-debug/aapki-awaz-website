@@ -125,7 +125,7 @@ const CategoryNavbar = () => {
               >
                 <li>
                   <Link
-                    href="/business-associates/login-via-mobile-number"
+                    href="/entertainment/bollywood-directory"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Bollywood Directory
@@ -133,7 +133,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/business-associates/login-via-userid"
+                    href="/entertainment/entertainment-bollywoord-news"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Entertainment / Bollywood News
@@ -141,7 +141,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/business-associates/registration"
+                    href="/entertainment/bollywood-registration"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Bollywood registration
@@ -149,7 +149,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/business-associates/registration"
+                    href="/entertainment/bollywood-login-via-userid"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Login via userid
@@ -157,7 +157,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/business-associates/registration"
+                    href="/entertainment/bollywood-login-via-mobile"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Bollywood User Mobile Login
@@ -165,7 +165,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/business-associates/registration"
+                    href="/entertainment/registration"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Bollywood Directory Data Package - User Registration Form
