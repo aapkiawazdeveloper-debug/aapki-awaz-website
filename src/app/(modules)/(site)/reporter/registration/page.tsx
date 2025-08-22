@@ -1,8 +1,12 @@
+import PageHeader from "@/app/shared/components/site/ui/PageHeader";
+
 const RegistrationPage = () => {
   return (
-    <div>
-      <h1>RegistrationPage</h1>
-    </div>
+    <>
+      <PageHeader pageTitle="NEWS REPORTER - REGISTRATION FORM" />
+
+      
+    </>
   );
 };
 

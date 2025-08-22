@@ -1,8 +1,12 @@
+import ReporterLoginFormViaMobileNumber from "@/app/shared/components/site/ReporterLoginFormViaMobileNumber";
+import Hero from "@/app/shared/components/site/ui/hero/Hero";
+
 const LoginViaMobileNumberPage = () => {
   return (
-    <div>
-      <h1>LoginViaMobileNumberPage</h1>
-    </div>
+    <>
+    <Hero title="Passcode" />
+    <ReporterLoginFormViaMobileNumber/>
+    </>
   );
 };
 
