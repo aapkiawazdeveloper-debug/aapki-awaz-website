@@ -933,7 +933,7 @@ const CategoryNavbar = () => {
               >
                 <li>
                   <Link
-                    href="/reporter/login-via-mobile-number"
+                    href="/bjp-leader/youth-front-bjp"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Youth Front - BJP
@@ -941,7 +941,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/login-via-userid"
+                    href="/bjp-leader/women-front-bjp"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Women's Front - BJP
