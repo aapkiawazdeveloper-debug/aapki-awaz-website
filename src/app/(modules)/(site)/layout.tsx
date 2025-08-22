@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const SiteLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
-      <body className="font-inter">
+      <body className="font-inter" suppressHydrationWarning>
         <Header />
 
         <div className="px-4 py-4 grid grid-cols-12 gap-6">
