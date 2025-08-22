@@ -14,7 +14,7 @@ const CategoryNavbar = () => {
   };
 
   return (
-    <div className="bg-[#337ab7]">
+    <div className="bg-[#ccc]">
       <nav className="px-4 py-2 relative">
         {/* Mobile Header */}
         <div className="flex justify-end items-center md:hidden">
@@ -31,7 +31,7 @@ const CategoryNavbar = () => {
         >
           <ul className="flex flex-col md:flex-row md:items-center gap-4 py-2 md:py-0">
             <li>
-              <Link href="/" className="text-white text-sm font-poppins">
+              <Link href="/" className="text-[#0000ff] text-sm font-poppins">
                 Home
               </Link>
             </li>
@@ -41,7 +41,7 @@ const CategoryNavbar = () => {
               className="relative group"
               onClick={() => handleDropdownClick("reporter")}
             >
-              <span className="flex items-center gap-1 text-white text-sm font-poppins cursor-pointer">
+              <span className="flex items-center gap-1 text-[#0000ff] text-sm font-poppins cursor-pointer">
                 Leader of Rajasthan <FiChevronDown size={12} />
               </span>
               <ul
@@ -110,7 +110,7 @@ const CategoryNavbar = () => {
               className="relative group"
               onClick={() => handleDropdownClick("business")}
             >
-              <span className="flex items-center gap-1 text-white text-sm font-poppins cursor-pointer">
+              <span className="flex items-center gap-1 text-[#0000ff] text-sm font-poppins cursor-pointer">
                 Entertainment <FiChevronDown size={12} />
               </span>
               <ul
@@ -179,7 +179,7 @@ const CategoryNavbar = () => {
               className="relative group"
               onClick={() => handleDropdownClick("business")}
             >
-              <span className="flex items-center gap-1 text-white text-sm font-poppins cursor-pointer">
+              <span className="flex items-center gap-1 text-[#0000ff] text-sm font-poppins cursor-pointer">
                 City News <FiChevronDown size={12} />
               </span>
               <ul
@@ -461,7 +461,7 @@ const CategoryNavbar = () => {
               className="relative group"
               onClick={() => handleDropdownClick("moreNews")}
             >
-              <span className="flex items-center gap-1 text-white text-sm font-poppins cursor-pointer">
+              <span className="flex items-center gap-1 text-[#0000ff] text-sm font-poppins cursor-pointer">
                 More News <FiChevronDown size={12} />
               </span>
               <ul
@@ -659,7 +659,7 @@ const CategoryNavbar = () => {
               className="relative group"
               onClick={() => handleDropdownClick("business")}
             >
-              <span className="flex items-center gap-1 text-white text-sm font-poppins cursor-pointer">
+              <span className="flex items-center gap-1 text-[#0000ff] text-sm font-poppins cursor-pointer">
                 Business / Profession Directory <FiChevronDown size={12} />
               </span>
               <ul
@@ -865,7 +865,7 @@ const CategoryNavbar = () => {
               className="relative group"
               onClick={() => handleDropdownClick("business")}
             >
-              <span className="flex items-center gap-1 text-white text-sm font-poppins cursor-pointer">
+              <span className="flex items-center gap-1 text-[#0000ff] text-sm font-poppins cursor-pointer">
                 Religion <FiChevronDown size={12} />
               </span>
               <ul
@@ -918,7 +918,7 @@ const CategoryNavbar = () => {
               className="relative group"
               onClick={() => handleDropdownClick("business")}
             >
-              <span className="flex items-center gap-1 text-white text-sm font-poppins cursor-pointer">
+              <span className="flex items-center gap-1 text-[#0000ff] text-sm font-poppins cursor-pointer">
                 BJP Leader <FiChevronDown size={12} />
               </span>
               <ul
@@ -951,7 +951,7 @@ const CategoryNavbar = () => {
             </li>
 
             <li>
-              <Link href="/" className="text-white text-sm font-poppins">
+              <Link href="/" className="text-[#0000ff] text-sm font-poppins">
                 Congress Leader - INC
               </Link>
             </li>
