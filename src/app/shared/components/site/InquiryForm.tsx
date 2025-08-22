@@ -14,7 +14,7 @@ const InquiryForm = () => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
   return (
-    <div>
+    <>
       <form className="grid grid-cols-12 gap-3">
         <div className="col-span-12">
           <CustomInput label="Name" />
@@ -124,14 +124,15 @@ const InquiryForm = () => {
         </div>
 
         <div className="col-span-12">
-          <ReCAPTCHA className="mt-4"
+          <ReCAPTCHA
+            className="mt-4"
             sitekey={"6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"}
             onChange={(value) => setCaptchaValue(value)}
           />
         </div>
 
-        <div className="col-span-12">
-          <Button />
+        <div className="col-span-12 sm:col-span-2">
+          <Button title="Submit" type="submit" />
         </div>
       </form>
 
@@ -161,7 +162,7 @@ const InquiryForm = () => {
           given to add / submit / update your listing.
         </p>
       </div>
-    </div>
+    </>
   );
 };
 
