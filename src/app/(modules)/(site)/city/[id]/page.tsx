@@ -1,8 +1,10 @@
+import CityDetails from "@/app/shared/components/site/CityDetails";
+
 const CityNewsDetailsPage = () => {
   return (
-    <div>
-      <h1>city news details page</h1>
-    </div>
+    <>
+      <CityDetails />
+    </>
   );
 };
 
