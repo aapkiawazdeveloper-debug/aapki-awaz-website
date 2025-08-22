@@ -8,7 +8,7 @@ const BreakingNews: React.FC<{ news: string[] }> = ({ news }) => {
     return (
         <div className="flex items-center overflow-hidden bg-[#757575] h-10">
             {/* Left Label */}
-            <div className="bg-[#0000ff] text-white px-6 font-medium text-base h-full min-w-40 text-center flex items-center">
+            <div className="bg-[#0000ff] text-white px-4 font-medium text-base h-full text-center flex items-center">
                 Breaking News
             </div>
 

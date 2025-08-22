@@ -15,7 +15,7 @@ const MainNav = () => {
 
   return (
     <div className="bg-[#337ab7]">
-      <nav className="container mx-auto px-4 py-2 relative">
+      <nav className="px-4 py-2 relative">
         {/* Mobile Header */}
         <div className="flex justify-end items-center md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">

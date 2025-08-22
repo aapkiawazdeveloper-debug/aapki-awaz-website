@@ -29,7 +29,7 @@ const SiteLayout = ({ children }: { children: React.ReactNode }) => {
       <body className="font-inter">
         <Header />
 
-        <div className="container mx-auto px-4 py-4 grid grid-cols-12 gap-6">
+        <div className="px-4 py-4 grid grid-cols-12 gap-6">
           <main className="col-span-12 lg:col-span-9">{children}</main>
 
           <div className="col-span-12 lg:col-span-3">
