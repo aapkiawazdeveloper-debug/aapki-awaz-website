@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     description: "Next.js auth",
 };
 
-const SiteLayout = ({ children }: { children: React.ReactNode }) => {
+const AuthLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <html lang="en">
             <body>
@@ -16,4 +16,4 @@ const SiteLayout = ({ children }: { children: React.ReactNode }) => {
     )
 }
 
-export default SiteLayout;
+export default AuthLayout;
