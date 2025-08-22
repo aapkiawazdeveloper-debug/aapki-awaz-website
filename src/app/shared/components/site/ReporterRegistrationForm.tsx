@@ -4,23 +4,26 @@ import { useState } from "react";
 import CustomInput from "./ui/form/CustomInput";
 import CustomRadioGroup from "./ui/form/CustomRadioGroup";
 import CustomTextarea from "./ui/form/CustomTextarea";
-import ReCAPTCHA from "react-google-recaptcha";
 import CustomCheckbox from "./ui/form/CustomCheckbox";
-import Link from "next/link";
+import ReCAPTCHA from "react-google-recaptcha";
 import Button from "./ui/buttons/Button";
 
-const InquiryForm = () => {
+const ReporterRegistrationForm = () => {
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
   return (
     <>
-      <form className="grid grid-cols-12 gap-3">
-        <div className="col-span-12">
-          <CustomInput label="Name" />
+      <form className="grid grid-cols-12 gap-4">
+        <div className="col-span-12 sm:col-span-6">
+          <CustomInput id="PersonName" label="Person Name:" />
         </div>
 
-        <div className="col-span-12">
+        <div className="col-span-12 sm:col-span-6">
+          <CustomInput id="FatherName" label="Father / Spouce Name:" />
+        </div>
+
+        <div className="col-span-6">
           <CustomRadioGroup
             label="Gender"
             name="gender"
@@ -31,55 +34,74 @@ const InquiryForm = () => {
           />
         </div>
 
+        <div className="col-span-12 sm:col-span-6">
+          <CustomInput id="businessName" label="Office / Business Name:" />
+        </div>
+
         <div className="col-span-12">
           <CustomTextarea
-            label="Product / Service Detail"
-            id="message"
+            label="Product / Service Detail:"
+            id="productDetails"
             rows={3}
           />
         </div>
 
         <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Office / Business Name" />
+          <CustomInput id="businessDesignation" label="Business Designation:" />
         </div>
 
         <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Office / Business Name" />
+          <CustomInput id="profession" label="Profession:" />
         </div>
 
         <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Profession" />
+          <CustomInput id="email" label="E-mail:" />
         </div>
 
         <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="E-mail" />
+          <CustomInput id="website" label="Website:" />
         </div>
 
         <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Website" />
+          <CustomInput id="homePhone" label="Home Phone:" />
         </div>
 
         <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Office Number" />
+          <CustomInput id="officeNumber" label="Office Number:" />
         </div>
 
         <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Mobile Number" />
+          <CustomInput id="mobileNumber" label="Mobile Number:" />
         </div>
 
         <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Mobile Number" />
-        </div>
-
-        <div className="col-span-12 sm:col-span-6">
-          <CustomTextarea label="Office Address" id="office_address" rows={3} />
+          <CustomInput id="mobileNumber" label="Mobile Number:" />
         </div>
 
         <div className="col-span-12 sm:col-span-6">
           <CustomTextarea
-            label="Business Profile Description"
-            id="profile_description"
+            label="Residence Address:"
+            id="residenceAddress"
             rows={3}
+          />
+        </div>
+
+        <div className="col-span-12 sm:col-span-6">
+          <CustomTextarea label="Office Address:" id="officeAddress" rows={3} />
+        </div>
+
+        <div className="col-span-12">
+          <CustomTextarea
+            label="Factory Address:"
+            id="factoryAddress"
+            rows={3}
+          />
+        </div>
+
+        <div className="col-span-12">
+          <CustomInput
+            id="businessProfileDescription"
+            label="Business Profile Description:"
           />
         </div>
 
@@ -90,34 +112,8 @@ const InquiryForm = () => {
             onChange={(e) => setIsChecked(e.target.checked)}
             label={
               <>
-                I agree to be a member of{" "}
-                <Link
-                  href="https://www.aapkiawaz.in/"
-                  target="_blank"
-                  className="text-[#337ab7] underline"
-                >
-                  https://www.aapkiawaz.in/
-                </Link>{" "}
-                and agree to receive promotional information via E-Mail, SMS,
-                Voice Call, WhatsApp, Rich Communication Services (“RCS”) and
-                Voice. Please do go through the{" "}
-                <Link
-                  href="/terms"
-                  target="_blank"
-                  className="text-[#337ab7] underline"
-                >
-                  Terms & Conditions
-                </Link>{" "}
-                before using any of the services. By submitting the form, I
-                agree to the{" "}
-                <Link
-                  href="/privacy"
-                  target="_blank"
-                  className="text-[#337ab7] underline"
-                >
-                  Privacy Policy
-                </Link>
-                .
+                I agree to be a member of https://www.aapkiawaz.in/ and agree to
+                receive promotional information via E-Mail, SMS and Call{" "}
               </>
             }
           />
@@ -125,7 +121,7 @@ const InquiryForm = () => {
 
         <div className="col-span-12">
           <ReCAPTCHA
-            className="mt-4"
+            className="mt-2"
             sitekey={"6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"}
             onChange={(value) => setCaptchaValue(value)}
           />
@@ -135,7 +131,6 @@ const InquiryForm = () => {
           <Button title="Submit" type="submit" />
         </div>
       </form>
-
       <div className="flex flex-col gap-y-1 mt-4">
         <h2 className="text-xl font-medium">DISCLAIMER</h2>
         <p className="text-sm text-[#666] font-normal">
@@ -166,4 +161,4 @@ const InquiryForm = () => {
   );
 };
 
-export default InquiryForm;
+export default ReporterRegistrationForm;

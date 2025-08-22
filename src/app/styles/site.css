@@ -27,3 +27,7 @@
   display: inline-flex;
   animation: marquee 50s linear infinite;
 }
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

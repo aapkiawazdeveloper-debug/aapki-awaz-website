@@ -1,7 +1,7 @@
-import ArticleCard from "@/app/shared/components/site/ui/cards/ArticleCard";
 import Pagination from "@/app/shared/components/site/Pagination";
-import PageHeader from "@/app/shared/components/site/ui/PageHeader";
+import ArticleCard from "@/app/shared/components/site/ui/cards/ArticleCard";
 import PageFilter from "@/app/shared/components/site/ui/filters/PageFilter";
+import PageHeader from "@/app/shared/components/site/ui/PageHeader";
 
 const buttons = [
   {
@@ -11,10 +11,10 @@ const buttons = [
   },
 ];
 
-const VideoInterviewPage = () => {
+const BusinessNewsPage = () => {
   return (
     <>
-      <PageHeader pageTitle="Video Interview" />
+      <PageHeader pageTitle="Business News" buttons={buttons} />
 
       <PageFilter />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -30,4 +30,4 @@ const VideoInterviewPage = () => {
   );
 };
 
-export default VideoInterviewPage;
+export default BusinessNewsPage;

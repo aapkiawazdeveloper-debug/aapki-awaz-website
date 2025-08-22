@@ -4,23 +4,21 @@ import { useState } from "react";
 import CustomInput from "./ui/form/CustomInput";
 import CustomRadioGroup from "./ui/form/CustomRadioGroup";
 import CustomTextarea from "./ui/form/CustomTextarea";
-import ReCAPTCHA from "react-google-recaptcha";
 import CustomCheckbox from "./ui/form/CustomCheckbox";
-import Link from "next/link";
+import ReCAPTCHA from "react-google-recaptcha";
 import Button from "./ui/buttons/Button";
+import CustomDatePicker from "./ui/form/DatePicker";
+import { FiCalendar } from "react-icons/fi";
+import CustomImageUploader from "./ui/form/CustomImageUploader";
 
-const InquiryForm = () => {
+const BusinessAssociatesReporterRegistrationForm = () => {
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
   return (
     <>
-      <form className="grid grid-cols-12 gap-3">
-        <div className="col-span-12">
-          <CustomInput label="Name" />
-        </div>
-
-        <div className="col-span-12">
+      <form className="grid grid-cols-12 gap-4">
+        <div className="col-span-6">
           <CustomRadioGroup
             label="Gender"
             name="gender"
@@ -31,55 +29,71 @@ const InquiryForm = () => {
           />
         </div>
 
-        <div className="col-span-12">
-          <CustomTextarea
-            label="Product / Service Detail"
-            id="message"
-            rows={3}
+        <div className="col-span-12 sm:col-span-6">
+          <CustomInput id="personName" label="Person Name:" />
+        </div>
+
+        <div className="col-span-12 sm:col-span-6">
+          <CustomInput id="profession" label="Profession:" />
+        </div>
+
+        <div className="col-span-12 sm:col-span-6">
+          <CustomInput id="education" label="Education:" />
+        </div>
+
+        <div className="col-span-12 sm:col-span-6">
+          <CustomInput id="email" label="E-mail:" />
+        </div>
+
+        <div className="col-span-12 sm:col-span-6">
+          <CustomInput id="homePhone" label="Home Phone:" />
+        </div>
+
+        <div className="col-span-12 sm:col-span-6">
+          <CustomInput id="mobileNumber" label="Mobile Number:" />
+        </div>
+
+        <div className="col-span-12 sm:col-span-6">
+          <CustomInput id="whatsappNumber" label="Whatsapp Number:" />
+        </div>
+
+        <div className="col-span-12 sm:col-span-6">
+          <CustomDatePicker
+            id="dob"
+            label="Date of Birth"
+            icon={<FiCalendar />}
           />
         </div>
 
         <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Office / Business Name" />
+          <CustomDatePicker
+            id="anniversaryDate"
+            label="Date of Anniversary"
+            icon={<FiCalendar />}
+          />
+        </div>
+
+        <div className="col-span-12">
+          <CustomTextarea label="Address:" id="address" rows={3} />
         </div>
 
         <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Office / Business Name" />
+          <CustomInput id="city" label="City:" />
         </div>
 
         <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Profession" />
+          <CustomInput id="state" label="State:" />
         </div>
 
         <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="E-mail" />
+          <CustomInput id="country" label="Country:" />
         </div>
 
-        <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Website" />
-        </div>
-
-        <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Office Number" />
-        </div>
-
-        <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Mobile Number" />
-        </div>
-
-        <div className="col-span-12 sm:col-span-6">
-          <CustomInput label="Mobile Number" />
-        </div>
-
-        <div className="col-span-12 sm:col-span-6">
-          <CustomTextarea label="Office Address" id="office_address" rows={3} />
-        </div>
-
-        <div className="col-span-12 sm:col-span-6">
-          <CustomTextarea
-            label="Business Profile Description"
-            id="profile_description"
-            rows={3}
+        <div className="col-span-12">
+          <CustomImageUploader
+            id="profilePic"
+            label="Profile Picture"
+            onChange={(file) => console.log("Uploaded File:", file)}
           />
         </div>
 
@@ -90,44 +104,10 @@ const InquiryForm = () => {
             onChange={(e) => setIsChecked(e.target.checked)}
             label={
               <>
-                I agree to be a member of{" "}
-                <Link
-                  href="https://www.aapkiawaz.in/"
-                  target="_blank"
-                  className="text-[#337ab7] underline"
-                >
-                  https://www.aapkiawaz.in/
-                </Link>{" "}
-                and agree to receive promotional information via E-Mail, SMS,
-                Voice Call, WhatsApp, Rich Communication Services (“RCS”) and
-                Voice. Please do go through the{" "}
-                <Link
-                  href="/terms"
-                  target="_blank"
-                  className="text-[#337ab7] underline"
-                >
-                  Terms & Conditions
-                </Link>{" "}
-                before using any of the services. By submitting the form, I
-                agree to the{" "}
-                <Link
-                  href="/privacy"
-                  target="_blank"
-                  className="text-[#337ab7] underline"
-                >
-                  Privacy Policy
-                </Link>
-                .
+                I agree to be a member of https://www.aapkiawaz.in/ and agree to
+                receive promotional information via E-Mail, SMS and Call.{" "}
               </>
             }
-          />
-        </div>
-
-        <div className="col-span-12">
-          <ReCAPTCHA
-            className="mt-4"
-            sitekey={"6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"}
-            onChange={(value) => setCaptchaValue(value)}
           />
         </div>
 
@@ -135,7 +115,6 @@ const InquiryForm = () => {
           <Button title="Submit" type="submit" />
         </div>
       </form>
-
       <div className="flex flex-col gap-y-1 mt-4">
         <h2 className="text-xl font-medium">DISCLAIMER</h2>
         <p className="text-sm text-[#666] font-normal">
@@ -159,11 +138,11 @@ const InquiryForm = () => {
           https://www.aapkiawaz.in/. If you find an error, please notify us. To
           add or remove or amend the listing in https://www.aapkiawaz.in/ kindly
           send us an email at info@www.aapkiawaz.in or kindly fill up the form
-          given to add / submit / update your listing.
+          given to add / submit / update your listing
         </p>
       </div>
     </>
   );
 };
 
-export default InquiryForm;
+export default BusinessAssociatesReporterRegistrationForm;
