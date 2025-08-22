@@ -1,4 +1,4 @@
-import CustomImage from "./CustomImage"
+import CustomImage from "../../CustomImage"
 
 const images = [
     {
