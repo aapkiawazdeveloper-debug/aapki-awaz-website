@@ -677,7 +677,7 @@ const CategoryNavbar = () => {
                   <div>
                     <li>
                       <Link
-                        href="/business/trade-industries"
+                        href="/business-professional-news/trade-industries"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         BUSINESS - TRADE & INDUSTRIES Directory
@@ -685,7 +685,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/trade-association"
+                        href="/business-professional-news/trade-association"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         TRADE & INDUSTRIES ASSOCIATION
@@ -693,7 +693,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/life-members"
+                        href="/business-professional-news/life-members"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         LIFE MEMBERS
@@ -701,7 +701,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/patron-members"
+                        href="/business-professional-news/patron-members"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         PATRON MEMBERS
@@ -713,7 +713,7 @@ const CategoryNavbar = () => {
                   <div>
                     <li>
                       <Link
-                        href="/business/naturopathy"
+                        href="/business-professional-news/naturopathy"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Naturopathy - Acupuncture & Acupressure
@@ -721,7 +721,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/hospitals"
+                        href="/business-professional-news/hospitals"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         All India Hospitals / Healthcare
@@ -729,7 +729,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/diagnostic-centre"
+                        href="/business-professional-news/diagnostic-centre"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Diagnostic Centre
@@ -737,7 +737,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/doctors"
+                        href="/business-professional-news/doctors"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Doctors
@@ -745,7 +745,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/hospitals-list"
+                        href="/business-professional-news/hospitals-list"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Hospitals
@@ -753,7 +753,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/pharma"
+                        href="/business-professional-news/pharma"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Pharma Companies & Dealer
@@ -765,7 +765,7 @@ const CategoryNavbar = () => {
                   <div>
                     <li>
                       <Link
-                        href="/business/education"
+                        href="/business-professional-news/education"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Education Directory
@@ -773,7 +773,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/hotels"
+                        href="/business-professional-news/hotels"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Indian Hotel Directory
@@ -781,7 +781,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/automobile"
+                        href="/business-professional-news/automobile"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Automobile Dealers
@@ -789,7 +789,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/safety-industry"
+                        href="/business-professional-news/safety-industry"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Safety Industry Directory
@@ -797,7 +797,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/fire-industry"
+                        href="/business-professional-news/fire-industry"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Fire Industry Directory
@@ -805,7 +805,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/safety-security"
+                        href="/business-professional-news/safety-security"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Safety Security & Fire Directory
@@ -817,7 +817,7 @@ const CategoryNavbar = () => {
                   <div>
                     <li>
                       <Link
-                        href="/business/caterers"
+                        href="/business-professional-news/caterers"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Caterers Dealers Directory
@@ -825,7 +825,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/tent-house"
+                        href="/business-professional-news/tent-house"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Tent House and Decorators
@@ -833,7 +833,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/gems"
+                        href="/business-professional-news/gems"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Gems & Jewellery
@@ -841,7 +841,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/marriage-garden"
+                        href="/business-professional-news/marriage-garden"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Marriage Garden / Banquet Halls / Wedding Hotels
@@ -849,7 +849,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/business/hardware"
+                        href="/business-professional-news/hardware"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Hardware & Sanitaryware Dealers

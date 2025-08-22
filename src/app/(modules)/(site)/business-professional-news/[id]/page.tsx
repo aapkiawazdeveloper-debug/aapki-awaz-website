@@ -1,8 +1,10 @@
+import BusinessDetailsPage from "@/app/shared/components/site/BusinessDetailsPage";
+
 const BusinessProfessionalNewsDetailsPage = () => {
   return (
-    <div>
-      <h1>BusinessProfessionalNewsDetailsPage</h1>
-    </div>
+    <>
+      <BusinessDetailsPage />
+    </>
   );
 };
 
