@@ -479,7 +479,7 @@ const CategoryNavbar = () => {
                   <div>
                     <li>
                       <Link
-                        href="/news/events"
+                        href="/more-news/events"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         News / Events
@@ -487,7 +487,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/national"
+                        href="/more-news/national"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         National News
@@ -495,7 +495,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/congress-rajasthan"
+                        href="/more-news/congress-rajasthan"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Congress Rajasthan News
@@ -503,7 +503,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/congress-national"
+                        href="/more-news/congress-national"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Congress National News
@@ -511,7 +511,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/bjp-national"
+                        href="/more-news/bjp-national"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         BJP National News
@@ -519,7 +519,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/it-computer"
+                        href="/more-news/it-computer"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         IT - Computer / Laptop
@@ -531,7 +531,7 @@ const CategoryNavbar = () => {
                   <div>
                     <li>
                       <Link
-                        href="/news/sports"
+                        href="/more-news/sports"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Sports
@@ -539,7 +539,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/religious"
+                        href="/more-news/religious"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Religious News
@@ -547,7 +547,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/yuva-morcha"
+                        href="/more-news/yuva-morcha"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Yuva Morcha BJP - News / Events
@@ -555,7 +555,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/mahila-morcha"
+                        href="/more-news/mahila-morcha"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Mahila Morcha BJP - News / Events
@@ -563,7 +563,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/jda"
+                        href="/more-news/jda"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         JDA News
@@ -575,7 +575,7 @@ const CategoryNavbar = () => {
                   <div>
                     <li>
                       <Link
-                        href="/news/new-delhi"
+                        href="/more-news/new-delhi"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         New Delhi News
@@ -583,7 +583,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/crime"
+                        href="/more-news/crime"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Crime
@@ -591,7 +591,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/business"
+                        href="/more-news/business"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Business News
@@ -599,7 +599,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/automobile-guide"
+                        href="/more-news/automobile-guide"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Automobile Guide
@@ -607,7 +607,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/wish"
+                        href="/more-news/wish"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Wish - Shubh Kamna - Congratulations
@@ -615,7 +615,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/railway"
+                        href="/more-news/railway"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Railway News
@@ -627,7 +627,7 @@ const CategoryNavbar = () => {
                   <div>
                     <li>
                       <Link
-                        href="/news/medical-guide"
+                        href="/more-news/medical-guide"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Medical and Health Guide
@@ -635,7 +635,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/medical-videos"
+                        href="/more-news/medical-videos"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Medical and Health Guide - Video Interviews
@@ -643,7 +643,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/news/cab-caa-nrc"
+                        href="/more-news/cab-caa-nrc"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         CAB - CAA - NRC Video News

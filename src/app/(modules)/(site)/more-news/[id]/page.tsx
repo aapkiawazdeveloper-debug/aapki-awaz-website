@@ -1,8 +1,10 @@
+import MoreNewsDetails from "@/app/shared/components/site/MoreNewsDetails";
+
 const MoreNewsDetailsPage = () => {
   return (
-    <div>
-      <h1>MoreNewsDetailsPage</h1>
-    </div>
+    <>
+      <MoreNewsDetails />
+    </>
   );
 };
 
