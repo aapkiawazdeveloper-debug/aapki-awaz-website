@@ -1,8 +1,12 @@
+import BusinessAssociatesLoginFormViaUserId from "@/app/shared/components/site/BusinessAssociatesLoginFormViaUserId";
+import Hero from "@/app/shared/components/site/ui/hero/Hero";
+
 const LoginViaUseridPage = () => {
   return (
-    <div>
-      <h1>LoginViaUseridPage</h1>
-    </div>
+    <>
+      <Hero title="Passcode" />
+      <BusinessAssociatesLoginFormViaUserId />
+    </>
   );
 };
 
