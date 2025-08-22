@@ -1,4 +1,6 @@
-import { ReactNode } from "react";
+"use client";
+
+import { ReactNode, useRef } from "react";
 
 const CustomDatePicker: React.FC<{
   id?: string;
@@ -7,6 +9,14 @@ const CustomDatePicker: React.FC<{
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }> = ({ id = "date", label = "Select Date", icon, value, onChange }) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const datePickerOpen = () => {
+    if (inputRef.current && "showPicker" in inputRef.current) {
+      (inputRef.current as any).showPicker();
+    }
+  };
+
   return (
     <div className="w-full">
       {label && (
@@ -20,15 +30,17 @@ const CustomDatePicker: React.FC<{
 
       <div className="relative">
         {icon && (
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">
+          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">
             {icon}
           </span>
         )}
         <input
+          ref={inputRef}
           type="date"
           id={id}
           value={value}
           onChange={onChange}
+          onClick={datePickerOpen}
           className={`border border-[#ccc] focus:border-[#ccc] focus:ring-0 rounded-sm text-[#555] px-4 py-1 h-[34px] w-full outline-none text-sm ${
             icon && "pl-9"
           }`}
