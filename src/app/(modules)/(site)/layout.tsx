@@ -30,9 +30,9 @@ const SiteLayout = ({ children }: { children: React.ReactNode }) => {
         <Header />
 
         <div className="px-4 py-4 grid grid-cols-12 gap-6">
-          <main className="col-span-12 lg:col-span-9">{children}</main>
+          <main className="col-span-12 lg:col-span-10">{children}</main>
 
-          <div className="col-span-12 lg:col-span-3">
+          <div className="col-span-8 sm:col-span-5 lg:col-span-2">
             <Sidebar />
           </div>
         </div>
