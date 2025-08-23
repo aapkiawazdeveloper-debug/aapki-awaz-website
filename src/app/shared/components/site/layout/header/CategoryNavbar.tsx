@@ -197,7 +197,7 @@ const CategoryNavbar = () => {
                   <div>
                     <li>
                       <Link
-                        href="/city/jaipur"
+                        href="/city-news/jaipur"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Jaipur News
@@ -205,7 +205,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/kota"
+                        href="/city-news/kota"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Kota News
@@ -213,7 +213,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/ajmer"
+                        href="/city-news/ajmer"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Ajmer News
@@ -221,7 +221,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/jodhpur"
+                        href="/city-news/jodhpur"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Jodhpur News
@@ -229,7 +229,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/udaipur"
+                        href="/city-news/udaipur"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Udaipur News
@@ -241,7 +241,7 @@ const CategoryNavbar = () => {
                   <div>
                     <li>
                       <Link
-                        href="/city/baran"
+                        href="/city-news/baran"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Baran News
@@ -249,7 +249,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/bhilwara"
+                        href="/city-news/bhilwara"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Bhilwara News
@@ -257,7 +257,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/beawar"
+                        href="/city-news/beawar"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Beawar News
@@ -265,7 +265,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/bharatpur"
+                        href="/city-news/bharatpur"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Bharatpur News
@@ -273,7 +273,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/barmer"
+                        href="/city-news/barmer"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Barmer News
@@ -281,7 +281,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/bikaner"
+                        href="/city-news/bikaner"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Bikaner News
@@ -293,7 +293,7 @@ const CategoryNavbar = () => {
                   <div>
                     <li>
                       <Link
-                        href="/city/bundi"
+                        href="/city-news/bundi"
                         className="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Bundi News
@@ -301,7 +301,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/chittorgarh"
+                        href="/city-news/chittorgarh"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Chittorgarh News
@@ -309,7 +309,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/churu"
+                        href="/city-news/churu"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Churu News
@@ -317,7 +317,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/dausa"
+                        href="/city-news/dausa"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Dausa News
@@ -325,7 +325,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/dholpur"
+                        href="/city-news/dholpur"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Dholpur News
@@ -333,7 +333,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/jaisalmer"
+                        href="/city-news/jaisalmer"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Jaisalmer News
@@ -341,7 +341,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/tonk"
+                        href="/city-news/tonk"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Tonk News
@@ -353,7 +353,7 @@ const CategoryNavbar = () => {
                   <div>
                     <li>
                       <Link
-                        href="/city/jalour"
+                        href="/city-news/jalour"
                         className="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         Jalour News
@@ -361,7 +361,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/jhalawar"
+                        href="/city-news/jhalawar"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Jhalawar News
@@ -369,7 +369,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/karauli"
+                        href="/city-news/karauli"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Karauli News
@@ -377,7 +377,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/nagour"
+                        href="/city-news/nagour"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Nagour News
@@ -385,7 +385,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/pali"
+                        href="/city-news/pali"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Pali News
@@ -393,7 +393,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/pratapgarh"
+                        href="/city-news/pratapgarh"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Pratapgarh News
@@ -401,7 +401,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/rajsamand"
+                        href="/city-news/rajsamand"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Rajsamand News
@@ -409,7 +409,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/sawai-madhopur"
+                        href="/city-news/sawai-madhopur"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Sawai Madhopur News
@@ -421,7 +421,7 @@ const CategoryNavbar = () => {
                   <div>
                     <li>
                       <Link
-                        href="/city/new-delhi"
+                        href="/city-news/new-delhi"
                         className="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
                       >
                         New Delhi News
@@ -429,7 +429,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/crime"
+                        href="/city-news/crime"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Crime
@@ -437,7 +437,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/jda"
+                        href="/city-news/jda"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         JDA News
@@ -445,7 +445,7 @@ const CategoryNavbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/city/business"
+                        href="/city-news/business"
                         className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
                       >
                         Business News
