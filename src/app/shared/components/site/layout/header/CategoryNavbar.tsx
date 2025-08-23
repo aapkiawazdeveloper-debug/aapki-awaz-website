@@ -951,7 +951,10 @@ const CategoryNavbar = () => {
             </li>
 
             <li>
-              <Link href="/" className="text-[#0000ff] text-sm font-poppins">
+              <Link
+                href="/congress-leader"
+                className="text-[#0000ff] text-sm font-poppins"
+              >
                 Congress Leader - INC
               </Link>
             </li>
