@@ -7,7 +7,7 @@ const Button: React.FC<{
     <button
       type={type}
       onClick={onClick}
-      className="block px-4 py-1 text-center w-full text-sm font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition cursor-pointer"
+      className="block px-4 py-1 text-center text-sm font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition cursor-pointer"
     >
       {title}
     </button>
