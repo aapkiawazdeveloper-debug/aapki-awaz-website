@@ -880,7 +880,7 @@ const CategoryNavbar = () => {
               >
                 <li>
                   <Link
-                    href="/reporter/astrology"
+                    href="/religion/astrology"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Astrology
@@ -888,7 +888,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/vastu"
+                    href="/religion/vastu"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Vastu
@@ -896,7 +896,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/horoscope"
+                    href="/religion/horoscope"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Horoscope
@@ -904,7 +904,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/festivals"
+                    href="/religion/festivals"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Festivals

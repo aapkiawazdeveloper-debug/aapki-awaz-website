@@ -336,7 +336,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/astrology"
+                    href="/religion/astrology"
                     className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Astrology
@@ -344,7 +344,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/vastu"
+                    href="/religion/vastu"
                     className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Vastu
