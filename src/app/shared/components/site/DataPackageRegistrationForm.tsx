@@ -135,10 +135,10 @@ const DataPackageRegistrationForm = () => {
               badgeTextColor="#fff"
               profileView={250}
               options={[
-                { label: "30 Days", price: "₹7,000", duration: "30 Days" },
-                { label: "90 Days", price: "₹9,000", duration: "90 Days" },
-                { label: "180 Days", price: "₹11,000", duration: "180 Days" },
-                { label: "365 Days", price: "₹13,000", duration: "365 Days" },
+                { label: "30 Days", price: "₹10,000", duration: "30 Days" },
+                { label: "90 Days", price: "₹13,000", duration: "90 Days" },
+                { label: "180 Days", price: "₹15,000", duration: "180 Days" },
+                { label: "365 Days", price: "₹17,000", duration: "365 Days" },
               ]}
               selected={
                 selectedPackage?.name === "Silver"
@@ -160,10 +160,10 @@ const DataPackageRegistrationForm = () => {
               badgeTextColor="#fff"
               profileView={500}
               options={[
-                { label: "30 Days", price: "₹10,000", duration: "30 Days" },
-                { label: "90 Days", price: "₹13,000", duration: "90 Days" },
-                { label: "180 Days", price: "₹15,000", duration: "180 Days" },
-                { label: "365 Days", price: "₹17,000", duration: "365 Days" },
+                { label: "30 Days", price: "₹15,000", duration: "30 Days" },
+                { label: "90 Days", price: "₹19,500", duration: "90 Days" },
+                { label: "180 Days", price: "₹22,500", duration: "180 Days" },
+                { label: "365 Days", price: "₹22,500", duration: "365 Days" },
               ]}
               selected={
                 selectedPackage?.name === "Gold" ? selectedPackage.duration : ""
@@ -183,10 +183,10 @@ const DataPackageRegistrationForm = () => {
               badgeTextColor="#fff"
               profileView={1000}
               options={[
-                { label: "30 Days", price: "₹15,000", duration: "30 Days" },
-                { label: "90 Days", price: "₹20,000", duration: "90 Days" },
-                { label: "180 Days", price: "₹25,000", duration: "180 Days" },
-                { label: "365 Days", price: "₹30,000", duration: "365 Days" },
+                { label: "30 Days", price: "₹25,000", duration: "30 Days" },
+                { label: "90 Days", price: "₹32,500", duration: "90 Days" },
+                { label: "180 Days", price: "₹37,500", duration: "180 Days" },
+                { label: "365 Days", price: "₹42,500", duration: "365 Days" },
               ]}
               selected={
                 selectedPackage?.name === "Platinum"
