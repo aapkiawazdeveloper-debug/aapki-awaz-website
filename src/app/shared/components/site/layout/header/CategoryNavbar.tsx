@@ -165,7 +165,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/entertainment/registration"
+                    href="/entertainment/data-package-registration"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Bollywood Directory Data Package - User Registration Form
