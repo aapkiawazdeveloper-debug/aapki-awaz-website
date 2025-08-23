@@ -10,7 +10,10 @@ const Hero: React.FC<{ title: string }> = ({ title }) => {
 
       {/* Breadcrumb */}
       <div className="mt-3">
-        <BreadCrumb items={[{ label: "Home", href: "/" }, { label: title }]} />
+        <BreadCrumb
+          mode="hero"
+          items={[{ label: "Home", href: "/" }, { label: "Passcode" }]}
+        />
       </div>
     </div>
   );
