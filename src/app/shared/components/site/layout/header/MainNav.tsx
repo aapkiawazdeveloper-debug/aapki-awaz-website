@@ -127,27 +127,27 @@ const MainNav = () => {
             </li>
 
             <li>
-              <Link href="/" className="text-white text-sm font-poppins">
+              <Link href="/leader-of-rajasthan-minister-mla-mp-district" className="text-white text-sm font-poppins">
                 Member of Parliament - MP
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white text-sm font-poppins">
+              <Link href="/leader-of-rajasthan-minister-mla" className="text-white text-sm font-poppins">
                 MLA of Rajasthan
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white text-sm font-poppins">
+              <Link href="/panchayat-samiti-pradhan-rajasthan" className="text-white text-sm font-poppins">
                 Panchayat Samiti - Pradhan
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white text-sm font-poppins">
+              <Link href="/video-interview" className="text-white text-sm font-poppins">
                 Video Interview
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white text-sm font-poppins">
+              <Link href="/business-news" className="text-white text-sm font-poppins">
                 Business News
               </Link>
             </li>

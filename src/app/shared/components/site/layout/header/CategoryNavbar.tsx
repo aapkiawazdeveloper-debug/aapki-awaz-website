@@ -56,7 +56,7 @@ const CategoryNavbar = () => {
               >
                 <li>
                   <Link
-                    href="/reporter/login-via-mobile-number"
+                    href="/leader-of-rajasthan-minister-mla-mp-district"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Member of Parliament - MP
@@ -64,7 +64,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/login-via-userid"
+                    href="/leader-of-rajasthan-minister-mla"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     MLA of Rajasthan
@@ -72,7 +72,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/registration"
+                    href="/mayor-chairman-president-news-photos"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Mayor - Chairman - President
@@ -80,7 +80,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/registration"
+                    href="/rajasthan-zila-pramukh"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Rajasthan - Zila Pramukh
@@ -88,7 +88,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/registration"
+                    href="/panchayat-samiti-pradhan-rajasthan"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Panchayat Samiti - Pradhan
@@ -96,7 +96,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/registration"
+                    href="/sarpanch-rajasthan"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Sarpanch - Rajasthan
@@ -880,7 +880,7 @@ const CategoryNavbar = () => {
               >
                 <li>
                   <Link
-                    href="/reporter/login-via-mobile-number"
+                    href="/reporter/astrology"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Astrology
@@ -888,7 +888,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/login-via-userid"
+                    href="/reporter/vastu"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Vastu
@@ -896,7 +896,7 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/login-via-userid"
+                    href="/reporter/horoscope"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Horoscope
@@ -904,10 +904,10 @@ const CategoryNavbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/reporter/login-via-userid"
+                    href="/reporter/festivals"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    Festivals/Festivals
+                    Festivals
                   </Link>
                 </li>
               </ul>
