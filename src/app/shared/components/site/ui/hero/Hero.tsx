@@ -12,7 +12,7 @@ const Hero: React.FC<{ title: string }> = ({ title }) => {
       <div className="mt-3">
         <BreadCrumb
           mode="hero"
-          items={[{ label: "Home", href: "/" }, { label: "Passcode" }]}
+          items={[{ label: "Home", href: "/" }, { label: title }]}
         />
       </div>
     </div>
