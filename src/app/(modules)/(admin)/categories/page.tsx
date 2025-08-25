@@ -6,6 +6,12 @@ import { Category } from "@/app/shared/types/category";
 import React from "react";
 import { FiEdit, FiTrash2 } from "react-icons/fi";
 
+export const metadata = {
+  title: "Categories - Admin Dashboard | Aapki Awaz",
+  description:
+    "Manage news categories in the admin dashboard of Aapki Awaz. Add, edit, or delete categories.",
+};
+
 const breadcrumbItems = [
   { label: "Dashboard", path: "/admin" },
   { label: "Categories" },
