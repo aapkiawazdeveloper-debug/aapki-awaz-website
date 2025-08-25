@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { FaStar, FaRegStar, FaHeart } from "react-icons/fa";
 
-interface PageProps {
+type PageProps = {
   params: {
     id: string;
   };
-}
+};
 
-const BookDetailsPage = ({ params }: PageProps) => {
+export default function BookDetailsPage({ params }: PageProps) {
   const book = {
     id: params.id,
     title: "Business Strategies 2024",
@@ -18,15 +18,15 @@ const BookDetailsPage = ({ params }: PageProps) => {
     content: `
       Chapter 1: Introduction to Business Strategies
       ------------------------------------------------
-      In today's competitive market, businesses must adapt to rapidly changing environments...
+      In today's competitive market, businesses must adapt...
 
       Chapter 2: Market Analysis
       ------------------------------------------------
-      Understanding your customers and competitors is the foundation of success...
+      Understanding your customers and competitors...
 
       Chapter 3: Digital Transformation
       ------------------------------------------------
-      Companies that embrace technology are seeing better growth and resilience...
+      Companies that embrace technology are seeing better growth...
     `,
   };
 
@@ -34,7 +34,6 @@ const BookDetailsPage = ({ params }: PageProps) => {
     <>
       {/* Top Section */}
       <div className="grid grid-cols-12 items-center gap-6">
-        {/* Left: Book Cover */}
         <div className="col-span-3">
           <div className="bg-white shadow rounded-xl overflow-hidden">
             <Image
@@ -47,22 +46,8 @@ const BookDetailsPage = ({ params }: PageProps) => {
           </div>
         </div>
 
-        {/* Right: Book Info */}
         <div className="col-span-9">
           <h1 className="text-2xl font-bold">{book.title}</h1>
-          <p className="text-base mt-2 text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-            dignissimos eligendi fuga consequatur sit repellat, corporis natus
-            quos et nisi perspiciatis quisquam officiis dicta in totam non ab
-            repudiandae soluta a! Esse eum molestias quas tenetur doloribus
-            dolor animi quibusdam nihil laboriosam ullam ab laudantium, eveniet
-            quaerat magni ut quam molestiae cupiditate, officiis nisi natus
-            eligendi. Voluptatum neque illo ad veritatis laudantium eius labore
-            nesciunt qui earum aut nisi aliquam magnam consequatur aperiam, fuga
-            excepturi porro illum. Cumque itaque mollitia tempore animi vero
-            earum ipsam, ea vel nulla ex eius quod nam obcaecati praesentium
-            odit, nostrum temporibus sapiente adipisci molestiae.
-          </p>
           <p className="text-gray-600 mt-2">By {book.author}</p>
           <p className="text-sm text-gray-400">Published: {book.published}</p>
 
@@ -92,6 +77,4 @@ const BookDetailsPage = ({ params }: PageProps) => {
       </div>
     </>
   );
-};
-
-export default BookDetailsPage;
+}
