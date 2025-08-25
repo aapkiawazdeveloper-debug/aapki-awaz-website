@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 import "../../styles/globals.css";
 import Sidebar from "@/app/shared/components/admin/layout/Sidebar";
 import Header from "@/app/shared/components/admin/layout/Header";
+import Footer from "@/app/shared/components/admin/layout/Footer";
 
-const AdminLayout = ({ children }: { children: React.ReactNode }) => {
+const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -51,6 +52,7 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
           >
             <Header onToggleSidebar={toggleSidebar} />
             <main className="flex-1 overflow-y-auto p-4">{children}</main>
+            <Footer />
           </div>
         </div>
       </body>
