@@ -7,9 +7,9 @@ type PageProps = {
   };
 };
 
-export default function BookDetailsPage({ params }: PageProps) {
+const BookDetailsPage = () => {
   const book = {
-    id: params.id,
+    id: 1,
     title: "Business Strategies 2024",
     author: "John Doe",
     published: "Jan 2024",
@@ -77,4 +77,6 @@ export default function BookDetailsPage({ params }: PageProps) {
       </div>
     </>
   );
-}
+};
+
+export default BookDetailsPage;
