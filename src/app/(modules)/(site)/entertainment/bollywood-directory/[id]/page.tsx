@@ -1,8 +1,13 @@
+import ProfileDetails from "@/app/shared/components/site/ui/details/ProfileDetails";
+import PageHeader from "@/app/shared/components/site/ui/PageHeader";
+
 const BollywoodDirectoryDetailsPage = () => {
   return (
-    <div>
-      <h1>BollywoodDirectoryDetailsPage</h1>
-    </div>
+    <>
+      <PageHeader pageTitle="Profile Detail of Neha Kakkar" />
+
+      <ProfileDetails />
+    </>
   );
 };
 
