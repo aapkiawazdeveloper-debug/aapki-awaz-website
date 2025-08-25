@@ -30,8 +30,8 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const closeSidebar = () => isMobile && setIsSidebarOpen(false);
 
   return (
-    <html lang="en">
-      <body className="bg-gray-200">
+    <html lang="en" suppressHydrationWarning={true}>
+      <body className="bg-gray-100">
         <div className="flex h-screen overflow-hidden relative">
           {/* Sidebar */}
           <Sidebar isOpen={isSidebarOpen} overlayMode={true} />
