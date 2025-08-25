@@ -61,6 +61,12 @@ const ProfileDetails = () => {
             <FiMail /> moolchandmeena123@gmail.com
           </Link>
 
+          {/* Address */}
+          <p className="flex items-center gap-2 text-xs text-gray-600 font-medium mt-3">
+            <FiMapPin /> House No. Q-41, NRI colony, Haldigathi Road, Pratap
+            Nagar, Jaipur
+          </p>
+
           {/* Social Media Links */}
           <div className="flex gap-2 mt-4">
             <Link
@@ -106,12 +112,6 @@ const ProfileDetails = () => {
               <FaLinkedinIn size={14} />
             </Link>
           </div>
-
-          {/* Address */}
-          <p className="flex items-center gap-2 text-xs text-gray-600 font-medium mt-3">
-            <FiMapPin /> House No. Q-41, NRI colony, Haldigathi Road, Pratap
-            Nagar, Jaipur
-          </p>
         </div>
       </div>
     </section>
