@@ -1,8 +1,13 @@
 import Image from "next/image";
 import { FaStar, FaRegStar, FaHeart } from "react-icons/fa";
 
-const BookDetailsPage = ({ params }: { params: { id: string } }) => {
-  // Example book data (replace with API fetch later)
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+const BookDetailsPage = ({ params }: PageProps) => {
   const book = {
     id: params.id,
     title: "Business Strategies 2024",
