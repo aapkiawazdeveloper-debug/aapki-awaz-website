@@ -1,5 +1,8 @@
+"use client";
+
 import { useState } from "react";
-import { FiUpload, FiX } from "react-icons/fi";
+import { FiTrash2, FiUpload } from "react-icons/fi";
+import Image from "next/image";
 
 const CustomImageUploader: React.FC<{
   id?: string;
@@ -48,17 +51,19 @@ const CustomImageUploader: React.FC<{
           </>
         ) : (
           <div className="relative">
-            <img
+            <Image
               src={preview}
               alt="Preview"
+              width={128}
+              height={128}
               className="w-32 h-32 object-cover rounded-md border"
             />
             <button
               type="button"
               onClick={handleRemove}
-              className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600"
+              className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1.5 hover:bg-red-600 cursor-pointer"
             >
-              <FiX className="text-xs" />
+              <FiTrash2 size={16} />
             </button>
           </div>
         )}

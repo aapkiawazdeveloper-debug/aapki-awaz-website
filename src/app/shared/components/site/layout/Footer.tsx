@@ -5,22 +5,22 @@ const Footer = () => {
   return (
     <footer>
       <section className="bg-[#98AFC7] py-8">
-        <div className="container mx-auto px-4">
+        <div className="px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div>
               <ul className="space-y-4">
                 <li>
                   <Link
                     href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> home
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/leader-of-rajasthan-minister-mla-mp-district"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Member of
                     Parliament - MP
@@ -28,8 +28,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/leader-of-rajasthan-minister-mla"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> MLA of
                     Rajasthan
@@ -37,8 +37,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/mayor-chairman-president-news-photos"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Mayor -
                     Chairman - President
@@ -46,8 +46,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/rajasthan-zila-pramukh"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Rajasthan -
                     Zila Pramukh
@@ -55,8 +55,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/panchayat-samiti-pradhan-rajasthan"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Panchayat
                     Samiti - Pradhan
@@ -64,16 +64,16 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/reporter"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Reporter
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-associates"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Business
                     Associates
@@ -81,8 +81,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/leader-of-rajasthan-minister-mla-mp-district"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Member of
                     Parliament - MP
@@ -90,8 +90,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/video-interview"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Video
                     Interview
@@ -99,8 +99,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/more-news/vaish-samaj-news"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Vaish Samaj
                     News
@@ -108,8 +108,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/more-news/aap-party-news"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> AAP Party
                     News
@@ -117,8 +117,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/more-news/cab-caa-nrc-video-news"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> CAB - CAA -
                     NRC Video News
@@ -130,8 +130,8 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/leader-of-rajasthan-minister-mla"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> MLA of
                     Rajasthan
@@ -139,8 +139,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/panchayat-samiti-pradhan-rajasthan"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Panchayat
                     Samiti - Pradhan
@@ -148,8 +148,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/sarpanch-rajasthan"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Sarpanch -
                     Rajasthan
@@ -157,8 +157,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-news"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Business
                     News
@@ -166,8 +166,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/leader-of-rajasthan"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Leader of
                     Rajasthan
@@ -175,8 +175,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/leader-of-rajasthan-minister-mla"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> MLA of
                     Rajasthan
@@ -184,8 +184,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/mayor-chairman-president-news-photos"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Mayor -
                     Chairman - President
@@ -193,24 +193,24 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/city-news"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> City News
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/bjp-leader"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> BJP Leader
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/congress-leader"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Congress
                     Leader - INC
@@ -218,16 +218,16 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/contact-us"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Contact Us
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/video-interview"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Video
                     Interview
@@ -235,8 +235,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/press-release"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Press
                     Release
@@ -248,8 +248,8 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/trade-industries"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> BUSINESS -
                     TRADE & INDUSTRIES Directory
@@ -257,8 +257,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/trade-association"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> TRADE &
                     INDUSTRIES ASSOCIATION
@@ -266,8 +266,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/life-members"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> LIFE
                     MEMBERS
@@ -275,8 +275,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/patron-members"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> PATRON
                     MEMBERS
@@ -284,8 +284,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/entertainment/bollywood-directory"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Bollywood
                     Directory
@@ -293,8 +293,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/naturopathy"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Naturopathy
                     - Acupuncture & Acupressure
@@ -302,8 +302,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/hospitals"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> All India
                     Hospitals / Healthcare
@@ -311,8 +311,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/diagnostic-centre"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Diagnostic
                     Centre
@@ -320,34 +320,34 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/doctors"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Doctors
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/hospitals-list"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Hospitals
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/religion/astrology"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> ज्योतिष
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Astrology
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/religion/vastu"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
-                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> वास्तु
+                    <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Vastu
                   </Link>
                 </li>
               </ul>
@@ -356,8 +356,8 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/pharma"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Pharma
                     Companies & Dealer
@@ -365,8 +365,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/education"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Education
                     Directory
@@ -374,8 +374,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/hotels"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Indian
                     Hotel Directory
@@ -383,8 +383,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/automobile"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Automobile
                     Dealers
@@ -392,8 +392,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/safety-security"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Safety
                     Industry Directory
@@ -401,8 +401,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/fire-industry"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Fire
                     Industry Directory
@@ -410,8 +410,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/safety-security"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Safety
                     Security & Fire Directory
@@ -419,8 +419,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/caterers"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Caterers
                     Dealers Directory
@@ -428,8 +428,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/tent-house"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Tent House
                     and Decorators
@@ -437,8 +437,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/naturopathy-yoga-acupuncture-diet-therapy"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Naturopathy
                     - Yoga - Acupuncture - Diet therapy
@@ -446,8 +446,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/astrology-jyotish-vaastu-palmistry-expert"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Astrology,
                     Jyotish Vaastu, Palmistry, Yoga - Acupuncture - Diet therapy
@@ -456,8 +456,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="flex items-center gap-3 text-white uppercase font-medium font-poppins text-sm"
+                    href="/business-professional-news/automobile-guide"
+                    className="inline-flex items-center gap-3 text-white capitalize font-medium font-poppins text-sm"
                   >
                     <FaBullhorn className="w-4 h-4 flex-shrink-0" /> Automobile
                     Guide
@@ -470,7 +470,7 @@ const Footer = () => {
       </section>
 
       <section className="bg-[#8B6C42] py-4">
-        <div className="container mx-auto px-4">
+        <div className="px-4">
           <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             <li>
               <Link
@@ -565,7 +565,7 @@ const Footer = () => {
       </section>
 
       <section className="bg-[#23221e] py-2">
-        <div className="container mx-auto px-4">
+        <div className="px-4">
           <p className="text-center text-xs text-white">
             © 2025 AAP KI AWAZ PUBLICATION. All rights reserved. |{" "}
             <Link href="/privacy-policy" className="text-[#337ab7]">

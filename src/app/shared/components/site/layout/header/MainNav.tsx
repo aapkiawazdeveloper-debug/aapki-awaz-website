@@ -15,7 +15,7 @@ const MainNav = () => {
 
   return (
     <div className="bg-[#337ab7]">
-      <nav className="container mx-auto px-4 py-2 relative">
+      <nav className="px-4 py-2 relative">
         {/* Mobile Header */}
         <div className="flex justify-end items-center md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
@@ -127,28 +127,48 @@ const MainNav = () => {
             </li>
 
             <li>
-              <Link href="/" className="text-white text-sm font-poppins">
+              <Link
+                href="/leader-of-rajasthan-minister-mla-mp-district"
+                className="text-white text-sm font-poppins"
+              >
                 Member of Parliament - MP
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white text-sm font-poppins">
+              <Link
+                href="/leader-of-rajasthan-minister-mla"
+                className="text-white text-sm font-poppins"
+              >
                 MLA of Rajasthan
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white text-sm font-poppins">
+              <Link
+                href="/panchayat-samiti-pradhan-rajasthan"
+                className="text-white text-sm font-poppins"
+              >
                 Panchayat Samiti - Pradhan
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white text-sm font-poppins">
+              <Link
+                href="/video-interview"
+                className="text-white text-sm font-poppins"
+              >
                 Video Interview
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white text-sm font-poppins">
+              <Link
+                href="/business-news"
+                className="text-white text-sm font-poppins"
+              >
                 Business News
+              </Link>
+            </li>
+            <li>
+              <Link href="/ebooks" className="text-white text-sm font-poppins">
+                E-Books
               </Link>
             </li>
           </ul>

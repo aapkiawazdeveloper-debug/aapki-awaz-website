@@ -7,7 +7,7 @@ import CustomTextarea from "./ui/form/CustomTextarea";
 import CustomCheckbox from "./ui/form/CustomCheckbox";
 import ReCAPTCHA from "react-google-recaptcha";
 import Button from "./ui/buttons/Button";
-import CustomDatePicker from "./ui/form/DatePicker";
+import CustomDatePicker from "./ui/form/CustomDatePicker";
 import { FiCalendar } from "react-icons/fi";
 import CustomImageUploader from "./ui/form/CustomImageUploader";
 

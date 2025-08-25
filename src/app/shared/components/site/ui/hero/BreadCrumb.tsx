@@ -1,26 +1,53 @@
 import Link from "next/link";
 
-const BreadCrumb: React.FC<{
+interface BreadCrumbProps {
   items: {
     label: string;
     href?: string;
   }[];
-}> = ({ items }) => {
+  mode?: "hero" | "bollywood";
+  // hero = first link only
+  // bollywood = last link only
+}
+
+const BreadCrumb: React.FC<BreadCrumbProps> = ({ items, mode = "hero" }) => {
   return (
-    <nav className="text-sm text-gray-400">
+    <nav className="text-sm">
       {items.map((item, index) => {
+        const isFirst = index === 0;
         const isLast = index === items.length - 1;
-        return (
-          <span key={index} className="inline-flex items-center">
-            {!isLast && item.href ? (
-              <Link href={item.href} className="hover:text-white">
+
+        let content;
+
+        if (mode === "hero") {
+          if (isFirst && item.href) {
+            content = (
+              <Link href={item.href} className="text-blue-400">
                 {item.label}
               </Link>
-            ) : (
-              <span className="text-gray-300">{item.label}</span>
-            )}
+            );
+          } else {
+            content = <span className="text-gray-400">{item.label}</span>;
+          }
+        } else {
+          if (isLast && item.href) {
+            content = (
+              <Link
+                href={item.href}
+                className="text-blue-400 font-medium"
+              >
+                {item.label}
+              </Link>
+            );
+          } else {
+            content = <span className="text-gray-400">{item.label}</span>;
+          }
+        }
 
-            {!isLast && <span className="mx-2">/</span>}
+        return (
+          <span key={index} className="inline-flex items-center">
+            {content}
+            {!isLast && <span className="mx-2 text-gray-500">/</span>}
           </span>
         );
       })}

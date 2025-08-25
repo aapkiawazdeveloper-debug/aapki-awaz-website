@@ -1,7 +1,7 @@
-import CategoryNavbar from "../CategoryNavbar";
-import MainNav from "../MainNav";
-import AdBanner from "../AdBanner";
-import BreakingNews from "../BreakingNews";
+import CategoryNavbar from "./CategoryNavbar";
+import MainNav from "./MainNav";
+import BreakingNews from "./BreakingNews";
+import AdBanner from "./AdBanner";
 
 const newsData = [
     "Mewar Express train timings changed as per previous schedule",
