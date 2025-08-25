@@ -1,7 +1,13 @@
+import Breadcrumbs from "@/app/shared/components/admin/Breadcrumbs";
+
 const CategoriesPage = () => {
+  const breadcrumbItems = [
+    { label: "Dashboard", path: "/dashboard" },
+    { label: "Categories" },
+  ];
   return (
     <>
-      <h1>CategoriesPage</h1>
+      <Breadcrumbs items={breadcrumbItems} pageTitle="Categories" />
     </>
   );
 };
