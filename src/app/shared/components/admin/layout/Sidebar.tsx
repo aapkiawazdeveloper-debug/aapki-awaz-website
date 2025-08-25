@@ -14,21 +14,19 @@ import {
   FiFileText,
 } from "react-icons/fi";
 
-interface SidebarProps {
-  isOpen: boolean;
-  overlayMode?: boolean;
-}
-
-const Sidebar = ({ isOpen, overlayMode = false }: SidebarProps) => {
+const Sidebar: React.FC<{ isOpen: boolean; overlayMode?: boolean }> = ({
+  isOpen,
+  overlayMode = false,
+}) => {
   const pathname = usePathname();
 
   const menuItems = [
     { name: "Dashboard", href: "/dashboard", icon: FiHome },
-    { name: "News Management", href: "/news", icon: FiFileText },
+    { name: "News Management", href: "/news-management", icon: FiFileText },
     { name: "Categories", href: "/categories", icon: FiFolder },
     { name: "Users", href: "/users", icon: FiUsers },
     { name: "Comments", href: "/comments", icon: FiMessageSquare },
-    { name: "Ads Management", href: "/ads", icon: FiMonitor },
+    { name: "Ads Management", href: "/ads-management", icon: FiMonitor },
     { name: "Settings", href: "/settings", icon: FiSettings },
   ];
 
@@ -79,10 +77,10 @@ const Sidebar = ({ isOpen, overlayMode = false }: SidebarProps) => {
       </nav>
 
       {/* Footer Logout at bottom */}
-      <div className="px-4 py-4 border-t border-gray-200 mt-auto">
+      <div className="px-4 py-2 border-t border-gray-200 mt-auto">
         <Link
           href="/logout"
-          className="flex items-center gap-3 px-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100"
+          className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100"
         >
           <FiLogOut className="w-5 h-5" />
           <span>Logout</span>
