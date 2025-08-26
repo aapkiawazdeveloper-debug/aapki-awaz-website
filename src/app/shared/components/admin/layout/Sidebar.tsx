@@ -12,6 +12,7 @@ import {
   FiMessageSquare,
   FiFolder,
   FiFileText,
+  FiBook,
 } from "react-icons/fi";
 
 const Sidebar: React.FC<{ isOpen: boolean; overlayMode?: boolean }> = ({
@@ -22,11 +23,20 @@ const Sidebar: React.FC<{ isOpen: boolean; overlayMode?: boolean }> = ({
 
   const menuItems = [
     { name: "Dashboard", href: "/dashboard", icon: FiHome },
+
+    // Content
     { name: "News Management", href: "/news-management", icon: FiFileText },
     { name: "Categories", href: "/categories", icon: FiFolder },
+    { name: "Ebook Management", href: "/ebook-management", icon: FiBook },
+
+    // Community
     { name: "Users", href: "/users", icon: FiUsers },
     { name: "Comments", href: "/comments", icon: FiMessageSquare },
+
+    // Monetization
     { name: "Ads Management", href: "/ads-management", icon: FiMonitor },
+
+    // System
     { name: "Settings", href: "/settings", icon: FiSettings },
   ];
 
