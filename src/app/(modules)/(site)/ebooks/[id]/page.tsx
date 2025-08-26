@@ -1,7 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { FaStar, FaRegStar, FaHeart } from "react-icons/fa";
+import {
+  FaStar,
+  FaRegStar,
+  FaHeart,
+  FaArrowRight,
+  FaArrowLeft,
+} from "react-icons/fa";
 import HTMLFlipBook from "react-pageflip";
 import { useRef, useState } from "react";
 
@@ -76,7 +82,7 @@ const BookDetailsPage = () => {
     <>
       {/* Top Section */}
       <div className="grid grid-cols-12 items-center gap-6">
-        <div className="col-span-3">
+        <div className="col-span-12 md:col-span-3">
           <div className="bg-white shadow rounded-xl overflow-hidden">
             <Image
               src={book.cover}
@@ -88,7 +94,7 @@ const BookDetailsPage = () => {
           </div>
         </div>
 
-        <div className="col-span-9">
+        <div className="col-span-12 md:col-span-9">
           <h1 className="text-2xl font-bold">{book.title}</h1>
           <p className="text-gray-600 mt-2">{book.description}</p>
           <p className="text-gray-600 mt-2">By {book.author}</p>
@@ -110,7 +116,7 @@ const BookDetailsPage = () => {
       </div>
 
       {/* Page Flip Book */}
-      <div className="mt-10 flex flex-col items-center">
+      <div className="mt-10 flex flex-col items-center overflow-hidden">
         <HTMLFlipBook
           {...flipBookProps}
           className="shadow-lg rounded-lg"
@@ -133,33 +139,33 @@ const BookDetailsPage = () => {
         </HTMLFlipBook>
 
         {/* Page Controls */}
-        <div className="flex items-center justify-center gap-4 mt-4">
+        <div className="flex items-center justify-center gap-6 mt-4">
           <button
             onClick={handlePrev}
             disabled={currentPage === 0}
-            className={`px-4 py-2 rounded-lg border cursor-pointer ${
+            className={`p-2 rounded-full border cursor-pointer ${
               currentPage === 0
                 ? "border-gray-300 text-gray-300 cursor-not-allowed"
                 : "border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition"
             }`}
           >
-            Previous
+            <FaArrowLeft size={16} />
           </button>
 
-          <span className="text-gray-700">
-            Page {currentPage + 1} of {book.pages.length}
+          <span className="text-gray-700 font-medium">
+            {currentPage + 1} / {book.pages.length}
           </span>
 
           <button
             onClick={handleNext}
             disabled={currentPage === book.pages.length - 1}
-            className={`px-4 py-2 rounded-lg border cursor-pointer ${
+            className={`p-2 rounded-full border cursor-pointer ${
               currentPage === book.pages.length - 1
                 ? "border-gray-300 text-gray-300 cursor-not-allowed"
                 : "border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition"
             }`}
           >
-            Next
+            <FaArrowRight size={16} />
           </button>
         </div>
       </div>
