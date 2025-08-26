@@ -4,10 +4,10 @@ import Breadcrumbs from "@/app/shared/components/admin/Breadcrumbs";
 import PageSubHeader from "@/app/shared/components/admin/PageSubHeader";
 import EbookCard from "@/app/shared/components/admin/ui/cards/EbookCard";
 import { FiDownload, FiPlus } from "react-icons/fi";
-import Pagination from "./ui/paginations/Pagination";
+import Pagination from "../paginations/Pagination";
 import { useState } from "react";
 
-const EbookManagement = () => {
+const EbookManagementWrapper = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const ebooksPerPage = 12;
   const totalEbooks = 100;
@@ -50,4 +50,4 @@ const EbookManagement = () => {
   );
 };
 
-export default EbookManagement;
+export default EbookManagementWrapper;

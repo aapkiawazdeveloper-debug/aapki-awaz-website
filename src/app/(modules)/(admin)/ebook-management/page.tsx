@@ -1,5 +1,5 @@
+import EbookManagementWrapper from "@/app/shared/components/admin/ui/wrapper/EbookManagementWrapper";
 import { Metadata } from "next";
-import EbookManagement from "@/app/shared/components/admin/EbookManagement";
 
 export const metadata: Metadata = {
   title: "Ebook Management - Admin Dashboard | Aapki Awaz",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const EbookManagementPage = () => {
   return (
     <>
-      <EbookManagement />
+      <EbookManagementWrapper />
     </>
   );
 };
