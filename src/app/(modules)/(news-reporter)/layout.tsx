@@ -32,17 +32,28 @@ const NewsReporterLayout: React.FC<{ children: React.ReactNode }> = ({
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
   const closeSidebar = () => isMobile && setIsSidebarOpen(false);
 
+  // News Reporter-specific menu
   const menuItems = [
-    { name: "Dashboard", href: "/dashboard", icon: FiHome },
-    { name: "Business Overview", href: "/business/overview", icon: FiMonitor },
-    { name: "Advertisements", href: "/business/ads", icon: FiMonitor },
+    { name: "Dashboard", href: "/news-reporter/dashboard", icon: FiHome },
     {
-      name: "Business Analytics",
-      href: "/business/analytics",
+      name: "My News Submissions",
+      icon: FiFileText,
+      children: [
+        { name: "Add New News", href: "/news-reporter/submissions/add" },
+        { name: "Upload Media", href: "/news-reporter/submissions/upload" },
+        { name: "Edit Pending News", href: "/news-reporter/submissions/edit" },
+      ],
+    },
+    {
+      name: "Assigned Tasks",
+      href: "/news-reporter/assigned-tasks",
       icon: FiMonitor,
     },
-    { name: "Reports", href: "/reports", icon: FiMonitor },
-    { name: "Notifications", href: "/notifications", icon: FiMonitor },
+    {
+      name: "Notifications",
+      href: "/news-reporter/notifications",
+      icon: FiMonitor,
+    },
   ];
 
   return (

@@ -10,13 +10,16 @@ import {
   FiUsers,
   FiSettings,
   FiMonitor,
-  FiMessageSquare,
-  FiFolder,
   FiFileText,
-  FiBook,
+  FiFolder,
+  FiPackage,
+  FiTrendingUp,
+  FiBell,
 } from "react-icons/fi";
 
-const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const SuperAdminLayout: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -42,13 +45,65 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Admin-specific menu
   const menuItems = [
     { name: "Dashboard", href: "/dashboard", icon: FiHome },
-    { name: "News Management", href: "/news-management", icon: FiFileText },
-    { name: "Categories", href: "/categories", icon: FiFolder },
-    { name: "Ebook Management", href: "/ebook-management", icon: FiBook },
-    { name: "Users", href: "/users", icon: FiUsers },
-    { name: "Comments", href: "/comments", icon: FiMessageSquare },
-    { name: "Ads Management", href: "/ads-management", icon: FiMonitor },
-    { name: "Settings", href: "/settings", icon: FiSettings },
+    {
+      name: "Users Management",
+      icon: FiUsers,
+      children: [
+        { name: "Franchise", href: "/users/franchise" },
+        { name: "Business Associate", href: "/users/business-associate" },
+        { name: "Editors", href: "/users/editors" },
+        { name: "Reporters", href: "/users/reporters" },
+        { name: "Business Managers", href: "/users/business-managers" },
+        { name: "Product Managers", href: "/users/product-managers" },
+        { name: "Referral Managers", href: "/users/referral-managers" },
+      ],
+    },
+    {
+      name: "Content Management",
+      icon: FiFileText,
+      children: [
+        { name: "All News", href: "/content/news" },
+        { name: "Categories", href: "/content/categories" },
+        { name: "Locations", href: "/content/locations" },
+      ],
+    },
+    {
+      name: "Business Management",
+      icon: FiMonitor,
+      children: [
+        { name: "Advertisements", href: "/business/ads" },
+        { name: "Business Reports", href: "/business/reports" },
+      ],
+    },
+    {
+      name: "Product Management",
+      icon: FiPackage,
+      children: [
+        { name: "All Products", href: "/products/all" },
+        { name: "Categories & Inventory", href: "/products/categories" },
+        { name: "Pricing & Discounts", href: "/products/pricing" },
+      ],
+    },
+    {
+      name: "Referral Management",
+      icon: FiTrendingUp,
+      children: [
+        { name: "Campaigns", href: "/referrals/campaigns" },
+        { name: "Rewards & Payouts", href: "/referrals/rewards" },
+        { name: "Referral Analytics", href: "/referrals/analytics" },
+      ],
+    },
+    {
+      name: "System Settings",
+      icon: FiSettings,
+      children: [
+        { name: "Site Configuration", href: "/settings/site" },
+        { name: "Permissions & Roles", href: "/settings/roles" },
+        { name: "Backup & Restore", href: "/settings/backup" },
+      ],
+    },
+    { name: "Analytics & Reports", href: "/analytics", icon: FiTrendingUp },
+    { name: "Notifications", href: "/notifications", icon: FiBell },
   ];
 
   return (
@@ -86,4 +141,4 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   );
 };
 
-export default AdminLayout;
+export default SuperAdminLayout;

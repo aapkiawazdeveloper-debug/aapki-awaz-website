@@ -5,7 +5,7 @@ import "../../styles/globals.css";
 import Sidebar from "@/app/shared/components/admin/layout/Sidebar";
 import Header from "@/app/shared/components/admin/layout/Header";
 import Footer from "@/app/shared/components/admin/layout/Footer";
-import { FiHome, FiUsers, FiFileText, FiMonitor } from "react-icons/fi";
+import { FiHome, FiMonitor, FiBarChart2, FiBell } from "react-icons/fi";
 
 const BusinessAssociateLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -32,24 +32,31 @@ const BusinessAssociateLayout: React.FC<{ children: React.ReactNode }> = ({
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
   const closeSidebar = () => isMobile && setIsSidebarOpen(false);
 
-  // Franchise-specific menu
+  // Business Associate-specific menu
   const menuItems = [
-    { name: "Dashboard", href: "/business-associate-dashboard", icon: FiHome },
-    { name: "Business Management", href: "/business/manage", icon: FiMonitor },
+    { name: "Dashboard", href: "/business-associate/dashboard", icon: FiHome },
     {
-      name: "Add / Edit Businesses",
-      href: "/business/add-edit",
+      name: "Business Management",
       icon: FiMonitor,
+      children: [
+        {
+          name: "Add / Edit Businesses",
+          href: "/business-associate/business/add-edit",
+        },
+        { name: "Advertisements", href: "/business-associate/business/ads" },
+        {
+          name: "Campaign Reports",
+          href: "/business-associate/business/campaign-reports",
+        },
+      ],
     },
-    { name: "Advertisements", href: "/business/ads", icon: FiMonitor },
+    { name: "Reports", href: "/business-associate/reports", icon: FiBarChart2 },
     {
-      name: "Campaign Reports",
-      href: "/business/campaign-reports",
-      icon: FiMonitor,
+      name: "Notifications",
+      href: "/business-associate/notifications",
+      icon: FiBell,
     },
-    { name: "Notifications", href: "/notifications", icon: FiMonitor },
   ];
-
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body className="bg-gray-100">

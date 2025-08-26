@@ -32,17 +32,23 @@ const BusinessManagerLayout: React.FC<{ children: React.ReactNode }> = ({
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
   const closeSidebar = () => isMobile && setIsSidebarOpen(false);
 
+  // Business Manager-specific menu
   const menuItems = [
-    { name: "Dashboard", href: "/business-manager-dashboard", icon: FiHome },
-    { name: "Business Overview", href: "/business/overview", icon: FiMonitor },
-    { name: "Advertisements", href: "/business/ads", icon: FiMonitor },
+    { name: "Dashboard", href: "/business-manager/dashboard", icon: FiHome },
     {
-      name: "Business Analytics",
-      href: "/business/analytics",
+      name: "Business Overview",
+      icon: FiMonitor,
+      children: [
+        { name: "Advertisements", href: "/business-manager/ads" },
+        { name: "Business Analytics", href: "/business-manager/analytics" },
+      ],
+    },
+    { name: "Reports", href: "/business-manager/reports", icon: FiMonitor },
+    {
+      name: "Notifications",
+      href: "/business-manager/notifications",
       icon: FiMonitor,
     },
-    { name: "Reports", href: "/reports", icon: FiMonitor },
-    { name: "Notifications", href: "/notifications", icon: FiMonitor },
   ];
 
   return (

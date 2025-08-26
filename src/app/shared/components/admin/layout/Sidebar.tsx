@@ -4,12 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IconType } from "react-icons";
-import { FiLogOut } from "react-icons/fi";
+import { FiChevronDown, FiChevronRight, FiLogOut } from "react-icons/fi";
+import { useState } from "react";
 
 interface MenuItem {
   name: string;
-  href: string;
+  href?: string;
   icon: IconType;
+  children?: { name: string; href: string }[];
 }
 
 interface SidebarProps {
@@ -24,6 +26,13 @@ const Sidebar: React.FC<SidebarProps> = ({
   menuItems,
 }) => {
   const pathname = usePathname();
+  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
+
+  const toggleDropdown = (name: string) => {
+    setOpenDropdowns((prev) =>
+      prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
+    );
+  };
 
   return (
     <aside
@@ -50,21 +59,72 @@ const Sidebar: React.FC<SidebarProps> = ({
       {/* Navigation */}
       <nav className="flex-1 overflow-y-auto px-2">
         <ul className="flex flex-col gap-y-2 mb-1 mt-4">
-          {menuItems.map(({ name, href, icon: Icon }) => {
+          {menuItems.map(({ name, href, icon: Icon, children }) => {
             const isActive = pathname === href;
+            const isDropdownOpen = openDropdowns.includes(name);
+
             return (
               <li key={name}>
-                <Link
-                  href={href}
-                  className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    isActive
-                      ? "bg-blue-100 text-blue-600"
-                      : "text-gray-700 hover:bg-gray-100"
-                  }`}
-                >
-                  <Icon className="w-5 h-5" />
-                  <span>{name}</span>
-                </Link>
+                {children ? (
+                  <>
+                    <button
+                      onClick={() => toggleDropdown(name)}
+                      className={`flex items-center justify-between w-full gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
+                        isDropdownOpen
+                          ? "bg-blue-100 text-blue-600"
+                          : "text-gray-700 hover:bg-gray-100"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <Icon className="w-5 h-5" />
+                        <span>{name}</span>
+                      </div>
+                      {isDropdownOpen ? (
+                        <FiChevronDown className="w-4 h-4 transition-transform duration-300 rotate-180" />
+                      ) : (
+                        <FiChevronRight className="w-4 h-4 transition-transform duration-300" />
+                      )}
+                    </button>
+
+                    {/* Dropdown with animation */}
+                    <div
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                        isDropdownOpen
+                          ? "max-h-96 opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <ul className="pl-10 mt-1 space-y-1">
+                        {children.map((child) => (
+                          <li key={child.name}>
+                            <Link
+                              href={child.href}
+                              className={`block px-3 py-1.5 rounded-lg text-sm font-medium ${
+                                pathname === child.href
+                                  ? "bg-blue-50 text-blue-600"
+                                  : "text-gray-600 hover:bg-gray-100"
+                              }`}
+                            >
+                              {child.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                ) : (
+                  <Link
+                    href={href || "#"}
+                    className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      isActive
+                        ? "bg-blue-100 text-blue-600"
+                        : "text-gray-700 hover:bg-gray-100"
+                    }`}
+                  >
+                    <Icon className="w-5 h-5" />
+                    <span>{name}</span>
+                  </Link>
+                )}
               </li>
             );
           })}

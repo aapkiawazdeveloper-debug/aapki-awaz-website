@@ -5,7 +5,14 @@ import "../../styles/globals.css";
 import Sidebar from "@/app/shared/components/admin/layout/Sidebar";
 import Header from "@/app/shared/components/admin/layout/Header";
 import Footer from "@/app/shared/components/admin/layout/Footer";
-import { FiHome, FiUsers, FiFileText, FiMonitor } from "react-icons/fi";
+import {
+  FiHome,
+  FiUsers,
+  FiFileText,
+  FiMonitor,
+  FiCalendar,
+  FiBell,
+} from "react-icons/fi";
 
 const CategoryNewsEditorLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -32,29 +39,28 @@ const CategoryNewsEditorLayout: React.FC<{ children: React.ReactNode }> = ({
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
   const closeSidebar = () => isMobile && setIsSidebarOpen(false);
 
+  // Category News Editor-specific menu
   const menuItems = [
-    { name: "Dashboard", href: "/category-editor-dashboard", icon: FiHome },
+    { name: "Dashboard", href: "/category-editor/dashboard", icon: FiHome },
     {
-      name: "News By Category / Date",
-      href: "/content/category-news",
+      name: "Content Management",
       icon: FiFileText,
-    },
-    {
-      name: "Edit / Approve News",
-      href: "/content/edit-news",
-      icon: FiFileText,
-    },
-    {
-      name: "Assign Tasks to Reporters",
-      href: "/content/assign-tasks",
-      icon: FiFileText,
+      children: [
+        { name: "News By Category / Date", href: "/content/category-news" },
+        { name: "Edit / Approve News", href: "/content/edit-news" },
+        { name: "Assign Tasks to Reporters", href: "/content/assign-tasks" },
+      ],
     },
     {
       name: "Scheduled News",
       href: "/content/scheduled-news",
-      icon: FiFileText,
+      icon: FiCalendar,
     },
-    { name: "Notifications", href: "/notifications", icon: FiMonitor },
+    {
+      name: "Notifications",
+      href: "/category-editor/notifications",
+      icon: FiBell,
+    },
   ];
 
   return (

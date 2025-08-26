@@ -5,7 +5,14 @@ import "../../styles/globals.css";
 import Sidebar from "@/app/shared/components/admin/layout/Sidebar";
 import Header from "@/app/shared/components/admin/layout/Header";
 import Footer from "@/app/shared/components/admin/layout/Footer";
-import { FiHome, FiUsers, FiFileText, FiMonitor } from "react-icons/fi";
+import {
+  FiHome,
+  FiUsers,
+  FiFileText,
+  FiMonitor,
+  FiBell,
+  FiFolder,
+} from "react-icons/fi";
 
 const LocationManagerLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -32,20 +39,27 @@ const LocationManagerLayout: React.FC<{ children: React.ReactNode }> = ({
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
   const closeSidebar = () => isMobile && setIsSidebarOpen(false);
 
+  // Location manager specific menu
   const menuItems = [
-    { name: "Dashboard", href: "/location-manaegr-dashboard", icon: FiHome },
+    { name: "Dashboard", href: "/location-manager-dashboard", icon: FiHome },
     {
-      name: "News for Assigned Location",
-      href: "/content/location-news",
-      icon: FiFileText,
-    },
-    {
-      name: "Assign / Manage Reporters",
-      href: "/content/assign-reporters",
-      icon: FiUsers,
+      name: "Content Management",
+      icon: FiFolder,
+      children: [
+        {
+          name: "News for Assigned Location",
+          href: "/content/location-news",
+          icon: FiFileText,
+        },
+        {
+          name: "Assign / Manage Reporters",
+          href: "/content/assign-reporters",
+          icon: FiUsers,
+        },
+      ],
     },
     { name: "Reports", href: "/reports", icon: FiMonitor },
-    { name: "Notifications", href: "/notifications", icon: FiMonitor },
+    { name: "Notifications", href: "/notifications", icon: FiBell },
   ];
 
   return (
