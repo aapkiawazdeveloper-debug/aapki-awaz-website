@@ -5,18 +5,11 @@ import "../../styles/globals.css";
 import Sidebar from "@/app/shared/components/admin/layout/Sidebar";
 import Header from "@/app/shared/components/admin/layout/Header";
 import Footer from "@/app/shared/components/admin/layout/Footer";
-import {
-  FiHome,
-  FiUsers,
-  FiSettings,
-  FiMonitor,
-  FiMessageSquare,
-  FiFolder,
-  FiFileText,
-  FiBook,
-} from "react-icons/fi";
+import { FiHome, FiUsers, FiFileText, FiMonitor } from "react-icons/fi";
 
-const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const FranchiseLayout: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -39,16 +32,12 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
   const closeSidebar = () => isMobile && setIsSidebarOpen(false);
 
-  // Admin-specific menu
+  // Franchise-specific menu
   const menuItems = [
-    { name: "Dashboard", href: "/dashboard", icon: FiHome },
+    { name: "Dashboard", href: "/franchise-dashboard", icon: FiHome },
     { name: "News Management", href: "/news-management", icon: FiFileText },
-    { name: "Categories", href: "/categories", icon: FiFolder },
-    { name: "Ebook Management", href: "/ebook-management", icon: FiBook },
     { name: "Users", href: "/users", icon: FiUsers },
-    { name: "Comments", href: "/comments", icon: FiMessageSquare },
     { name: "Ads Management", href: "/ads-management", icon: FiMonitor },
-    { name: "Settings", href: "/settings", icon: FiSettings },
   ];
 
   return (
@@ -86,4 +75,4 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   );
 };
 
-export default AdminLayout;
+export default FranchiseLayout;

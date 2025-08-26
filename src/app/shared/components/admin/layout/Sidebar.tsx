@@ -3,42 +3,27 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  FiHome,
-  FiUsers,
-  FiSettings,
-  FiLogOut,
-  FiMonitor,
-  FiMessageSquare,
-  FiFolder,
-  FiFileText,
-  FiBook,
-} from "react-icons/fi";
+import { IconType } from "react-icons";
+import { FiLogOut } from "react-icons/fi";
 
-const Sidebar: React.FC<{ isOpen: boolean; overlayMode?: boolean }> = ({
+interface MenuItem {
+  name: string;
+  href: string;
+  icon: IconType;
+}
+
+interface SidebarProps {
+  isOpen: boolean;
+  overlayMode?: boolean;
+  menuItems: MenuItem[];
+}
+
+const Sidebar: React.FC<SidebarProps> = ({
   isOpen,
   overlayMode = false,
+  menuItems,
 }) => {
   const pathname = usePathname();
-
-  const menuItems = [
-    { name: "Dashboard", href: "/dashboard", icon: FiHome },
-
-    // Content
-    { name: "News Management", href: "/news-management", icon: FiFileText },
-    { name: "Categories", href: "/categories", icon: FiFolder },
-    { name: "Ebook Management", href: "/ebook-management", icon: FiBook },
-
-    // Community
-    { name: "Users", href: "/users", icon: FiUsers },
-    { name: "Comments", href: "/comments", icon: FiMessageSquare },
-
-    // Monetization
-    { name: "Ads Management", href: "/ads-management", icon: FiMonitor },
-
-    // System
-    { name: "Settings", href: "/settings", icon: FiSettings },
-  ];
 
   return (
     <aside
@@ -86,7 +71,7 @@ const Sidebar: React.FC<{ isOpen: boolean; overlayMode?: boolean }> = ({
         </ul>
       </nav>
 
-      {/* Footer Logout at bottom */}
+      {/* Footer Logout */}
       <div className="px-4 py-2 border-t border-gray-200 mt-auto">
         <Link
           href="/logout"

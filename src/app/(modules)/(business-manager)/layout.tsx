@@ -5,18 +5,11 @@ import "../../styles/globals.css";
 import Sidebar from "@/app/shared/components/admin/layout/Sidebar";
 import Header from "@/app/shared/components/admin/layout/Header";
 import Footer from "@/app/shared/components/admin/layout/Footer";
-import {
-  FiHome,
-  FiUsers,
-  FiSettings,
-  FiMonitor,
-  FiMessageSquare,
-  FiFolder,
-  FiFileText,
-  FiBook,
-} from "react-icons/fi";
+import { FiHome, FiFileText, FiMonitor } from "react-icons/fi";
 
-const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const BusinessManagerLayout: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -39,16 +32,17 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
   const closeSidebar = () => isMobile && setIsSidebarOpen(false);
 
-  // Admin-specific menu
   const menuItems = [
-    { name: "Dashboard", href: "/dashboard", icon: FiHome },
-    { name: "News Management", href: "/news-management", icon: FiFileText },
-    { name: "Categories", href: "/categories", icon: FiFolder },
-    { name: "Ebook Management", href: "/ebook-management", icon: FiBook },
-    { name: "Users", href: "/users", icon: FiUsers },
-    { name: "Comments", href: "/comments", icon: FiMessageSquare },
-    { name: "Ads Management", href: "/ads-management", icon: FiMonitor },
-    { name: "Settings", href: "/settings", icon: FiSettings },
+    { name: "Dashboard", href: "/business-manager-dashboard", icon: FiHome },
+    { name: "Business Overview", href: "/business/overview", icon: FiMonitor },
+    { name: "Advertisements", href: "/business/ads", icon: FiMonitor },
+    {
+      name: "Business Analytics",
+      href: "/business/analytics",
+      icon: FiMonitor,
+    },
+    { name: "Reports", href: "/reports", icon: FiMonitor },
+    { name: "Notifications", href: "/notifications", icon: FiMonitor },
   ];
 
   return (
@@ -86,4 +80,4 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   );
 };
 
-export default AdminLayout;
+export default BusinessManagerLayout;
