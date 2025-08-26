@@ -2,7 +2,7 @@ import Pagination from "@/app/shared/components/site/Pagination";
 import BookCard from "@/app/shared/components/site/ui/cards/BookCard";
 import PageHeader from "@/app/shared/components/site/ui/PageHeader";
 
-const EbooksPage = () => {
+const Ebooks = () => {
   return (
     <>
       <PageHeader pageTitle="E-Books" />
@@ -20,4 +20,4 @@ const EbooksPage = () => {
   );
 };
 
-export default EbooksPage;
+export default Ebooks;
