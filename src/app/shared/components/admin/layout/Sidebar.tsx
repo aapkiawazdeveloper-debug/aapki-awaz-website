@@ -63,8 +63,8 @@ const Sidebar: React.FC<{ isOpen: boolean; overlayMode?: boolean }> = ({
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 overflow-y-auto px-2 mt-4">
-        <ul className="flex flex-col gap-y-2 mb-1">
+      <nav className="flex-1 overflow-y-auto px-2">
+        <ul className="flex flex-col gap-y-2 mb-1 mt-4">
           {menuItems.map(({ name, href, icon: Icon }) => {
             const isActive = pathname === href;
             return (
