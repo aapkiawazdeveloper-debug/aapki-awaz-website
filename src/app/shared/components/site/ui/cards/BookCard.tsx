@@ -5,18 +5,20 @@ import { FaStar, FaRegStar, FaHeart, FaBookOpen } from "react-icons/fa";
 const BookCard = () => {
   return (
     <div className="bg-white shadow rounded-xl overflow-hidden">
-      <div className="h-36 overflow-hidden">
+      <Link href="/ebooks/1">
         <Image
-          src="/assets/images/book-image.jpg"
-          width={320}
-          height={480}
+          src="/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - 0.jpg"
+          width={2404}
+          height={3304}
           className="object-cover"
           alt="book image"
         />
-      </div>
+      </Link>
 
       <div className="p-3">
-        <h1 className="text-base font-semibold">Business Strategies 2024</h1>
+        <Link href="/ebooks/1" className="text-base font-semibold">
+          Vaishya Bharati Patrika June 2022
+        </Link>
         <p className="text-sm text-gray-600">By John Doe</p>
         <p className="text-xs text-gray-400">Published: Jan 2024</p>
 
@@ -35,7 +37,7 @@ const BookCard = () => {
             <FaBookOpen /> Read Now
           </Link>
 
-          <button className="flex items-center gap-1 text-red-500 text-sm">
+          <button className="flex items-center gap-1 text-red-500 text-sm cursor-pointer">
             <FaHeart /> Save
           </button>
         </div>
