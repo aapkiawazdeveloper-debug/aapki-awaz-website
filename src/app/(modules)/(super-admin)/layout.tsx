@@ -11,7 +11,6 @@ import {
   FiSettings,
   FiMonitor,
   FiFileText,
-  FiFolder,
   FiPackage,
   FiTrendingUp,
   FiBell,
@@ -44,7 +43,7 @@ const SuperAdminLayout: React.FC<{ children: React.ReactNode }> = ({
 
   // Super Admin-specific menu
   const menuItems = [
-    { name: "Dashboard", href: "/dashboard", icon: FiHome },
+    { name: "Dashboard", href: "/super-admin-dashboard", icon: FiHome },
     {
       name: "Users Management",
       icon: FiUsers,

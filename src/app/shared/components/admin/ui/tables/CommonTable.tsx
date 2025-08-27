@@ -32,13 +32,13 @@ const CommonTable = <T extends { id: string | number }>({
             {columns.map((col) => (
               <th
                 key={col.key as string}
-                className="text-left text-gray-600 px-6 py-4 text-[15px] font-semibold tracking-wide whitespace-nowrap"
+                className="text-left text-gray-600 px-6 py-3 text-[15px] font-semibold tracking-wide whitespace-nowrap"
               >
                 {col.label}
               </th>
             ))}
             {actions && (
-              <th className="text-left text-gray-600 px-6 py-4 text-[15px] font-semibold tracking-wide whitespace-nowrap">
+              <th className="text-left text-gray-600 px-6 py-3 text-[15px] font-semibold tracking-wide whitespace-nowrap">
                 Actions
               </th>
             )}
