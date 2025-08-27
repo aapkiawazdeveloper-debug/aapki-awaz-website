@@ -8,9 +8,20 @@ import {
   FiGrid,
   FiPlus,
   FiMinus,
+  FiRefreshCw,
 } from "react-icons/fi";
 import HTMLFlipBook from "react-pageflip";
 import { useRef, useState, useEffect } from "react";
+import Link from "next/link";
+import {
+  FaFacebookF,
+  FaGooglePlusG,
+  FaLinkedinIn,
+  FaPinterestP,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa";
+import ArticleCard from "@/app/shared/components/site/ui/cards/ArticleCard";
 
 const BookDetailsPage = () => {
   const bookRef = useRef<any>(null);
@@ -44,13 +55,13 @@ const BookDetailsPage = () => {
   const [isSinglePage, setIsSinglePage] = useState(false);
   const [bookKey, setBookKey] = useState(0);
   const [bookWidth, setBookWidth] = useState(800);
-
   const [pageZoom, setPageZoom] = useState(Array(book.pages.length).fill(1));
   const [offset, setOffset] = useState(
     Array(book.pages.length).fill({ x: 0, y: 0 })
   );
   const [isDragging, setIsDragging] = useState(false);
   const [startPos, setStartPos] = useState({ x: 0, y: 0 });
+  const [autoSlideInterval, setAutoSlideInterval] = useState(3000); // 3 seconds
 
   const isZoomed = pageZoom[currentPage] > 1;
 
@@ -77,6 +88,7 @@ const BookDetailsPage = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Page flip handler
   const onPageFlip = (e: any) => {
     setCurrentPage(e.data);
     if (pageFlipSound.current) {
@@ -85,6 +97,7 @@ const BookDetailsPage = () => {
     }
   };
 
+  // Toggle single/double page view
   const toggleSingleDoublePage = (single: boolean) => {
     setIsSinglePage(single);
     setPageZoom(Array(book.pages.length).fill(1));
@@ -93,29 +106,30 @@ const BookDetailsPage = () => {
     setBookKey((prev) => prev + 1);
   };
 
+  // Previous page
   const handlePrev = () => bookRef.current?.pageFlip().flipPrev();
+
+  // Next page
   const handleNext = () => bookRef.current?.pageFlip().flipNext();
 
-  // Zoom functions (vertical only)
-  const handleZoomIn = () => {
+  // Zoom in
+  const imageZoomIn = () => {
     if (!isSinglePage) toggleSingleDoublePage(true);
-
     const idx = currentPage;
     const newZoom = [...pageZoom];
     newZoom[idx] = Math.min(newZoom[idx] + 0.3, 3);
     setPageZoom(newZoom);
-
     const newOffset = [...offset];
     newOffset[idx] = { x: 0, y: Math.min(newOffset[idx].y, 0) };
     setOffset(newOffset);
   };
 
-  const handleZoomOut = () => {
+  // Zoom out
+  const imageZoomOut = () => {
     const idx = currentPage;
     const newZoom = [...pageZoom];
     newZoom[idx] = Math.max(newZoom[idx] - 0.3, 1);
     setPageZoom(newZoom);
-
     if (newZoom[idx] === 1) {
       const newOffset = [...offset];
       newOffset[idx] = { x: 0, y: 0 };
@@ -124,17 +138,13 @@ const BookDetailsPage = () => {
     }
   };
 
-  // Dragging (vertical only)
+  // Dragging
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     if (isZoomed) {
       setIsDragging(true);
-      setStartPos({
-        x: e.clientX,
-        y: e.clientY - offset[currentPage].y,
-      });
+      setStartPos({ x: e.clientX, y: e.clientY - offset[currentPage].y });
     }
   };
-
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (isDragging) {
       const newOffset = [...offset];
@@ -144,12 +154,30 @@ const BookDetailsPage = () => {
       setOffset(newOffset);
     }
   };
-
   const handleMouseUp = () => setIsDragging(false);
   const handleMouseLeave = () => setIsDragging(false);
   const handlePageClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (isDragging) e.stopPropagation();
   };
+  const handleResetZoom = () => {
+    setPageZoom(Array(book.pages.length).fill(1));
+    setOffset(Array(book.pages.length).fill({ x: 0, y: 0 }));
+    setIsDragging(false);
+  };
+
+  // Auto-slide effect
+  useEffect(() => {
+    if (!autoSlideInterval) return;
+    const interval = setInterval(() => {
+      if (bookRef.current && currentPage < book.pages.length - 1) {
+        bookRef.current.pageFlip().flipNext();
+      } else if (bookRef.current) {
+        bookRef.current.pageFlip().flip(0); // reset to first page
+      }
+    }, autoSlideInterval);
+
+    return () => clearInterval(interval);
+  }, [currentPage, autoSlideInterval]);
 
   return (
     <div className="flex flex-col items-center w-full overflow-hidden">
@@ -172,21 +200,33 @@ const BookDetailsPage = () => {
           <FiGrid size={16} /> Double Page
         </button>
         <button
-          onClick={handleZoomIn}
+          onClick={imageZoomIn}
           className="px-3 py-1.5 font-medium border rounded cursor-pointer text-sm flex items-center gap-2"
         >
           <FiPlus size={16} /> Zoom In
         </button>
         <button
-          onClick={handleZoomOut}
+          onClick={imageZoomOut}
           className="px-3 py-1.5 font-medium border rounded cursor-pointer text-sm flex items-center gap-2"
         >
           <FiMinus size={16} /> Zoom Out
         </button>
+        <button
+          onClick={handleResetZoom}
+          className="px-2.5 py-1.5 font-medium border rounded cursor-pointer text-sm flex items-center gap-2"
+        >
+          <FiRefreshCw size={16} /> Reset
+        </button>
+        <button
+          onClick={() => setAutoSlideInterval(autoSlideInterval ? 0 : 3000)}
+          className="px-3 py-1.5 font-medium border rounded cursor-pointer text-sm"
+        >
+          {autoSlideInterval ? "Stop Auto Slide" : "Start Auto Slide"}
+        </button>
       </div>
 
       {/* Search Bar */}
-      <div className="mt-5 w-full max-w-md">
+      <div className="mt-3 w-full max-w-[620px]">
         <input
           id="searchInput"
           type="text"
@@ -310,6 +350,61 @@ const BookDetailsPage = () => {
         >
           <FiArrowRight size={16} />
         </button>
+      </div>
+
+      {/* Social Links */}
+      <div className="px-2 pt-6 flex gap-4 transition-all duration-300">
+        <Link
+          href="https://facebook.com"
+          target="_blank"
+          className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+        >
+          <FaFacebookF size={16} />
+        </Link>
+        <Link
+          href="https://plus.google.com"
+          target="_blank"
+          className="p-2 bg-red-600 text-white rounded-full hover:bg-red-700"
+        >
+          <FaGooglePlusG size={16} />
+        </Link>
+        <Link
+          href="https://twitter.com"
+          target="_blank"
+          className="p-2 bg-sky-500 text-white rounded-full hover:bg-sky-600"
+        >
+          <FaTwitter size={16} />
+        </Link>
+        <Link
+          href="https://wa.me/919414970299"
+          target="_blank"
+          className="p-2 bg-green-500 text-white rounded-full hover:bg-green-600"
+        >
+          <FaWhatsapp size={16} />
+        </Link>
+        <Link
+          href="https://pinterest.com"
+          target="_blank"
+          className="p-2 bg-red-500 text-white rounded-full hover:bg-red-600"
+        >
+          <FaPinterestP size={16} />
+        </Link>
+        <Link
+          href="https://linkedin.com"
+          target="_blank"
+          className="p-2 bg-blue-700 text-white rounded-full hover:bg-blue-800"
+        >
+          <FaLinkedinIn size={16} />
+        </Link>
+      </div>
+
+      {/* Articles */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
+        {Array(13)
+          .fill(null)
+          .map((_, index) => (
+            <ArticleCard key={index} />
+          ))}
       </div>
     </div>
   );
