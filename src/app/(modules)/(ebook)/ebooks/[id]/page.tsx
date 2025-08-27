@@ -226,7 +226,7 @@ const BookDetailsPage = () => {
       </div>
 
       {/* Search Bar */}
-      <div className="mt-3 w-full max-w-[620px]">
+      <div className="mt-3 w-full max-w-[756px]">
         <input
           id="searchInput"
           type="text"
