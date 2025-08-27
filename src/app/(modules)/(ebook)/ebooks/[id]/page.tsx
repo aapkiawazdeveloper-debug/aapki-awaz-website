@@ -4,11 +4,11 @@ import Image from "next/image";
 import {
   FiArrowRight,
   FiArrowLeft,
-  FiColumns,
-  FiGrid,
   FiPlus,
   FiMinus,
   FiRefreshCw,
+  FiBook,
+  FiBookOpen,
 } from "react-icons/fi";
 import HTMLFlipBook from "react-pageflip";
 import { useRef, useState, useEffect } from "react";
@@ -61,9 +61,12 @@ const BookDetailsPage = () => {
   );
   const [isDragging, setIsDragging] = useState(false);
   const [startPos, setStartPos] = useState({ x: 0, y: 0 });
-  const [autoSlideInterval, setAutoSlideInterval] = useState(3000); // 3 seconds
+  const [autoSlideInterval, setAutoSlideInterval] = useState(3000);
 
   const isZoomed = pageZoom[currentPage] > 1;
+
+  // Search state
+  const [searchValue, setSearchValue] = useState<string>("");
 
   // Load page flip sound
   useEffect(() => {
@@ -107,10 +110,16 @@ const BookDetailsPage = () => {
   };
 
   // Previous page
-  const handlePrev = () => bookRef.current?.pageFlip().flipPrev();
+  const handlePrev = () => {
+    setAutoSlideInterval(0);
+    bookRef.current?.pageFlip().flipPrev();
+  };
 
   // Next page
-  const handleNext = () => bookRef.current?.pageFlip().flipNext();
+  const handleNext = () => {
+    setAutoSlideInterval(0);
+    bookRef.current?.pageFlip().flipNext();
+  };
 
   // Zoom in
   const imageZoomIn = () => {
@@ -145,6 +154,7 @@ const BookDetailsPage = () => {
       setStartPos({ x: e.clientX, y: e.clientY - offset[currentPage].y });
     }
   };
+
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (isDragging) {
       const newOffset = [...offset];
@@ -154,10 +164,17 @@ const BookDetailsPage = () => {
       setOffset(newOffset);
     }
   };
+
   const handleMouseUp = () => setIsDragging(false);
+
   const handleMouseLeave = () => setIsDragging(false);
+
   const handlePageClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (isDragging) e.stopPropagation();
+    if (isDragging) {
+      e.stopPropagation();
+    } else {
+      setAutoSlideInterval(0);
+    }
   };
   const handleResetZoom = () => {
     setPageZoom(Array(book.pages.length).fill(1));
@@ -189,7 +206,8 @@ const BookDetailsPage = () => {
             isSinglePage ? "bg-blue-500 text-white" : ""
           }`}
         >
-          <FiColumns size={16} /> Single Page
+          <FiBook size={16} />
+          <span className="hidden sm:block">Single Page</span>
         </button>
         <button
           onClick={() => toggleSingleDoublePage(false)}
@@ -197,25 +215,28 @@ const BookDetailsPage = () => {
             !isSinglePage ? "bg-blue-500 text-white" : ""
           }`}
         >
-          <FiGrid size={16} /> Double Page
+          <FiBookOpen size={16} />
+          <span className="hidden sm:block">Double Page</span>
         </button>
         <button
           onClick={imageZoomIn}
           className="px-3 py-1.5 font-medium border rounded cursor-pointer text-sm flex items-center gap-2"
         >
-          <FiPlus size={16} /> Zoom In
+          <FiPlus size={16} /> <span className="hidden sm:block">Zoom In</span>
         </button>
         <button
           onClick={imageZoomOut}
           className="px-3 py-1.5 font-medium border rounded cursor-pointer text-sm flex items-center gap-2"
         >
-          <FiMinus size={16} /> Zoom Out
+          <FiMinus size={16} />{" "}
+          <span className="hidden sm:block">Zoom Out</span>
         </button>
         <button
           onClick={handleResetZoom}
           className="px-2.5 py-1.5 font-medium border rounded cursor-pointer text-sm flex items-center gap-2"
         >
-          <FiRefreshCw size={16} /> Reset
+          <FiRefreshCw size={16} />{" "}
+          <span className="hidden sm:block">Reset</span>
         </button>
         <button
           onClick={() => setAutoSlideInterval(autoSlideInterval ? 0 : 3000)}
@@ -226,13 +247,21 @@ const BookDetailsPage = () => {
       </div>
 
       {/* Search Bar */}
-      <div className="mt-3 w-full max-w-[756px]">
+      <div className="mt-3 w-full max-w-[756px] flex items-center gap-2">
         <input
           id="searchInput"
           type="text"
           placeholder="Type to search..."
-          className="w-full px-3 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-gray-300 focus:border-gray-300"
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
+          className="flex-1 px-3 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring focus:ring-gray-300 focus:border-gray-300"
         />
+        <button
+          onClick={() => setSearchValue("")}
+          className="px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+        >
+          Reset
+        </button>
       </div>
 
       {/* FlipBook */}
