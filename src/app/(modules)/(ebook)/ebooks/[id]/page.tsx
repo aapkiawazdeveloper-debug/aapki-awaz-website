@@ -22,6 +22,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import ArticleCard from "@/app/shared/components/site/ui/cards/ArticleCard";
+import AdBanner from "@/app/shared/components/site/layout/header/AdBanner";
 
 const BookDetailsPage = () => {
   const bookRef = useRef<any>(null);
@@ -379,6 +380,10 @@ const BookDetailsPage = () => {
         >
           <FiArrowRight size={16} />
         </button>
+      </div>
+
+      <div className="mt-8">
+        <AdBanner />
       </div>
 
       {/* Social Links */}
