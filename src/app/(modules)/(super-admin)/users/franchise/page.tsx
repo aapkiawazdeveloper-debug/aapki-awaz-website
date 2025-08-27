@@ -1,39 +1,102 @@
-import Breadcrumbs from "@/app/shared/components/admin/Breadcrumbs";
-import PageSubHeader from "@/app/shared/components/admin/PageSubHeader";
+import Link from "next/link";
+import { FiDownload, FiEdit, FiEye, FiPlus, FiTrash2 } from "react-icons/fi";
 import CommonTable, {
   Column,
 } from "@/app/shared/components/admin/ui/tables/CommonTable";
 import AdminPageWrapper from "@/app/shared/components/admin/ui/wrapper/AdminPageWrapper";
-import Link from "next/link";
-import {
-  FiDownload,
-  FiEdit,
-  FiEye,
-  FiPlus,
-  FiTrash2,
-  FiUsers,
-} from "react-icons/fi";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "Franchise Users - Admin Dashboard | Aapki Awaz",
+// Metadata
+export const metadata: Metadata = {
+  title: "Franchises - Admin Dashboard | Aapki Awaz",
   description:
-    "Manage franchise users in the admin dashboard of Aapki Awaz. View, edit, disable, or manage assigned users for each franchise.",
+    "Manage franchises in the admin dashboard of Aapki Awaz. View, edit, disable, or manage each franchise.",
 };
 
-interface FranchiseUser {
+// Type for Franchise
+interface Franchise {
   id: number;
   name: string;
+  owner: string;
   email: string;
-  location: string;
+  mobile: string;
+  city: string;
+  state: string;
+  country: string;
   status: "Active" | "Pending" | "Inactive";
   createdAt: string;
 }
 
-const columns: Column<FranchiseUser>[] = [
+// Sample data
+const franchises: Franchise[] = [
+  {
+    id: 101,
+    name: "Sunshine Mart",
+    owner: "Alice Johnson",
+    email: "alice.johnson@sunshinemart.com",
+    mobile: "+1 555-1122",
+    city: "Los Angeles",
+    state: "California",
+    country: "USA",
+    status: "Active",
+    createdAt: "2023-05-15",
+  },
+  {
+    id: 102,
+    name: "Greenfield Grocers",
+    owner: "Bob Smith",
+    email: "bob.smith@greenfield.com",
+    mobile: "+1 555-3344",
+    city: "Chicago",
+    state: "Illinois",
+    country: "USA",
+    status: "Pending",
+    createdAt: "2024-02-10",
+  },
+  {
+    id: 103,
+    name: "Bright Foods",
+    owner: "Clara Lee",
+    email: "clara.lee@brightfoods.com",
+    mobile: "+44 20 7946 1234",
+    city: "London",
+    state: "Greater London",
+    country: "UK",
+    status: "Inactive",
+    createdAt: "2023-11-20",
+  },
+  {
+    id: 104,
+    name: "FreshMart",
+    owner: "David Kim",
+    email: "david.kim@freshmart.com",
+    mobile: "+82 10-1234-5678",
+    city: "Seoul",
+    state: "Seoul",
+    country: "South Korea",
+    status: "Active",
+    createdAt: "2024-01-05",
+  },
+  {
+    id: 105,
+    name: "Tasty Bites",
+    owner: "Emma Thompson",
+    email: "emma.thompson@tastybites.com",
+    mobile: "+61 2 9876 5432",
+    city: "Sydney",
+    state: "New South Wales",
+    country: "Australia",
+    status: "Active",
+    createdAt: "2023-08-30",
+  },
+];
+
+// Table columns
+const columns: Column<Franchise>[] = [
   {
     key: "name",
     label: "Franchise Name",
-    render: (row: FranchiseUser) => (
+    render: (row: Franchise) => (
       <Link
         href={`/users/franchise/${row.id}`}
         className="text-blue-600 hover:underline"
@@ -42,12 +105,18 @@ const columns: Column<FranchiseUser>[] = [
       </Link>
     ),
   },
-  { key: "email", label: "Email / Contact" },
-  { key: "location", label: "Location / Region" },
+  { key: "owner", label: "Owner" },
+  { key: "email", label: "Email" },
+  { key: "mobile", label: "Mobile Number" },
+  {
+    key: "city",
+    label: "Location",
+    render: (row: Franchise) => `${row.city}, ${row.state}, ${row.country}`,
+  },
   {
     key: "status",
     label: "Status",
-    render: (row: FranchiseUser) => {
+    render: (row: Franchise) => {
       let colorClass = "bg-gray-100 text-gray-800";
       if (row.status === "Active") colorClass = "bg-green-100 text-green-800";
       else if (row.status === "Pending")
@@ -66,42 +135,13 @@ const columns: Column<FranchiseUser>[] = [
   },
   {
     key: "createdAt",
-    label: "Created Date",
-    render: (row: FranchiseUser) =>
-      new Date(row.createdAt).toLocaleDateString(),
-  },
-];
-
-// Sample data
-const franchiseUsers: FranchiseUser[] = [
-  {
-    id: 101,
-    name: "John Doe Franchise",
-    email: "contact@johndoe.com",
-    location: "New York, USA",
-    status: "Active",
-    createdAt: "2024-02-15",
-  },
-  {
-    id: 102,
-    name: "Smith Enterprises",
-    email: "info@smithenterprises.com",
-    location: "California, USA",
-    status: "Pending",
-    createdAt: "2024-05-10",
-  },
-  {
-    id: 103,
-    name: "Amit Kumar Franchise",
-    email: "amit@franchise.in",
-    location: "Delhi, India",
-    status: "Inactive",
-    createdAt: "2023-12-01",
+    label: "Registered On",
+    render: (row: Franchise) => new Date(row.createdAt).toLocaleDateString(),
   },
 ];
 
 // Row actions
-const actions = (row: FranchiseUser) => (
+const rowActions = (row: Franchise) => (
   <div className="flex space-x-2">
     <Link
       href={`/users/franchise/${row.id}`}
@@ -115,36 +155,31 @@ const actions = (row: FranchiseUser) => (
     <button className="text-red-600 hover:text-red-800 cursor-pointer">
       <FiTrash2 title="Disable/Delete Franchise" />
     </button>
-    <button className="text-purple-600 hover:text-purple-800 cursor-pointer">
-      <FiUsers title="Manage Assigned Users" />
-    </button>
   </div>
 );
 
-const UserFranchisePage = () => {
+const FranchisePage = () => {
   return (
-    <>
-      <AdminPageWrapper
-        pageTitle="Franchise Users"
-        breadcrumbs={[
-          { label: "Dashboard", path: "/super-admin-dashboard" },
-          { label: "Users Management" },
-          { label: "Franchise Users" },
-        ]}
-        actions={[
-          { label: "Add Franchise User", icon: <FiPlus /> },
-          { label: "Export", icon: <FiDownload /> },
-        ]}
-      >
-        <CommonTable
-          columns={columns}
-          data={franchiseUsers}
-          maxHeight="500px"
-          actions={actions}
-        />
-      </AdminPageWrapper>
-    </>
+    <AdminPageWrapper
+      pageTitle="Franchises"
+      breadcrumbs={[
+        { label: "Dashboard", path: "/super-admin-dashboard" },
+        { label: "Users Management" },
+        { label: "Franchises" },
+      ]}
+      actions={[
+        { label: "Add Franchise", icon: <FiPlus /> },
+        { label: "Export", icon: <FiDownload /> },
+      ]}
+    >
+      <CommonTable
+        columns={columns}
+        data={franchises}
+        maxHeight="500px"
+        actions={rowActions}
+      />
+    </AdminPageWrapper>
   );
 };
 
-export default UserFranchisePage;
+export default FranchisePage;
