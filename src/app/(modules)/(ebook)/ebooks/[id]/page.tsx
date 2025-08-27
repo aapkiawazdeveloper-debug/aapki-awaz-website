@@ -62,7 +62,7 @@ const BookDetailsPage = () => {
   );
   const [isDragging, setIsDragging] = useState(false);
   const [startPos, setStartPos] = useState({ x: 0, y: 0 });
-  const [autoSlideInterval, setAutoSlideInterval] = useState(3000);
+  const [autoSlideInterval, setAutoSlideInterval] = useState(7000);
 
   const isZoomed = pageZoom[currentPage] > 1;
 
@@ -203,7 +203,7 @@ const BookDetailsPage = () => {
       <div className="flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
         <button
           onClick={() => toggleSingleDoublePage(true)}
-          className={`px-3 py-1.5 font-medium border rounded cursor-pointer text-sm flex items-center gap-2 ${
+          className={`px-3 py-1.5 font-medium border rounded-sm cursor-pointer text-sm flex items-center gap-2 ${
             isSinglePage ? "bg-blue-500 text-white" : ""
           }`}
         >
@@ -212,7 +212,7 @@ const BookDetailsPage = () => {
         </button>
         <button
           onClick={() => toggleSingleDoublePage(false)}
-          className={`px-3 py-1.5 font-medium border rounded cursor-pointer text-sm flex items-center gap-2 ${
+          className={`px-3 py-1.5 font-medium border rounded-sm cursor-pointer text-sm flex items-center gap-2 ${
             !isSinglePage ? "bg-blue-500 text-white" : ""
           }`}
         >
@@ -221,27 +221,27 @@ const BookDetailsPage = () => {
         </button>
         <button
           onClick={imageZoomIn}
-          className="px-3 py-1.5 font-medium border rounded cursor-pointer text-sm flex items-center gap-2"
+          className="px-3 py-1.5 font-medium border rounded-sm cursor-pointer text-sm flex items-center gap-2"
         >
           <FiPlus size={16} /> <span className="hidden sm:block">Zoom In</span>
         </button>
         <button
           onClick={imageZoomOut}
-          className="px-3 py-1.5 font-medium border rounded cursor-pointer text-sm flex items-center gap-2"
+          className="px-3 py-1.5 font-medium border rounded-sm cursor-pointer text-sm flex items-center gap-2"
         >
           <FiMinus size={16} />{" "}
           <span className="hidden sm:block">Zoom Out</span>
         </button>
         <button
           onClick={handleResetZoom}
-          className="px-2.5 py-1.5 font-medium border rounded cursor-pointer text-sm flex items-center gap-2"
+          className="px-2.5 py-1.5 font-medium border rounded-sm cursor-pointer text-sm flex items-center gap-2"
         >
           <FiRefreshCw size={16} />{" "}
           <span className="hidden sm:block">Reset</span>
         </button>
         <button
           onClick={() => setAutoSlideInterval(autoSlideInterval ? 0 : 3000)}
-          className="px-3 py-1.5 font-medium border rounded cursor-pointer text-sm"
+          className="px-3 py-1.5 font-medium border rounded-sm cursor-pointer text-sm"
         >
           {autoSlideInterval ? "Stop Auto Slide" : "Start Auto Slide"}
         </button>
@@ -259,7 +259,7 @@ const BookDetailsPage = () => {
         />
         <button
           onClick={() => setSearchValue("")}
-          className="px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+          className="px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors cursor-pointer"
         >
           Reset
         </button>
