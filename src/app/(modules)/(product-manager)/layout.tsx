@@ -41,7 +41,7 @@ const ProductManagerLayout: React.FC<{ children: React.ReactNode }> = ({
 
   // Product Manager-specific menu
   const menuItems = [
-    { name: "Dashboard", href: "/product-manager-dashboard", icon: FiHome },
+    { name: "Dashboard", href: "/dashboard", icon: FiHome },
     {
       name: "Product Management",
       icon: FiPackage,
@@ -49,6 +49,7 @@ const ProductManagerLayout: React.FC<{ children: React.ReactNode }> = ({
         { name: "Add / Edit Products", href: "/products/manage" },
         { name: "Product Categories", href: "/products/categories" },
         { name: "Product Media (Images / Videos)", href: "/products/media" },
+        { name: "Ebook Management", href: "/products/ebooks" },
       ],
     },
     {

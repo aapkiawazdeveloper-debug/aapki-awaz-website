@@ -42,7 +42,7 @@ const SuperAdminLayout: React.FC<{ children: React.ReactNode }> = ({
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
   const closeSidebar = () => isMobile && setIsSidebarOpen(false);
 
-  // Admin-specific menu
+  // Super Admin-specific menu
   const menuItems = [
     { name: "Dashboard", href: "/dashboard", icon: FiHome },
     {
@@ -65,6 +65,7 @@ const SuperAdminLayout: React.FC<{ children: React.ReactNode }> = ({
         { name: "All News", href: "/content/news" },
         { name: "Categories", href: "/content/categories" },
         { name: "Locations", href: "/content/locations" },
+        { name: "Ebooks", href: "/content/ebooks" }, // Added Ebook
       ],
     },
     {
@@ -82,6 +83,7 @@ const SuperAdminLayout: React.FC<{ children: React.ReactNode }> = ({
         { name: "All Products", href: "/products/all" },
         { name: "Categories & Inventory", href: "/products/categories" },
         { name: "Pricing & Discounts", href: "/products/pricing" },
+        { name: "Ebook Management", href: "/products/ebooks" },
       ],
     },
     {

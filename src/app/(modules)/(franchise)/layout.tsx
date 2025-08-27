@@ -5,7 +5,14 @@ import "../../styles/globals.css";
 import Sidebar from "@/app/shared/components/admin/layout/Sidebar";
 import Header from "@/app/shared/components/admin/layout/Header";
 import Footer from "@/app/shared/components/admin/layout/Footer";
-import { FiHome, FiUsers, FiFileText, FiMonitor, FiBarChart2, FiBell } from "react-icons/fi";
+import {
+  FiHome,
+  FiUsers,
+  FiFileText,
+  FiMonitor,
+  FiBarChart2,
+  FiBell,
+} from "react-icons/fi";
 
 const FranchiseLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -34,36 +41,37 @@ const FranchiseLayout: React.FC<{ children: React.ReactNode }> = ({
 
   // Franchise-specific menu
   const menuItems = [
-    { name: "Dashboard", href: "/franchise/dashboard", icon: FiHome },
+    { name: "Dashboard", href: "/franchise-dashboard", icon: FiHome },
     {
       name: "Users Under Franchise",
       icon: FiUsers,
       children: [
-        {
-          name: "Business Associates",
-          href: "/franchise/users/business-associates",
-        },
-        { name: "Reporters", href: "/franchise/users/reporters" },
+        { name: "Business Associates", href: "/users/business-associates" },
+        { name: "Reporters", href: "/users/reporters" },
       ],
     },
     {
       name: "Content Management",
       icon: FiFileText,
       children: [
-        { name: "News Approval", href: "/franchise/content/news-approval" },
-        { name: "Assign Tasks", href: "/franchise/content/assign-tasks" },
+        { name: "News Approval", href: "/content/news-approval" },
+        {
+          name: "Assign Tasks to Editors / Reporters",
+          href: "/content/assign-tasks",
+        },
+        { name: "Ebooks", href: "/content/ebooks" },
       ],
     },
     {
       name: "Business Management",
       icon: FiMonitor,
       children: [
-        { name: "Business Listings", href: "/franchise/business/listings" },
-        { name: "Advertisements", href: "/franchise/business/ads" },
+        { name: "Business Listings", href: "/business/listings" },
+        { name: "Advertisements", href: "/business/ads" },
       ],
     },
-    { name: "Reports", href: "/franchise/reports", icon: FiBarChart2 },
-    { name: "Notifications", href: "/franchise/notifications", icon: FiBell },
+    { name: "Reports", href: "/reports", icon: FiBarChart2 },
+    { name: "Notifications", href: "/notifications", icon: FiBell },
   ];
 
   return (
