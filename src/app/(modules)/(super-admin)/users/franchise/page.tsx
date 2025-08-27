@@ -3,6 +3,7 @@ import PageSubHeader from "@/app/shared/components/admin/PageSubHeader";
 import CommonTable, {
   Column,
 } from "@/app/shared/components/admin/ui/tables/CommonTable";
+import AdminPageWrapper from "@/app/shared/components/admin/ui/wrapper/AdminPageWrapper";
 import Link from "next/link";
 import {
   FiDownload,
@@ -123,28 +124,25 @@ const actions = (row: FranchiseUser) => (
 const UserFranchisePage = () => {
   return (
     <>
-      <Breadcrumbs
+      <AdminPageWrapper
         pageTitle="Franchise Users"
-        items={[
+        breadcrumbs={[
           { label: "Dashboard", path: "/super-admin-dashboard" },
           { label: "Users Management" },
           { label: "Franchise Users" },
         ]}
-      />
-
-      <PageSubHeader
         actions={[
           { label: "Add Franchise User", icon: <FiPlus /> },
           { label: "Export", icon: <FiDownload /> },
         ]}
-      />
-
-      <CommonTable
-        columns={columns}
-        data={franchiseUsers}
-        maxHeight="500px"
-        actions={actions}
-      />
+      >
+        <CommonTable
+          columns={columns}
+          data={franchiseUsers}
+          maxHeight="500px"
+          actions={actions}
+        />
+      </AdminPageWrapper>
     </>
   );
 };
