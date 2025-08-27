@@ -382,7 +382,7 @@ const BookDetailsPage = () => {
         </button>
       </div>
 
-      <div className="mt-8">
+      <div className="mt-8 w-full">
         <AdBanner />
       </div>
 

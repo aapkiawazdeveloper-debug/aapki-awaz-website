@@ -4,15 +4,15 @@ const images = [
     {
         id: 1,
         src: "/assets/images/logo.jpg",
-        height: 1626,
-        width: 263,
+        height: 1600,
+        width: 420,
         alt: "ad image",
     },
     {
         id: 2,
         src: "/assets/images/Electronics_Guide.jpg",
-        height: 1600,
-        width: 482,
+        height: 1626,
+        width: 263,
         alt: "ad image",
     },
 ]
