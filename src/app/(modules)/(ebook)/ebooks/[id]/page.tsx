@@ -26,6 +26,17 @@ const BookDetailsPage = () => {
       "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 2.jpg",
       "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 3.jpg",
       "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 4.jpg",
+      "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 5.jpg",
+      "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 6.jpg",
+      "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 7.jpg",
+      "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 8.jpg",
+      "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 9.jpg",
+      "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 10.jpg",
+      "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 11.jpg",
+      "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 12.jpg",
+      "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 13.jpg",
+      "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 14.jpg",
+      "/assets/magazine/Chandra_Raj_Singhvi_2024_Magazine/Chandra Raj Singhvi - Book - Page - 15.jpg",
     ],
   };
 
@@ -91,7 +102,7 @@ const BookDetailsPage = () => {
 
     const idx = currentPage;
     const newZoom = [...pageZoom];
-    newZoom[idx] = Math.min(newZoom[idx] + 0.3, 3); // max 3x height
+    newZoom[idx] = Math.min(newZoom[idx] + 0.3, 3);
     setPageZoom(newZoom);
 
     const newOffset = [...offset];
@@ -102,12 +113,12 @@ const BookDetailsPage = () => {
   const handleZoomOut = () => {
     const idx = currentPage;
     const newZoom = [...pageZoom];
-    newZoom[idx] = Math.max(newZoom[idx] - 0.3, 1); // min 1x height
+    newZoom[idx] = Math.max(newZoom[idx] - 0.3, 1);
     setPageZoom(newZoom);
 
     if (newZoom[idx] === 1) {
       const newOffset = [...offset];
-      newOffset[idx] = { x: 0, y: 0 }; // reset
+      newOffset[idx] = { x: 0, y: 0 };
       setOffset(newOffset);
       setIsDragging(false);
     }
@@ -128,8 +139,8 @@ const BookDetailsPage = () => {
     if (isDragging) {
       const newOffset = [...offset];
       let newY = e.clientY - startPos.y;
-      if (newY > 0) newY = 0; // cannot drag down
-      newOffset[currentPage] = { x: 0, y: newY }; // horizontal fixed
+      if (newY > 0) newY = 0;
+      newOffset[currentPage] = { x: 0, y: newY };
       setOffset(newOffset);
     }
   };
@@ -143,7 +154,7 @@ const BookDetailsPage = () => {
   return (
     <div className="flex flex-col items-center w-full overflow-hidden">
       {/* Toolbar */}
-      <div className="flex items-center justify-center gap-4 flex-wrap">
+      <div className="flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
         <button
           onClick={() => toggleSingleDoublePage(true)}
           className={`px-3 py-1.5 font-medium border rounded cursor-pointer text-sm flex items-center gap-2 ${
@@ -206,9 +217,9 @@ const BookDetailsPage = () => {
         usePortrait={isSinglePage}
         clickEventForward={true}
         startZIndex={0}
-        useMouseEvents={!isZoomed} // disable horizontal flip when zoomed
-        disableFlipByClick={isZoomed} // disable click flip when zoomed
-        swipeDistance={isZoomed ? 1000 : 30} // effectively disables swipe
+        useMouseEvents={!isZoomed}
+        disableFlipByClick={isZoomed}
+        swipeDistance={isZoomed ? 1000 : 30}
         showPageCorners={true}
         autoSize={!isSinglePage}
         style={{ margin: "0 auto" }}
@@ -255,7 +266,7 @@ const BookDetailsPage = () => {
       </HTMLFlipBook>
 
       {/* Page Controls */}
-      <div className="flex items-center justify-center gap-6 mt-4">
+      <div className="flex items-center justify-center gap-4 mt-4">
         <button
           onClick={handlePrev}
           disabled={currentPage === 0}
@@ -267,9 +278,27 @@ const BookDetailsPage = () => {
         >
           <FiArrowLeft size={16} />
         </button>
-        <span className="text-gray-700 font-medium">
-          {currentPage + 1} / {book.pages.length}
-        </span>
+
+        {/* Go to page input */}
+        <div className="flex items-center gap-2">
+          <input
+            type="number"
+            min={1}
+            max={book.pages.length}
+            value={currentPage + 1}
+            onChange={(e) => {
+              let page = parseInt(e.target.value, 10);
+              if (isNaN(page)) return;
+              page = Math.max(1, Math.min(page, book.pages.length));
+              bookRef.current?.pageFlip().flip(page - 1);
+            }}
+            className="w-16 px-2 py-1 border border-gray-300 rounded text-center focus:outline-none focus:ring focus:ring-gray-300"
+          />
+          <span className="text-gray-700 font-medium">
+            / {book.pages.length}
+          </span>
+        </div>
+
         <button
           onClick={handleNext}
           disabled={currentPage === book.pages.length - 1}
