@@ -1,12 +1,30 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FiChevronDown } from "react-icons/fi";
+import axios from "axios";
+import { CategoriesResponse, CategoryData } from "@/app/shared/types/category";
 
 const CategoryNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [categories, setCategories] = useState<CategoryData[]>([]);
+
+  // get the data on the page load
+  useEffect(() => {
+    getCategoryList();
+  }, []);
+
+  // get category list
+  const getCategoryList = async () => {
+    const response: CategoriesResponse = await axios.get("/api/categories");
+
+    // check the response
+    if (response.data.success) {
+      setCategories(response.data.categories);
+    }
+  };
 
   // For mobile toggle dropdown
   const handleDropdownClick = (menu: string) => {
@@ -35,6 +53,17 @@ const CategoryNavbar = () => {
                 Home
               </Link>
             </li>
+
+            {categories?.map((category) => (
+              <li key={category.id}>
+                <Link
+                  href={category?.system_short_url}
+                  className="text-[#0000ff] text-sm font-poppins"
+                >
+                  {category?.catname}
+                </Link>
+              </li>
+            ))}
 
             {/* Leadaer of Rajasthan Dropdown */}
             <li
