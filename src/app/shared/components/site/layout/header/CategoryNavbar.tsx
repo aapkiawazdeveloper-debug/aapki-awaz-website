@@ -54,7 +54,7 @@ const CategoryNavbar = () => {
               </Link>
             </li>
 
-            {categories?.map((category) => (
+            {/* {categories?.map((category) => (
               <li key={category.id}>
                 <Link
                   href={category?.system_short_url}
@@ -63,7 +63,7 @@ const CategoryNavbar = () => {
                   {category?.catname}
                 </Link>
               </li>
-            ))}
+            ))} */}
 
             {/* Leadaer of Rajasthan Dropdown */}
             <li
