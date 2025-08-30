@@ -125,7 +125,6 @@ export type MainMegaCols =
   | "mainmenu_mega_col5"
   | "mainmenu_mega_col6";
 
-// Arrays to loop through in your code
 export const topMegaColsArray: TopMegaCols[] = [
   "topmenu_mega_col1",
   "topmenu_mega_col2",

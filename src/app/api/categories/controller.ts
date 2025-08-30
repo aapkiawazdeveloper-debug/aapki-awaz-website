@@ -2,7 +2,13 @@ import { error, success } from "@/app/core/utils/response";
 import { createCategory, getAllCategories, getCategoryById } from "./service";
 import { NextResponse } from "next/server";
 import { CategoryData } from "@/app/shared/types/category";
-import { Category, mainMegaColsArray, TopMegaCols, topMegaColsArray } from "./types";
+import {
+  Category,
+  mainMegaColsArray,
+  TopMegaCols,
+  topMegaColsArray,
+} from "./types";
+import { filterCategories } from "@/app/core/utils/category-helpers";
 
 /**
  * GET: Retrieve all categories
@@ -15,7 +21,7 @@ export const getCategories = async () => {
       categories.map(async (category) => {
         // ----- TOP MENU -----
         const topMegaMenuColumn = Number(category.top_mega_menu_column) || 0;
-        const childColumns: Record<string, any[]> = {};
+        const childColumns: Record<string, Category[]> = {};
 
         if (topMegaMenuColumn >= 1 && topMegaMenuColumn <= 6) {
           for (let i = 0; i < topMegaMenuColumn; i++) {
@@ -23,13 +29,13 @@ export const getCategories = async () => {
             const colIds =
               category[key]?.split(",").map((id) => Number(id.trim())) || [];
             const children = await Promise.all(colIds.map(getCategoryById));
-            childColumns[key] = children.filter(Boolean);
+            childColumns[key] = filterCategories(children);
           }
         }
 
         // ----- MAIN MENU -----
         const mainMegaMenuColumn = Number(category.main_mega_menu_column) || 0;
-        const mainChildColumns: Record<string, any[]> = {};
+        const mainChildColumns: Record<string, Category[]> = {};
 
         if (mainMegaMenuColumn >= 1 && mainMegaMenuColumn <= 6) {
           for (let i = 0; i < mainMegaMenuColumn; i++) {
@@ -37,14 +43,14 @@ export const getCategories = async () => {
             const colIds =
               category[key]?.split(",").map((id) => Number(id.trim())) || [];
             const children = await Promise.all(colIds.map(getCategoryById));
-            mainChildColumns[key] = children.filter(Boolean);
+            mainChildColumns[key] = filterCategories(children);
           }
         }
 
         return {
           ...category,
-          childColumns, // Top menu child objects
-          mainChildColumns, // Main menu child objects
+          childColumns,
+          mainChildColumns,
         };
       })
     );
