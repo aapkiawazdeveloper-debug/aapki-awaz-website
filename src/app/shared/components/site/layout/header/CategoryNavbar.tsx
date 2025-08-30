@@ -71,6 +71,12 @@ const CategoryNavbar = () => {
             </ul>
           ) : (
             <ul className="flex flex-col md:flex-row md:items-center gap-4 py-2 md:py-0">
+              <li>
+                <Link href="/" className="text-[#0000ff] text-sm font-poppins">
+                  Home
+                </Link>
+              </li>
+
               {categories.map((category) => {
                 const columns: CategoryData[][] = [];
                 if (category.childColumns) {

@@ -71,6 +71,12 @@ const MainNav = () => {
             </ul>
           ) : (
             <ul className="flex flex-col md:flex-row md:items-center gap-4 py-2 md:py-0">
+              <li>
+                <Link href="/" className="text-white text-sm font-poppins">
+                  Home
+                </Link>
+              </li>
+
               {categories.map((category) => {
                 console.log("categiry data ", category);
                 const columns: CategoryData[][] = [];
