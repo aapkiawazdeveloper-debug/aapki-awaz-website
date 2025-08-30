@@ -108,3 +108,38 @@ export interface Category {
   system_short_url: string | null;
   numeric_short_url: string | null;
 }
+
+export type TopMegaCols =
+  | "topmenu_mega_col1"
+  | "topmenu_mega_col2"
+  | "topmenu_mega_col3"
+  | "topmenu_mega_col4"
+  | "topmenu_mega_col5"
+  | "topmenu_mega_col6";
+
+export type MainMegaCols =
+  | "mainmenu_mega_col1"
+  | "mainmenu_mega_col2"
+  | "mainmenu_mega_col3"
+  | "mainmenu_mega_col4"
+  | "mainmenu_mega_col5"
+  | "mainmenu_mega_col6";
+
+// Arrays to loop through in your code
+export const topMegaColsArray: TopMegaCols[] = [
+  "topmenu_mega_col1",
+  "topmenu_mega_col2",
+  "topmenu_mega_col3",
+  "topmenu_mega_col4",
+  "topmenu_mega_col5",
+  "topmenu_mega_col6",
+];
+
+export const mainMegaColsArray: MainMegaCols[] = [
+  "mainmenu_mega_col1",
+  "mainmenu_mega_col2",
+  "mainmenu_mega_col3",
+  "mainmenu_mega_col4",
+  "mainmenu_mega_col5",
+  "mainmenu_mega_col6",
+];

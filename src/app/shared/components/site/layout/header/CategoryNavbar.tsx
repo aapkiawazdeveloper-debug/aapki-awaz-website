@@ -78,6 +78,7 @@ const CategoryNavbar = () => {
                     const colKey =
                       `topmenu_mega_col${i}` as keyof TopMenuMegaCols;
                     const colData = category.childColumns[colKey];
+
                     if (colData && colData.length > 0) {
                       columns.push(colData);
                     }

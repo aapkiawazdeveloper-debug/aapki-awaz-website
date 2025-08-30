@@ -2,49 +2,50 @@ import { error, success } from "@/app/core/utils/response";
 import { createCategory, getAllCategories, getCategoryById } from "./service";
 import { NextResponse } from "next/server";
 import { CategoryData } from "@/app/shared/types/category";
+import { Category, mainMegaColsArray, TopMegaCols, topMegaColsArray } from "./types";
 
 /**
  * GET: Retrieve all categories
  */
 export const getCategories = async () => {
   try {
-    const categories = await getAllCategories();
+    const categories: Category[] = await getAllCategories();
 
     const categoryList = await Promise.all(
       categories.map(async (category) => {
+        // ----- TOP MENU -----
         const topMegaMenuColumn = Number(category.top_mega_menu_column) || 0;
+        const childColumns: Record<string, any[]> = {};
 
         if (topMegaMenuColumn >= 1 && topMegaMenuColumn <= 6) {
-          type TopMegaCols =
-            | "topmenu_mega_col1"
-            | "topmenu_mega_col2"
-            | "topmenu_mega_col3"
-            | "topmenu_mega_col4"
-            | "topmenu_mega_col5"
-            | "topmenu_mega_col6";
-
-          const childColumns: Record<string, any[]> = {};
-
-          for (let i = 1; i <= topMegaMenuColumn; i++) {
-            const key = `topmenu_mega_col${i}` as TopMegaCols;
+          for (let i = 0; i < topMegaMenuColumn; i++) {
+            const key = topMegaColsArray[i];
             const colIds =
-              category[key]
-                ?.split(",")
-                .map((id: string) => Number(id.trim())) || [];
-
-            const children = await Promise.all(
-              colIds.map((id) => getCategoryById(id))
-            );
+              category[key]?.split(",").map((id) => Number(id.trim())) || [];
+            const children = await Promise.all(colIds.map(getCategoryById));
             childColumns[key] = children.filter(Boolean);
           }
-
-          return {
-            ...category,
-            childColumns,
-          };
         }
 
-        return category;
+        // ----- MAIN MENU -----
+        const mainMegaMenuColumn = Number(category.main_mega_menu_column) || 0;
+        const mainChildColumns: Record<string, any[]> = {};
+
+        if (mainMegaMenuColumn >= 1 && mainMegaMenuColumn <= 6) {
+          for (let i = 0; i < mainMegaMenuColumn; i++) {
+            const key = mainMegaColsArray[i];
+            const colIds =
+              category[key]?.split(",").map((id) => Number(id.trim())) || [];
+            const children = await Promise.all(colIds.map(getCategoryById));
+            mainChildColumns[key] = children.filter(Boolean);
+          }
+        }
+
+        return {
+          ...category,
+          childColumns, // Top menu child objects
+          mainChildColumns, // Main menu child objects
+        };
       })
     );
 
@@ -83,14 +84,6 @@ export const createNewCategory = async (request: Request) => {
         { status: 400 }
       );
     }
-
-    type TopMegaCols =
-      | "topmenu_mega_col1"
-      | "topmenu_mega_col2"
-      | "topmenu_mega_col3"
-      | "topmenu_mega_col4"
-      | "topmenu_mega_col5"
-      | "topmenu_mega_col6";
 
     for (let i = 1; i <= 6; i++) {
       const key = `topmenu_mega_col${i}` as TopMegaCols;
