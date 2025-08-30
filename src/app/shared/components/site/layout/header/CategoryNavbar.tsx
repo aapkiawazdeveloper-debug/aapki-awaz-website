@@ -94,7 +94,7 @@ const CategoryNavbar = () => {
                     onClick={() => toggleDropdown(dropdownId)}
                   >
                     <span className="flex items-center gap-1 text-[#0000ff] text-sm font-poppins cursor-pointer capitalize">
-                      {category.catname} <FiChevronDown size={12} />
+                      {category.display_name} <FiChevronDown size={12} />
                     </span>
 
                     {columns.length > 0 && (
@@ -126,7 +126,7 @@ const CategoryNavbar = () => {
                                     href={child.system_short_url || "/"}
                                     className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                                   >
-                                    {child.catname}
+                                    {child.display_name}
                                   </Link>
                                 </li>
                               ))}
