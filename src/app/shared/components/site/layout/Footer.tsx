@@ -11,6 +11,9 @@ const Footer = () => {
   const [footerBottomCategoryList, setFooterBottomCategoryList] = useState<
     CategoryData[]
   >([]);
+  const [footerTopCategoryList, setFooterTopCategoryList] = useState<
+    CategoryData[]
+  >([]);
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -23,14 +26,17 @@ const Footer = () => {
     try {
       const response: CategoriesResponse = await axios.get("/api/categories");
       if (response.data.success) {
-        response.data.categories.map((category) => {
-          setFooterBottomCategoryList(
+        response.data.categories.forEach((category) => {
+          setFooterTopCategoryList(
             category.footerMenu?.top_footer_menu_list ?? []
+          );
+          setFooterBottomCategoryList(
+            category.footerMenu?.bottom_footer_menu_list ?? []
           );
         });
       }
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+      console.error(error);
     } finally {
       setLoading(false);
     }
