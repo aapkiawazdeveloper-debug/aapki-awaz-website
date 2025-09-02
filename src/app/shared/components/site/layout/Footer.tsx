@@ -1,7 +1,41 @@
+"use client";
+
+import { CategoriesResponse, CategoryData } from "@/app/shared/types/category";
+import axios from "axios";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { FaBullhorn } from "react-icons/fa";
+import Skeleton from "react-loading-skeleton";
 
 const Footer = () => {
+  const [footerBottomCategoryList, setFooterBottomCategoryList] = useState<
+    CategoryData[]
+  >([]);
+  const [loading, setLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    getCategoryList();
+  }, []);
+
+  // get category list
+  const getCategoryList = async () => {
+    setLoading(true);
+    try {
+      const response: CategoriesResponse = await axios.get("/api/categories");
+      if (response.data.success) {
+        response.data.categories.map((category) => {
+          setFooterBottomCategoryList(
+            category.footerMenu?.top_footer_menu_list ?? []
+          );
+        });
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <footer>
       <section className="bg-[#98AFC7] py-8">
@@ -472,94 +506,117 @@ const Footer = () => {
       <section className="bg-[#8B6C42] py-4">
         <div className="px-4">
           <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-            <li>
-              <Link
-                href="/"
-                className="text-white text-sm font-poppins font-normal"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/leader-of-rajasthan-minister-mla-mp-district"
-                className="text-white text-sm font-poppins font-normal"
-              >
-                Member of Parliament - MP
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/leader-of-rajasthan-minister-mla"
-                className="text-white text-sm font-poppins font-normal"
-              >
-                MLA of Rajasthan
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/mayor-chairman-president-news-photos"
-                className="text-white text-sm font-poppins font-normal"
-              >
-                Mayor - Chairman - President
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/rajasthan-zila-pramukh"
-                className="text-white text-sm font-poppins font-normal"
-              >
-                Rajasthan - Zila Pramukh
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/panchayat-samiti-pradhan-rajasthan"
-                className="text-white text-sm font-poppins font-normal"
-              >
-                Panchayat Samiti - Pradhan
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/video-interview"
-                className="text-white text-sm font-poppins font-normal"
-              >
-                Video Interview
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/terms-and-conditions"
-                className="text-white text-sm font-poppins font-normal"
-              >
-                Terms & Conditions
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/privacy-policy"
-                className="text-white text-sm font-poppins font-normal"
-              >
-                Privacy Policy
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/cookie-policy"
-                className="text-white text-sm font-poppins font-normal"
-              >
-                Cookie Policy
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact-us"
-                className="text-white text-sm font-poppins font-normal"
-              >
-                Contact Us
-              </Link>
-            </li>
+            {loading ? (
+              <ul className="flex flex-col md:flex-row md:items-center gap-4 py-2 md:py-0">
+                {[...Array(8)].map((_, index) => (
+                  <li key={index}>
+                    <Skeleton height={18} width={96} />
+                  </li>
+                ))}
+              </ul>
+            ) : footerBottomCategoryList.length === 0 ? (
+              <>
+                <li>
+                  <Link
+                    href="/"
+                    className="text-white text-sm font-poppins font-normal"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/leader-of-rajasthan-minister-mla-mp-district"
+                    className="text-white text-sm font-poppins font-normal"
+                  >
+                    Member of Parliament - MP
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/leader-of-rajasthan-minister-mla"
+                    className="text-white text-sm font-poppins font-normal"
+                  >
+                    MLA of Rajasthan
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/mayor-chairman-president-news-photos"
+                    className="text-white text-sm font-poppins font-normal"
+                  >
+                    Mayor - Chairman - President
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/rajasthan-zila-pramukh"
+                    className="text-white text-sm font-poppins font-normal"
+                  >
+                    Rajasthan - Zila Pramukh
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/panchayat-samiti-pradhan-rajasthan"
+                    className="text-white text-sm font-poppins font-normal"
+                  >
+                    Panchayat Samiti - Pradhan
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/video-interview"
+                    className="text-white text-sm font-poppins font-normal"
+                  >
+                    Video Interview
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/terms-and-conditions"
+                    className="text-white text-sm font-poppins font-normal"
+                  >
+                    Terms & Conditions
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/privacy-policy"
+                    className="text-white text-sm font-poppins font-normal"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/cookie-policy"
+                    className="text-white text-sm font-poppins font-normal"
+                  >
+                    Cookie Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact-us"
+                    className="text-white text-sm font-poppins font-normal"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+              </>
+            ) : (
+              footerBottomCategoryList.map((category) => (
+                <li key={category.id}>
+                  <Link
+                    href={category.slug}
+                    className="text-white text-sm font-poppins font-normal"
+                  >
+                    {category?.display_name}
+                  </Link>
+                </li>
+              ))
+            )}
           </ul>
         </div>
       </section>

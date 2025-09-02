@@ -9,6 +9,7 @@ import {
   topMegaColsArray,
 } from "./types";
 import { filterCategories } from "@/app/core/utils/category-helpers";
+import { parseFooterMenu } from "@/app/core/utils/footer-menu";
 
 /**
  * GET: Retrieve all categories
@@ -47,10 +48,22 @@ export const getCategories = async () => {
           }
         }
 
+        // ----- FOOTER MENU -----
+        let footerMenu: {
+          top_footer_menu_list: Category[];
+          bottom_footer_menu_list: Category[];
+        } = { top_footer_menu_list: [], bottom_footer_menu_list: [] };
+
+        if (category.footer_menu_ids) {
+          const parsed = await parseFooterMenu(category.footer_menu_ids);
+          footerMenu = parsed.footer_menu_ids;
+        }
+
         return {
           ...category,
           childColumns,
           mainChildColumns,
+          footerMenu,
         };
       })
     );

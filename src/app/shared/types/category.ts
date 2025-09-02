@@ -115,6 +115,7 @@ export interface CategoryData {
   system_short_url: string;
   numeric_short_url: string;
   childColumns?: TopMenuMegaCols;
+  footerMenu?: FooterMenu;
 }
 
 export interface CategoriesResponse {
@@ -137,4 +138,9 @@ export interface TopMenuMegaCols {
   topmenu_mega_col4?: CategoryData[];
   topmenu_mega_col5?: CategoryData[];
   topmenu_mega_col6?: CategoryData[];
+}
+
+export interface FooterMenu {
+  top_footer_menu_list: CategoryData[];
+  bottom_footer_menu_list: CategoryData[];
 }

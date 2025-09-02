@@ -1,6 +1,5 @@
 import { getCategoryById } from "@/app/api/categories/service";
 import { Category } from "@/app/api/categories/types";
-import { filterCategories } from "./category-helpers";
 
 /**
  * Parse footer_menu_ids into a structured object
@@ -14,59 +13,38 @@ export const parseFooterMenu = async (
     bottom_footer_menu_list: Category[];
   };
 }> => {
+  // Ensure both arrays exist
+  const top_footer_menu_list: Category[] = [];
+  const bottom_footer_menu_list: Category[] = [];
+
   if (!footerMenuIds) {
     return {
-      footer_menu_ids: {
-        top_footer_menu_list: [],
-        bottom_footer_menu_list: [],
-      },
+      footer_menu_ids: { top_footer_menu_list, bottom_footer_menu_list },
     };
   }
 
-  // ---- Social theme format (upper + lower with "||||")
-  if (footerMenuIds.includes("||||")) {
-    const [upperRaw, lowerRaw] = footerMenuIds.split("||||");
+  // Split top/bottom if using '||||' format
+  const [topRaw = "", bottomRaw = ""] = footerMenuIds.includes("||||")
+    ? footerMenuIds.split("||||")
+    : [footerMenuIds, ""];
 
-    const parseSection = async (section: string): Promise<Category[]> => {
-      if (!section) return [];
-      const ids = section
-        .split("|")
-        .flatMap((col) => col.split(",").map((id) => Number(id.trim())));
-      const children = await Promise.all(ids.map(getCategoryById));
-      return filterCategories(children).sort((a, b) =>
-        (a.catname ?? "").localeCompare(b.catname ?? "")
-      );
-    };
+  const parseIds = async (raw: string) => {
+    if (!raw) return [];
+    const ids = raw
+      .split(",")
+      .map((id) => Number(id.trim()))
+      .filter((id) => !isNaN(id));
+    const categories = await Promise.all(ids.map(getCategoryById));
+    return categories.filter((c): c is Category => !!c);
+  };
 
-    return {
-      footer_menu_ids: {
-        top_footer_menu_list: await parseSection(upperRaw),
-        bottom_footer_menu_list: await parseSection(lowerRaw),
-      },
-    };
-  }
+  const topCategories = await parseIds(topRaw);
+  const bottomCategories = await parseIds(bottomRaw);
 
-  // ---- Directory section (comma-separated IDs only)
-  if (footerMenuIds.includes(",")) {
-    const ids = footerMenuIds.split(",").map((id) => Number(id.trim()));
-    const children = await Promise.all(ids.map(getCategoryById));
-    const sorted = filterCategories(children).sort((a, b) =>
-      (a.catname ?? "").localeCompare(b.catname ?? "")
-    );
-    return {
-      footer_menu_ids: {
-        top_footer_menu_list: sorted,
-        bottom_footer_menu_list: [],
-      },
-    };
-  }
-
-  // ---- Fallback: single ID
-  const single = await getCategoryById(Number(footerMenuIds.trim()));
   return {
     footer_menu_ids: {
-      top_footer_menu_list: single ? [single] : [],
-      bottom_footer_menu_list: [],
+      top_footer_menu_list: topCategories,
+      bottom_footer_menu_list: bottomCategories,
     },
   };
 };
