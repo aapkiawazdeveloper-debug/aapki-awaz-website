@@ -46,6 +46,42 @@ export const getCategoryBySystemShortUrl = async (
 };
 
 /**
+ * Get a single category by short_url
+ * @param short_url - string unique identifier for the category
+ * @returns Category object or null if not found
+ */
+export const getCategoryByShortUrl = async (
+  short_url: string
+): Promise<Category | null> => {
+  const [rows] = await pool.execute<RowDataPacket[]>(
+    "SELECT * FROM categories WHERE short_url = ? LIMIT 1",
+    [short_url]
+  );
+
+  if (rows.length === 0) return null;
+
+  return rows[0] as Category;
+};
+
+/**
+ * Get a single category by slug
+ * @param slug - string unique identifier for the category
+ * @returns Category object or null if not found
+ */
+export const getCategoryByslug = async (
+  slug: string
+): Promise<Category | null> => {
+  const [rows] = await pool.execute<RowDataPacket[]>(
+    "SELECT * FROM categories WHERE slug = ? LIMIT 1",
+    [slug]
+  );
+
+  if (rows.length === 0) return null;
+
+  return rows[0] as Category;
+};
+
+/**
  * Create a new category
  * @param columns - array of column names
  * @param values - array of corresponding values
