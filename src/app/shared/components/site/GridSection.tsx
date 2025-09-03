@@ -10,17 +10,23 @@ const GridSection = () => {
   const [newsList, setNewsList] = useState<News[]>([]);
   const [isLoader, setIsLoader] = useState<boolean>(false);
 
+  const [page, setPage] = useState<number>(1);
+  const [limit] = useState<number>(20);
+  const [hasMore, setHasMore] = useState<boolean>(true);
+
   useEffect(() => {
-    getNewsList();
-  }, []);
+    getNewsList(page, limit);
+  }, [page]);
 
   // get news list
-  const getNewsList = async () => {
+  const getNewsList = async (page: number, limit: number) => {
     setIsLoader(true);
     try {
-      const response: NewsResponse = await axios.get("/api/news");
+      const response: NewsResponse = await axios.get(
+        `/api/news?page=${page}&limit=${limit}`
+      );
+
       if (response.data.success) {
-        console.log("news list ", response.data.newsList);
         setNewsList(response.data.newsList);
       }
     } catch (error: any) {

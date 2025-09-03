@@ -129,7 +129,7 @@ const CategoryNavbar = () => {
                               {colItems.map((child) => (
                                 <li key={child.id}>
                                   <Link
-                                    href={child.slug || "/"}
+                                    href={child.system_short_url || "/"}
                                     className="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded"
                                   >
                                     {child.display_name}
