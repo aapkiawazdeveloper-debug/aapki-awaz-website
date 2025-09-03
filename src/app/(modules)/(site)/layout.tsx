@@ -1,7 +1,7 @@
 import { Inter, Poppins } from "next/font/google";
 import type { Metadata } from "next";
-import "../../styles/globals.css";
-import "../../styles/site.css";
+import "../../../styles/globals.css";
+import "../../../styles/site.css";
 import Header from "@/app/shared/components/site/layout/header/Header";
 import Footer from "@/app/shared/components/site/layout/Footer";
 import Sidebar from "@/app/shared/components/site/layout/Sidebar";

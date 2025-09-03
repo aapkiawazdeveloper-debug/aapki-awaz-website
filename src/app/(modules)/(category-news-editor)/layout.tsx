@@ -1,15 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import "../../styles/globals.css";
+import "../../../styles/globals.css";
 import Sidebar from "@/app/shared/components/admin/layout/Sidebar";
 import Header from "@/app/shared/components/admin/layout/Header";
 import Footer from "@/app/shared/components/admin/layout/Footer";
 import {
   FiHome,
-  FiUsers,
   FiFileText,
-  FiMonitor,
   FiCalendar,
   FiBell,
 } from "react-icons/fi";
