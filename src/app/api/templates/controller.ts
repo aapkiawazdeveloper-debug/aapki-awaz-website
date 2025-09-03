@@ -10,17 +10,18 @@ export const getTemplates = async () => {
   try {
     const templates: Template[] = await getAllTemplate();
 
-    const parseTemplates = templates.map((template) => {
-      return {
-        ...template,
-        layout_data: JSON.parse(template.layout_data),
-      };
-    });
+    // const parseTemplates = templates.map((template) => {
+    //   return {
+    //     ...template,
+    //     layout_data: JSON.parse(template.layout_data),
+    //   };
+    // });
 
     return success(
       {
         message: "Templates data retrieved successfully",
-        templates: parseTemplates,
+        templates: templates,
+        totalTemplates: templates.length,
       },
       200
     );
