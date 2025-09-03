@@ -17,3 +17,12 @@ export const getNews = async () => {
     return error("Internal Server Error", 500);
   }
 };
+
+export const getPaginatedNews = async (page: number, limit: number) => {
+  try {
+    
+  } catch (err) {
+    console.error("Failed to retrieve news:", err);
+    return error("Internal Server Error", 500);
+  }
+};

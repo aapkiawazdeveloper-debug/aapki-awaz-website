@@ -1,3 +1,4 @@
+import { News } from "@/app/api/news/types";
 import Link from "next/link";
 import {
   FaFacebookF,
@@ -8,7 +9,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-const ArticleCard: React.FC<{ isSocialMedia?: boolean }> = ({
+const ArticleCard: React.FC<{ isSocialMedia?: boolean; newsData?: News }> = ({
   isSocialMedia = false,
 }) => {
   return (

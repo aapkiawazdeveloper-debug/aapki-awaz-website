@@ -12,3 +12,14 @@ export const getAllNews = async (): Promise<News[]> => {
   );
   return rows as News[];
 };
+
+/**
+ * Get paginated news
+ * Returns an array of News objects
+ */
+export const getPaginatedNews = async (): Promise<News[]> => {
+  const [rows] = await pool.execute<RowDataPacket[]>(
+    "SELECT * FROM news WHERE deleted_at IS NULL ORDER BY created_at DESC"
+  );
+  return rows as News[];
+};
