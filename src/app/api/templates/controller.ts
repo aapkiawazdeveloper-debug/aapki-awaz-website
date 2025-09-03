@@ -1,18 +1,26 @@
 import { success } from "@/app/core/utils/response";
 import { getAllTemplate } from "./service";
 import { error } from "console";
+import { Template } from "./types";
 
 /**
  * GET: Retrieve all templates
  */
 export const getTemplates = async () => {
   try {
-    const templates = await getAllTemplate();
+    const templates: Template[] = await getAllTemplate();
+
+    const parseTemplates = templates.map((template) => {
+      return {
+        ...template,
+        layout_data: JSON.parse(template.layout_data),
+      };
+    });
 
     return success(
       {
         message: "Templates data retrieved successfully",
-        templates,
+        templates: parseTemplates,
       },
       200
     );
