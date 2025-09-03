@@ -78,7 +78,6 @@ const MainNav = () => {
               </li>
 
               {categories.map((category) => {
-                console.log("categiry data ", category);
                 const columns: CategoryData[][] = [];
                 if (category.childColumns) {
                   for (let i = 1; i <= 6; i++) {
