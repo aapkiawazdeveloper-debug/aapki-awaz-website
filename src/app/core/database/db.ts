@@ -2,13 +2,11 @@ import "../../../env/index";
 
 import mysql from "mysql2/promise";
 
-console.log("db host ", process.env.DB_HOST);
-
 const pool = mysql.createPool({
   host: process.env.DB_HOST!,
-  user: "root",
-  password: "Rohit1234",
-  database: "akap_aapkiawa_next",
+  user: process.env.DB_USER!,
+  password: process.env.DB_PASSWORD!,
+  database: process.env.DB_NAME!,
 });
 
 export default pool;
