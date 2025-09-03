@@ -11,7 +11,9 @@ import {
 
 const ArticleCard: React.FC<{ isSocialMedia?: boolean; newsData?: News }> = ({
   isSocialMedia = false,
+  newsData,
 }) => {
+  console.log("news data ", newsData);
   return (
     <div className="shadow-sm">
       <iframe

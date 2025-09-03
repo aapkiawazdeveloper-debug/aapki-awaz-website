@@ -21,7 +21,7 @@ export const getTemplates = async () => {
       {
         message: "Templates data retrieved successfully",
         templates: templates,
-        totalTemplates: templates.length,
+        // totalTemplates: templates.length,
       },
       200
     );

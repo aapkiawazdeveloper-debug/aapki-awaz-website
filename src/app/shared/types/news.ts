@@ -54,10 +54,17 @@ export interface NewsResponse {
     success: boolean;
     message: string;
     newsList: News[];
+    pagination?: Pagination;
   };
   status: number;
   statusText: string;
   headers: Record<string, string>;
   config: Record<string, any>;
   request: Record<string, any>;
+}
+
+export interface Pagination {
+  currentPage: number;
+  limit: number;
+  totalItems: number;
 }
