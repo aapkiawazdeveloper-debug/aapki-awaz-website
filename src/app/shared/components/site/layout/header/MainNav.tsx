@@ -77,7 +77,7 @@ const MainNav = () => {
                 </Link>
               </li>
 
-              {categories.map((category) => {
+              {categories.map((category, index) => {
                 const columns: CategoryData[][] = [];
                 if (category.childColumns) {
                   for (let i = 1; i <= 6; i++) {
@@ -91,6 +91,7 @@ const MainNav = () => {
                 }
 
                 const dropdownId = `category-${category.id}`;
+                const alignRight = index >= categories.length - 2;
 
                 return (
                   <li
@@ -104,7 +105,7 @@ const MainNav = () => {
 
                     {columns.length > 0 && (
                       <ul
-                        className={`absolute left-0 top-full bg-white shadow-lg rounded-lg z-50 transition-all duration-300 ease-in-out overflow-auto
+                        className={`absolute top-full bg-white shadow-lg rounded-lg z-50 transition-all duration-300 ease-in-out overflow-auto
                           ${
                             openDropdown === dropdownId
                               ? "block"
@@ -114,6 +115,7 @@ const MainNav = () => {
                         style={{
                           maxWidth: "100vw",
                           width: `min(${columns.length * 200}px, 100vw)`,
+                          [alignRight ? "right" : "left"]: 0,
                         }}
                       >
                         <div
