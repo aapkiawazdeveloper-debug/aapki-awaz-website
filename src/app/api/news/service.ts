@@ -33,3 +33,20 @@ export const getPaginatedNews = async (
   const [rows] = await pool.execute<RowDataPacket[]>(query);
   return rows as News[];
 };
+
+/**
+ * Get a single news by system_short_url
+ * @param system_short_url - string unique identifier for the news
+ * @returns news object or null if not found
+ */
+export const getNewsBySystemShortUrl = async (
+  system_short_url: string
+): Promise<News | null> => {
+  const [rows] = await pool.execute<RowDataPacket[]>(
+    "SELECT * FROM news WHERE system_short_url = ? LIMIT 1",
+    [system_short_url]
+  );
+
+  if (rows.length === 0) return null;
+  return rows[0] as News;
+};

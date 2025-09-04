@@ -13,7 +13,6 @@ const ArticleCard: React.FC<{ isSocialMedia?: boolean; newsData?: News }> = ({
   isSocialMedia = false,
   newsData,
 }) => {
-  console.log("news data ", newsData);
   return (
     <div className="shadow-sm">
       <iframe
@@ -30,16 +29,17 @@ const ArticleCard: React.FC<{ isSocialMedia?: boolean; newsData?: News }> = ({
 
       <div className="p-3">
         <Link
-          href="/news/1"
+          href={`/news/${newsData?.system_short_url}`}
           className="font-helvetica font-semibold text-md text-black hover:text-[#C13B3C] transition-colors duration-300 ease-in-out"
         >
-          वोट चोरी के आरोपों को लेकर चुनाव आयोग के खिलाफ कांग्रेस ने किया विरोध
-          प्रदर्शन
+          {newsData?.news_name && newsData?.news_name.length > 70
+            ? newsData.news_name.slice(0, 70) + "..."
+            : newsData?.news_name}
         </Link>
         <p className="font-helvetica text-base pt-1">
-          राजस्थान कांग्रेस कमेटी द्वारा प्रदेशाध्यक्ष गोविन्द सिंह डोटासरा के
-          नेतृत्व में आज राजधानी जयपुर में 'वोट चोरी' और चुनावी
-          प्रक्रिया........
+          {newsData?.news_desc && newsData?.news_desc.length > 100
+            ? newsData.news_desc.slice(0, 70) + "..."
+            : newsData?.news_desc}
         </p>
 
         {isSocialMedia && (

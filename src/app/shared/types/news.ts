@@ -68,3 +68,18 @@ export interface Pagination {
   limit: number;
   totalItems: number;
 }
+
+export interface NewsDetailsResponse {
+  config: Record<string, any>;
+  data: NewsData;
+  headers: Record<string, string>;
+  request: Record<string, any>;
+  status: number;
+  statusText: string;
+}
+
+export interface NewsData {
+  success: boolean;
+  message: string;
+  news?: News;
+}

@@ -1,3 +1,4 @@
+import { News } from "@/app/shared/types/news";
 import Link from "next/link";
 import {
   FaFacebookF,
@@ -9,16 +10,22 @@ import {
 } from "react-icons/fa";
 import { FiCalendar } from "react-icons/fi";
 
-const NewsDetails = () => {
+const NewsDetails: React.FC<{ news: News }> = ({ news }) => {
+  console.log("news data", news);
+
   return (
     <section className="py-4">
       <div className="flex flex-col gap-y-2">
-        <h2 className="text-2xl font-semibold">
-          वोट चोरी के आरोपों को लेकर चुनाव आयोग
-        </h2>
+        <h2 className="text-2xl font-semibold">{news.news_name}</h2>
         <div className="flex items-center gap-1">
           <FiCalendar size={18} />
-          <p>16 August 2025</p>
+          <p>
+            {new Date(news.date).toLocaleDateString("en-GB", {
+              day: "2-digit",
+              month: "long",
+              year: "numeric",
+            })}
+          </p>
         </div>
 
         <div className="flex gap-1.5 mt-2">
@@ -78,20 +85,7 @@ const NewsDetails = () => {
           allowFullScreen
         />
 
-        <p className="text-base font-normal mt-2">
-          {" "}
-          ओम प्रकाश मित्तल अखिल भारतीय पूर्व राष्ट्रीय अध्यक्ष व पूर्वी व
-          पूर्वोत्तर भारत के प्रभारी - लघु उद्योग भारती से आपकी आवाज के मुख्य
-          संपादक अरुण कूलवाल ने MSME उद्योग नीति, जीएसटी सरलीकरण, आपातकाल और
-          आरएसएस को लेकर विस्तार से की चर्चा चर्चा के मुख्य बिंदु - लघु उद्योग
-          भारती की भूमिका व विजन, मार्बल इंडस्ट्री लघु उद्योग मंत्रालय का गठन
-          प्रदेश व देशभर MSME की इकाइयां व उनके अधिकार MSME अधिनियम में संशोधन
-          एमएसएमई पर्यावरण नीति एमएसएमई को वित्तीय सहायता, तकनीकी चुनौतियां पर
-          चर्चा... विभिन्न राज्यों/केंद्र शासित प्रदेशों में एमएसएमई क्लस्टरों
-          का वित्तपोषण MSMEs क्षेत्र में उद्यमिता और कौशल विकास एमएसएमई खनन
-          उद्योग की योजना, और पर्यावरण प्रबंधन नीति अंतर्राष्ट्रीय स्तर पर भारत
-          की भूमिका राष्ट्रनिर्माण में आरएसएस की भूमिका !!!
-        </p>
+        <p className="text-base font-normal mt-2">{news.news_desc}</p>
       </div>
     </section>
   );

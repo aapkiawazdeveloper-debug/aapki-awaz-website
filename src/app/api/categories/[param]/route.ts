@@ -38,9 +38,12 @@ export const DELETE = async (
     return new Response(JSON.stringify(body), { status });
   } catch (err) {
     console.error("Failed to delete category:", err);
-    return new Response(JSON.stringify({ message: "Internal Server Error" }), {
-      status: 500,
-    });
+    return new Response(
+      JSON.stringify({ message: "Internal Server Error", status: false }),
+      {
+        status: 500,
+      }
+    );
   }
 };
 
