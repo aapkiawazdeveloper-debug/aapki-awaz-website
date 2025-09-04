@@ -5,7 +5,7 @@ const PageHeader: React.FC<{ pageTitle: string; buttons?: any[] }> = ({
   buttons = [],
 }) => {
   return (
-    <section className="bg-[#C13B3C] px-4 py-2 rounded-lg mb-4">
+    <section className="bg-[#C13B3C] px-4 py-2 rounded-sm sm:rounded-lg mb-4">
       <div className="flex items-center justify-between gap-4">
         <h1 className="text-sm sm:text-lg -tracking-tight text-white font-poppins font-semibold">
           {pageTitle}

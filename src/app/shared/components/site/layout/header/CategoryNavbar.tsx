@@ -23,7 +23,6 @@ const CategoryNavbar = () => {
     getCategoryList();
   }, []);
 
-  // get category list
   const getCategoryList = async () => {
     try {
       const response: CategoriesResponse = await axios.get("/api/categories");
@@ -40,7 +39,6 @@ const CategoryNavbar = () => {
     }
   };
 
-  // toggle dropdown
   const toggleDropdown = (menu: string) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
   };
@@ -48,17 +46,19 @@ const CategoryNavbar = () => {
   return (
     <div className="bg-[#ccc]">
       <nav className="p-4 relative">
-        {/* Mobile Menu Button */}
         <div className="flex justify-end items-center md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
-            <AiOutlineMenu className="text-white" size={24} />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="cursor-pointer text-white"
+          >
+            <AiOutlineMenu size={24} />
           </button>
         </div>
 
         {/* Menu List */}
         <div
           className={`transition-all duration-500 ease-in-out ${
-            isOpen ? "max-h-[500px]" : "max-h-0"
+            isOpen ? "max-h-[2000px]" : "max-h-0"
           } overflow-hidden md:overflow-visible md:max-h-none`}
         >
           {loading ? (
@@ -72,7 +72,10 @@ const CategoryNavbar = () => {
           ) : (
             <ul className="flex flex-col md:flex-row md:items-center gap-4 py-2 md:py-0">
               <li>
-                <Link href="/" className="text-[#0000ff] text-sm font-poppins">
+                <Link
+                  href="/"
+                  className="text-[#0000ff] text-sm font-poppins block py-2"
+                >
                   Home
                 </Link>
               </li>
@@ -94,32 +97,38 @@ const CategoryNavbar = () => {
                 const alignRight = index >= categories.length - 4;
 
                 return (
-                  <li
-                    key={category.id}
-                    className="relative group"
-                    onClick={() => toggleDropdown(dropdownId)}
-                  >
-                    <span className="flex items-center gap-1 text-[#0000ff] text-sm font-poppins cursor-pointer capitalize">
-                      {category.display_name} <FiChevronDown size={12} />
-                    </span>
+                  <li key={category.id} className="relative group">
+                    <div
+                      className="flex justify-between items-center text-[#0000ff] text-sm font-poppins cursor-pointer py-2"
+                      onClick={() => toggleDropdown(dropdownId)}
+                    >
+                      <span className="capitalize">
+                        {category.display_name}
+                      </span>
+                      <FiChevronDown size={12} className="md:hidden" />
+                    </div>
 
                     {columns.length > 0 && (
                       <ul
-                        className={`absolute top-full bg-white shadow-lg rounded-lg z-50 transition-all duration-300 ease-in-out overflow-auto
+                        className={`
+                          md:absolute md:top-full md:shadow-lg md:rounded-lg md:z-50 md:transition-all md:duration-300 md:ease-in-out
+                          md:group-hover:opacity-100 md:group-hover:block md:opacity-0 md:hidden md:overflow-auto
+                          overflow-hidden transition-all duration-500 ease-in-out
                           ${
                             openDropdown === dropdownId
-                              ? "block"
-                              : "hidden md:block md:opacity-0 md:group-hover:opacity-100"
+                              ? "max-h-[2000px] opacity-100"
+                              : "max-h-0 opacity-0"
                           }
                         `}
                         style={{
                           maxWidth: "100vw",
-                          width: `min(${columns.length * 200}px, 100vw)`,
-                          [alignRight ? "right" : "left"]: 0,
+                          width: "100%",
+                          left: !alignRight ? 0 : undefined,
+                          right: alignRight ? 0 : undefined,
                         }}
                       >
                         <div
-                          className="grid gap-6 py-4 px-2"
+                          className="grid gap-6 py-4 px-2 md:grid-cols-1"
                           style={{
                             display: "grid",
                             gridTemplateColumns: `repeat(${columns.length}, minmax(0,1fr))`,
