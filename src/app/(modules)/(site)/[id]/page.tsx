@@ -75,10 +75,6 @@ const SiteCategoryDetails = () => {
           <div className="mt-4">
             <GridSection />
           </div>
-
-          <div className="mt-4">
-            <Pagination />
-          </div>
         </div>
       ))}
     </>

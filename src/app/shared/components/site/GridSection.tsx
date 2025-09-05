@@ -5,14 +5,16 @@ import ArticleCard from "./ui/cards/ArticleCard";
 import axios from "axios";
 import { NewsResponse } from "../../types/news";
 import { News } from "@/app/api/news/types";
+import Pagination from "./Pagination";
 
 const GridSection = () => {
   const [newsList, setNewsList] = useState<News[]>([]);
   const [isLoader, setIsLoader] = useState<boolean>(false);
 
+  // pagination state
   const [page, setPage] = useState<number>(1);
   const [limit] = useState<number>(20);
-  const [hasMore, setHasMore] = useState<boolean>(true);
+  const [totalPages, setTotalPages] = useState<number>(1);
 
   useEffect(() => {
     getNewsList(page, limit);
@@ -28,8 +30,7 @@ const GridSection = () => {
 
       if (response.data.success) {
         setNewsList(response.data.newsList);
-
-        console.log("news response data ", response.data.newsList);
+        setTotalPages(response.data.pagination?.totalItems ?? 1);
       }
     } catch (error: any) {
       setNewsList([]);
@@ -52,6 +53,13 @@ const GridSection = () => {
           </>
         )}
       </div>
+
+      {/* Pagination */}
+      <Pagination
+        currentPage={page}
+        totalPages={totalPages}
+        onPageChange={(newPage) => setPage(newPage)}
+      />
     </section>
   );
 };
