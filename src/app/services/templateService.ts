@@ -13,6 +13,15 @@ export const templateService = {
     return data;
   },
 
+  // get template by the dynamic tpl
+  // getTemplat
+
+  // get category by dynamic tpl
+  getCategoryByDynamicTpl: async (dynamic_tpl: number) => {
+    const { data } = await api.get(`/templates?dynamic_tpl=${dynamic_tpl}`);
+    return data;
+  },
+
   // create template
   async createTemplate(payload: { title: string; content: string }) {
     const { data } = await api.post("/templates", payload);

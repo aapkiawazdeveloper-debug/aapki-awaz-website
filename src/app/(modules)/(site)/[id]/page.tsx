@@ -1,48 +1,14 @@
 "use client";
 
-import { categoryService } from "@/app/services/categoryService";
 import { templateService } from "@/app/services/templateService";
 import GridSection from "@/app/shared/components/site/GridSection";
 import Pagination from "@/app/shared/components/site/Pagination";
 import PageFilter from "@/app/shared/components/site/ui/filters/PageFilter";
 import PageHeader from "@/app/shared/components/site/ui/PageHeader";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const SiteCategoryDetails = () => {
-  // const [templates, setTemplates] = useState<Template[]>([]);
-
-  // const [templateId, setTemplateId] = useState<number>(0);
-
-  // const [categoryId, setCategoryId] = useState<number>(0);
-
-  // useEffect(() => {
-  //   getTemplates();
-
-  //   getCategoryByDynamicTpl();
-  // }, []);
-
-  // // get templates
-  // const getTemplates = async () => {
-  //   try {
-  //     const response: TempalteData = await templateService.getTemplates();
-
-  //     setTemplates(response.templates);
-
-  //     const findCategory = response.templates.find(
-  //       (template) => +template.id === 7
-  //     );
-
-  //     console.log(findCategory);
-  //   } catch (error) {}
-  // };
-
-  // // get category by dynamic tpl
-  // const getCategoryByDynamicTpl = async () => {
-  //   try {
-  //     const response = await templateService.getTemplateByDynamicTpl(7);
-  //     console.log(response);
-  //   } catch (error) {}
-  // };
+  const [templateItems, setTemplateItems] = useState<any[]>([]);
 
   useEffect(() => {
     getCategoryByDynamicTpl();
@@ -51,8 +17,35 @@ const SiteCategoryDetails = () => {
   // get catgory by the dynamic tpl
   const getCategoryByDynamicTpl = async () => {
     try {
-      const response = await categoryService.getCategoryByDynamicTpl(7);
-      console.log("response category with dynamic tpl", response);
+      const response = await templateService.getCategoryByDynamicTpl(7);
+      if (response.success) {
+        getTemplates(response.category.dynamic_tpl ?? 7);
+      }
+    } catch (error: any) {
+      console.error(error.message);
+    }
+  };
+
+  // get template
+  const getTemplates = async (id: string) => {
+    try {
+      const response = await templateService.getTemplateById(id);
+
+      if (response.success) {
+        const parsedLayout = JSON.parse(response.template.layout_data).layout;
+
+        const templateItems: any[] = [];
+
+        parsedLayout.map((row: any) => {
+          row.columns.map((column: any) => {
+            column.items.map((item: any) => {
+              templateItems.push(item);
+            });
+          });
+        });
+        console.log("Template Items: ", templateItems);
+        setTemplateItems(templateItems);
+      }
     } catch (error: any) {
       console.error(error.message);
     }
@@ -60,22 +53,34 @@ const SiteCategoryDetails = () => {
 
   return (
     <>
-      <PageHeader
-        pageTitle="News / Events"
-        buttons={[
-          {
-            id: 1,
-            title: "View More",
-            link: "/",
-          },
-        ]}
-      />
+      {templateItems.map((templateItem, index) => (
+        <div key={index}>
+          <div className={index === 0 ? "mt-0" : "mt-4"}>
+            <PageHeader
+              pageTitle={templateItem.config.title}
+              buttons={[
+                {
+                  id: 1,
+                  title: "View More",
+                  link: "/",
+                },
+              ]}
+            />
+          </div>
 
-      <PageFilter />
+          <div className="mt-4">
+            <PageFilter />
+          </div>
 
-      <GridSection />
+          <div className="mt-4">
+            <GridSection />
+          </div>
 
-      <Pagination />
+          <div className="mt-4">
+            <Pagination />
+          </div>
+        </div>
+      ))}
     </>
   );
 };

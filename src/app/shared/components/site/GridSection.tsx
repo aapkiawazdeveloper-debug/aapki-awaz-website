@@ -28,6 +28,8 @@ const GridSection = () => {
 
       if (response.data.success) {
         setNewsList(response.data.newsList);
+
+        console.log("news response data ", response.data.newsList);
       }
     } catch (error: any) {
       setNewsList([]);

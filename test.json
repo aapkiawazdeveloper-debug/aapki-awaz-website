@@ -1,0 +1,124 @@
+{
+  "layout": [
+    {
+      "rowId": "row-1",
+      "columns": [
+        {
+          "columnId": "row-1-column-1",
+          "width": "6",
+          "items": [
+            {
+              "type": "news",
+              "config": {
+                "title": "News",
+                "count": "5",
+                "category_search": "Home test",
+                "category": "1",
+                "data_column": "3",
+                "extra_search": "",
+                "custom_css": "",
+                "scroll_select": "",
+                "thumb_view": "0",
+                "first_full_width": "0",
+                "show_pagination": "0",
+                "enable_search": "0"
+              }
+            },
+            {
+              "type": "video",
+              "config": {
+                "title": "Video",
+                "count": "5",
+                "category_search": "Home test",
+                "category": "1",
+                "data_column": "3",
+                "extra_search": "",
+                "custom_css": "",
+                "scroll_select": "",
+                "first_full_width": "0",
+                "show_pagination": "0",
+                "enable_search": "0",
+                "thumb_view": "0"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rowId": "row-2",
+      "columns": [
+        {
+          "columnId": "row-2-column-1",
+          "width": "6",
+          "items": [
+            {
+              "type": "categories",
+              "config": {
+                "title": "Categories",
+                "count": "6",
+                "category_ids": "1",
+                "parent_id_type": "1",
+                "fields_for_display": "",
+                "enable_search": "0",
+                "show_pagination": "0",
+                "scroll_select": "",
+                "thumb_view": "0"
+              }
+            }
+          ]
+        },
+        {
+          "columnId": "row-2-column-2",
+          "width": "6",
+          "items": [
+            {
+              "type": "ads",
+              "config": {
+                "title": "Ads",
+                "count": "5",
+                "category": "1",
+                "data_column": "3",
+                "custom_css": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rowId": "row-3",
+      "columns": [
+        {
+          "columnId": "row-3-column-1",
+          "width": "6",
+          "items": [
+            {
+              "type": "profiles",
+              "config": {
+                "title": "Profiles",
+                "count": "6",
+                "group": "all",
+                "fields_for_display": "",
+                "enable_search": "0",
+                "search_profile": "",
+                "scroll_select": "",
+                "thumb_view": "0"
+              }
+            },
+            {
+              "type": "gallery",
+              "config": {
+                "title": "Gallery",
+                "count": "8",
+                "album": "all",
+                "layout": "grid"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": { "type": "right-sidebar", "description": "" }
+}
