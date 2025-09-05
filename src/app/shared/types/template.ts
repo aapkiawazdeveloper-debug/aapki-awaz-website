@@ -13,14 +13,16 @@ export interface Template {
 }
 
 export interface TemplateResponse {
-  data: {
-    success: boolean;
-    message: string;
-    templates: Template[];
-  };
+  data: TempalteData;
   status: number;
   statusText: string;
   headers: Record<string, string>;
   config: Record<string, any>;
   request: Record<string, any>;
+}
+
+export interface TempalteData {
+  success: boolean;
+  message: string;
+  templates: Template[];
 }
