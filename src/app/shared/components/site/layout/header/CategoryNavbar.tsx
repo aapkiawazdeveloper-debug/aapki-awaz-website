@@ -46,6 +46,7 @@ const CategoryNavbar = () => {
   return (
     <div className="bg-[#ccc]">
       <nav className="p-4 relative">
+        {/* Mobile Toggle Button */}
         <div className="flex justify-end items-center md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -95,27 +96,40 @@ const CategoryNavbar = () => {
 
                 const dropdownId = `category-${category.id}`;
                 const alignRight = index >= categories.length - 4;
+                const isOpenMobile = openDropdown === dropdownId;
 
                 return (
                   <li key={category.id} className="relative group">
-                    <div
-                      className="flex justify-between items-center text-[#0000ff] text-sm font-poppins cursor-pointer py-2"
-                      onClick={() => toggleDropdown(dropdownId)}
+                    {/* Category Button */}
+                    <button
+                      className="flex gap-x-2 items-center text-[#0000ff] text-sm font-poppins cursor-pointer py-2"
+                      onClick={() => {
+                        if (window.innerWidth < 768) {
+                          toggleDropdown(dropdownId);
+                        }
+                      }}
                     >
                       <span className="capitalize">
                         {category.display_name}
                       </span>
-                      <FiChevronDown size={12} className="md:hidden" />
-                    </div>
+                      <FiChevronDown
+                        size={12}
+                        className={`transition-transform duration-300 md:group-hover:rotate-180 ${
+                          isOpenMobile ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
 
+                    {/* Dropdown */}
                     {columns.length > 0 && (
                       <ul
                         className={`
-                          md:absolute md:top-full md:shadow-lg md:rounded-lg md:z-50 md:transition-all md:duration-300 md:ease-in-out
-                          md:group-hover:opacity-100 md:group-hover:block md:opacity-0 md:hidden md:overflow-auto
-                          overflow-hidden transition-all duration-500 ease-in-out
+                          md:absolute md:top-full md:shadow-lg md:rounded-lg md:z-50
+                          md:opacity-0 md:invisible md:translate-y-2
+                          md:group-hover:opacity-100 md:group-hover:visible md:group-hover:translate-y-0
+                          transition-all duration-300 ease-in-out
                           ${
-                            openDropdown === dropdownId
+                            isOpenMobile
                               ? "max-h-[2000px] opacity-100"
                               : "max-h-0 opacity-0"
                           }
