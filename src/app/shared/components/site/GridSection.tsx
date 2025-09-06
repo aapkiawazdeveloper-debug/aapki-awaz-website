@@ -6,8 +6,9 @@ import axios from "axios";
 import { NewsResponse } from "../../types/news";
 import { News } from "@/app/api/news/types";
 import Pagination from "./Pagination";
+import { getGridClass } from "../../lib/GetGridClass";
 
-const GridSection = () => {
+const GridSection: React.FC<{ dataColumn: string }> = ({ dataColumn }) => {
   const [newsList, setNewsList] = useState<News[]>([]);
   const [isLoader, setIsLoader] = useState<boolean>(false);
 
@@ -15,6 +16,8 @@ const GridSection = () => {
   const [page, setPage] = useState<number>(1);
   const [limit] = useState<number>(20);
   const [totalPages, setTotalPages] = useState<number>(1);
+
+  const gridClass = getGridClass(dataColumn);
 
   useEffect(() => {
     getNewsList(page, limit);
@@ -42,9 +45,9 @@ const GridSection = () => {
 
   return (
     <section>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className={`grid gap-4 ${gridClass}`}>
         {isLoader ? (
-          <p>Loading...</p>
+          <p>Loading news...</p>
         ) : (
           <>
             {newsList.map((news: News) => (
