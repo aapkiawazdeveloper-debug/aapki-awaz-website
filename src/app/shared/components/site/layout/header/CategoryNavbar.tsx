@@ -124,10 +124,10 @@ const CategoryNavbar = () => {
                     {columns.length > 0 && (
                       <ul
                         className={`
-                          md:absolute md:top-full md:shadow-lg md:rounded-lg md:z-50
+                          md:absolute md:top-full md:shadow-lg md:rounded-sm md:bg-white md:z-50
                           md:opacity-0 md:invisible md:translate-y-2
                           md:group-hover:opacity-100 md:group-hover:visible md:group-hover:translate-y-0
-                          transition-all duration-300 ease-in-out
+                          transition-all duration-300 ease-in-out 
                           ${
                             isOpenMobile
                               ? "max-h-[2000px] opacity-100"
@@ -142,7 +142,7 @@ const CategoryNavbar = () => {
                         }}
                       >
                         <div
-                          className="grid gap-6 py-4 px-2 md:grid-cols-1"
+                          className="grid gap-6 py-4 px-2 md:grid-cols-1 md:bg-white md:rounded-sm md:shadow-lg"
                           style={{
                             display: "grid",
                             gridTemplateColumns: `repeat(${columns.length}, minmax(0,1fr))`,
