@@ -8,6 +8,7 @@ import Footer from "@/app/shared/components/site/layout/Footer";
 import Sidebar from "@/app/shared/components/site/layout/Sidebar";
 import { templateService } from "@/app/services/templateService";
 import { useEffect, useState } from "react";
+import { advertisersService } from "@/app/services/advertisersService";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ const SiteLayout = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     getTemplateById();
+    getAdvertisers();
   }, []);
 
   // get template by id
@@ -42,6 +44,16 @@ const SiteLayout = ({ children }: { children: React.ReactNode }) => {
   };
 
   const hasSidebar = templateType === "right-sidebar";
+
+  // get advertisers list
+  const getAdvertisers = async () => {
+    try {
+      const response = await advertisersService.getAdvertisers();
+      console.log("get advertisers ", response.advertisers);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <html

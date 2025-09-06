@@ -15,6 +15,7 @@
                 "category_search": "Home test",
                 "category": "1",
                 "data_column": "3",
+                "fields_for_display": "[image][name][description]",
                 "extra_search": "",
                 "custom_css": "",
                 "scroll_select": "",
@@ -34,6 +35,7 @@
                 "data_column": "3",
                 "extra_search": "",
                 "custom_css": "",
+                "fields_for_display": "",
                 "scroll_select": "",
                 "first_full_width": "0",
                 "show_pagination": "0",
@@ -59,7 +61,7 @@
                 "count": "6",
                 "category_ids": "1",
                 "parent_id_type": "1",
-                "fields_for_display": "",
+                "fields_for_display": "[image][name][description]",
                 "enable_search": "0",
                 "show_pagination": "0",
                 "scroll_select": "",
@@ -99,7 +101,7 @@
                 "title": "Profiles",
                 "count": "6",
                 "group": "all",
-                "fields_for_display": "",
+                "fields_for_display": "[image][name][description]",
                 "enable_search": "0",
                 "search_profile": "",
                 "scroll_select": "",
@@ -112,7 +114,85 @@
                 "title": "Gallery",
                 "count": "8",
                 "album": "all",
+                "fields_for_display": "[image][name][description]",
                 "layout": "grid"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rowId": "row-4",
+      "columns": [
+        {
+          "columnId": "row-4-column-1",
+          "width": "6",
+          "items": [
+            {
+              "type": "news",
+              "config": {
+                "title": "News",
+                "count": "20",
+                "category_search": "Home test",
+                "category": "1",
+                "data_column": "3",
+                "fields_for_display": "",
+                "extra_search": "",
+                "custom_css": "",
+                "scroll_select": "",
+                "thumb_view": "1",
+                "first_full_width": "1",
+                "show_pagination": "1",
+                "enable_search": "1"
+              }
+            }
+          ]
+        },
+        {
+          "columnId": "row-4-column-2",
+          "width": "6",
+          "items": [
+            {
+              "type": "news",
+              "config": {
+                "title": "News",
+                "count": "5",
+                "category_search": "Home test",
+                "category": "1",
+                "data_column": "3",
+                "fields_for_display": "",
+                "extra_search": "",
+                "custom_css": "",
+                "scroll_select": "",
+                "thumb_view": "0",
+                "first_full_width": "0",
+                "show_pagination": "0",
+                "enable_search": "0"
+              }
+            }
+          ]
+        },
+        {
+          "columnId": "row-4-column-3",
+          "width": "6",
+          "items": [
+            {
+              "type": "news",
+              "config": {
+                "title": "News",
+                "count": "5",
+                "category_search": "Ajmer News",
+                "category": "835",
+                "data_column": "1",
+                "fields_for_display": "[title position=\"right\"] \n[description len\"10\"]",
+                "extra_search": "",
+                "custom_css": "",
+                "scroll_select": "",
+                "thumb_view": "0",
+                "first_full_width": "0",
+                "show_pagination": "0",
+                "enable_search": "0"
               }
             }
           ]
